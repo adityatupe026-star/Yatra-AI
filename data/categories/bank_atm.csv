@@ -1,0 +1,543 @@
+place_id,place_name,latitude,longitude,category,subcategory,address,rating,rating_normalized,tags,source,osm_id,website,phone,opening_hours,cuisine,description,wheelchair,fee,image,is_free,is_open_24h,price_level,category_label
+OPE_6906524648,Akshay Blood Bank,18.499071,73.941253,bank_atm,blood_bank,"Pune, 411028",N/A,,finance|money|banking,openstreetmap,6906524648,N/A,02026993247 02026993248,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6130922026,Allahabad Bank,18.563649,73.802818,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6130922026,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6201762554,Allahabad Bank,18.522479,73.841207,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6201762554,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2801208405,Andhra Bank,18.5235,73.846842,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2801208405,https://www.andhrabank.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4930450602,Andra Bank,18.566128,73.816572,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4930450602,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6897390630,Armed Forces Blood Bank,18.50394,73.890178,bank_atm,blood_bank,"Pune, 411040",N/A,,finance|money|banking,openstreetmap,6897390630,N/A,02026026038 02026306337,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11258989071,Atm,18.577454,73.893091,bank_atm,bank,"Street Name, Lane No 10, Pune, 411032",N/A,,finance|money|banking,openstreetmap,11258989071,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3750410210,Axis Bank,18.47798,73.824048,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3750410210,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5331643520,Axis Bank,18.46279,73.890147,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5331643520,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_784995223,Axis Bank,18.45016,73.901472,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,784995223,https://www.axisbank.com,N/A,24/7,N/A,N/A,no,N/A,N/A,False,True,,Bank / ATM
+OPE_1883112979,Axis Bank,18.504928,73.818011,bank_atm,bank,Mayur Colony,N/A,,finance|money|banking,openstreetmap,1883112979,https://www.axisbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2973189047,Axis Bank,18.556646,73.794556,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2973189047,https://www.axisbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3506853565,Axis Bank,18.490051,73.831797,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3506853565,https://www.axisbank.com,02024251973,Mo-Fr 09:30-15:30; Sa 09:30-13:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496167,Axis Bank,18.520059,73.77865,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496167,https://www.axisbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496169,Axis Bank,18.538369,73.82989,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496169,https://www.axisbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4359560190,Axis Bank,18.494804,73.825978,bank_atm,bank,411052,N/A,,finance|money|banking,openstreetmap,4359560190,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5149099147,Axis Bank,18.540977,73.829934,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5149099147,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5713386200,Axis Bank,18.543811,73.785269,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5713386200,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6113341875,Axis Bank,18.508098,73.796356,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6113341875,https://www.axisbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6130922014,Axis Bank,18.557517,73.804448,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6130922014,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6130922015,Axis Bank,18.557601,73.8044,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6130922015,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10799668305,Axis Bank,18.544571,73.781774,bank_atm,bank,Pashan-Sus Road,N/A,,finance|money|banking,openstreetmap,10799668305,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13622256823,Axis Bank,18.511936,73.774913,bank_atm,bank,"Lane 2, Bavdhan, Pune, 411021",N/A,,finance|money|banking,openstreetmap,13622256823,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_359955267,Axis Bank,18.491365,73.8215,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,359955267,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1911011471,Axis Bank,18.513774,73.861734,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1911011471,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_1911012777,Axis Bank,18.515268,73.865917,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1911012777,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_2428952229,Axis Bank,18.530024,73.83652,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2428952229,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2428955600,Axis Bank,18.533908,73.833708,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2428955600,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4677974490,Axis Bank,18.516442,73.850014,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4677974490,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5122330523,Axis Bank,18.515786,73.853848,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5122330523,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5554773708,Axis Bank,18.532271,73.849237,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5554773708,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5918828049,Axis Bank,18.524073,73.906149,bank_atm,bank,"Bhagwan Tatyasaheb Kawade Marg, Pune, 411001",N/A,,finance|money|banking,openstreetmap,5918828049,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6184010097,Axis Bank,18.539789,73.892277,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6184010097,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6184010102,Axis Bank,18.539369,73.899395,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6184010102,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6201762553,Axis Bank,18.523109,73.841182,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6201762553,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183587172,Axis Bank,18.561879,73.930822,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2183587172,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183587174,Axis Bank,18.552718,73.93758,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2183587174,https://www.axisbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10747814972,Axis Bank,18.59054,73.906273,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10747814972,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13385606609,Axis Bank,18.590131,73.862795,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,13385606609,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12386185001,Axis Bank Loan Center,18.562795,73.807651,bank_atm,bank,"New DP Road Aundh, 411007",N/A,,finance|money|banking,openstreetmap,12386185001,N/A,N/A,Su-Fr 09:30-18:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11110340000,Bandhan Bank,18.553524,73.808378,bank_atm,bank,"Shankarao Gaikwad path, Pune, 411007",N/A,,finance|money|banking,openstreetmap,11110340000,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438813,Bandhan Bank,18.518096,73.834271,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5832438813,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6186406673,Bandhan Bank,18.544769,73.911544,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6186406673,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11292633357,Bank Of Baroda,18.44305,73.780809,bank_atm,bank,"Sinhagad Road, Pune, 411024",N/A,,finance|money|banking,openstreetmap,11292633357,N/A,N/A,Mo-Sa 10:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10576238393,Bank Of Baroda,18.470778,73.889205,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10576238393,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_352754613,Bank Of Baroda,18.47016,73.889247,bank_atm,bank,"Kondhwa Road, Pune, 411048",N/A,,finance|money|banking,openstreetmap,352754613,http://www.bankofbaroda.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_670298363,Bank Of Baroda,18.565908,73.771544,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,670298363,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_763552839,Bank Of Baroda,18.554448,73.798741,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,763552839,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1271226874,Bank Of Baroda,18.510164,73.820384,bank_atm,bank,Paud Road,N/A,,finance|money|banking,openstreetmap,1271226874,http://www.bankofbaroda.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3022118147,Bank Of Baroda,18.529144,73.83014,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3022118147,http://www.denabank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3022118157,Bank Of Baroda,18.52913,73.830153,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3022118157,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6130922029,Bank Of Baroda,18.564348,73.802722,bank_atm,bank,"New DP Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,6130922029,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6130922030,Bank Of Baroda,18.56438,73.802719,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6130922030,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_13142331889,Bank Of Baroda,18.510275,73.818507,bank_atm,bank,"Paud Road, Kothrud, Pune, 411038",N/A,,finance|money|banking,openstreetmap,13142331889,N/A,N/A,"Mo-Fr 10:00-16:00; Sa[1,3] 10:00-16:00; PH closed",N/A,N/A,limited,N/A,N/A,False,False,,Bank / ATM
+OPE_13418325180,Bank Of Baroda,18.566613,73.770513,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13418325180,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1182849579,Bank Of Baroda,18.540741,73.836478,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1182849579,http://www.bankofbaroda.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985517,Bank Of Baroda,18.51293,73.839602,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2859985517,http://www.bankofbaroda.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985547,Bank Of Baroda,18.520012,73.852747,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2859985547,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438805,Bank Of Baroda,18.517994,73.836889,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5832438805,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6186406658,Bank Of Baroda,18.546489,73.901434,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6186406658,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12651970688,Bank Of Baroda,18.561788,73.836536,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12651970688,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13433002500,Bank Of Baroda,18.508671,73.846061,bank_atm,bank,"223B, Sharad Pandit Path, Pune, 411030",N/A,,finance|money|banking,openstreetmap,13433002500,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1080909858,Bank Of Baroda,18.542028,73.83583,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1080909858,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11811152409,Bank Of India,18.464935,73.77417,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11811152409,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2784701543,Bank Of India,18.516018,73.815655,bank_atm,atm,"MIT College Road, Pune, 411038",N/A,,finance|money|banking,openstreetmap,2784701543,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2784706446,Bank Of India,18.509307,73.814256,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2784706446,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2787987411,Bank Of India,18.503211,73.820065,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2787987411,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3022118146,Bank Of India,18.554878,73.800944,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3022118146,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6199355639,Bank Of India,18.564108,73.813165,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6199355639,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12806062620,Bank Of India,18.554711,73.798737,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12806062620,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1432747068,Bank Of India,18.540984,73.817318,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1432747068,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183569903,Bank Of India,18.56503,73.916144,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2183569903,https://www.bankofindia.co.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3642844984,Bank Of India,18.5364,73.898648,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3642844984,https://www.bankofindia.co.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496170,Bank Of India,18.523593,73.841308,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496170,https://www.bankofindia.co.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511938,Bank Of India,18.523547,73.841302,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511938,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832547679,Bank Of India,18.503535,73.855659,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5832547679,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13417412808,"Bank Of India,Koregaon Park Branch",18.541615,73.886201,bank_atm,bank,"Burning Ghat Road, Pune, 411001",N/A,,finance|money|banking,openstreetmap,13417412808,N/A,N/A,Mo-Fr 09:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1311585649,Bank Of Maharashtra,18.478832,73.824041,bank_atm,bank,"Sinhgad Road, 411041",N/A,,finance|money|banking,openstreetmap,1311585649,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1762149649,Bank Of Maharashtra,18.453982,73.820721,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1762149649,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_360458832,Bank Of Maharashtra,18.480696,73.860992,bank_atm,bank,"Aniket Housing Society No. 2, Swami Vivekanand Marg, Pune, 411037",N/A,,finance|money|banking,openstreetmap,360458832,N/A,N/A,Mo-Fr 10:30-16:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_360458842,Bank Of Maharashtra,18.480574,73.861017,bank_atm,bank,"Aniket Housing Society No. 2, Swami Vivekanand Marg, Pune, 411037",N/A,,finance|money|banking,openstreetmap,360458842,N/A,N/A,Mo-Fr 10:30-16:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2432102257,Bank Of Maharashtra,18.50293,73.81819,bank_atm,bank,"Karve Road, Pune, 411038",N/A,,finance|money|banking,openstreetmap,2432102257,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2432102924,Bank Of Maharashtra,18.510732,73.81672,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2432102924,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2788035758,Bank Of Maharashtra,18.511361,73.819594,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2788035758,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2801564593,Bank Of Maharashtra,18.501598,73.815275,bank_atm,bank,Karve Road,N/A,,finance|money|banking,openstreetmap,2801564593,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496171,Bank Of Maharashtra,18.557961,73.793162,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496171,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496172,Bank Of Maharashtra,18.54371,73.78366,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496172,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511965,Bank Of Maharashtra,18.557941,73.793189,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511965,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3719799790,Bank Of Maharashtra,18.501593,73.815229,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3719799790,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4909016329,Bank Of Maharashtra,18.555019,73.823019,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4909016329,N/A,N/A,Mo-Sa 09:00-04:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5181628321,Bank Of Maharashtra,18.55344,73.812947,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5181628321,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111012001,Bank Of Maharashtra,18.532011,73.830268,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6111012001,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111132444,Bank Of Maharashtra,18.560462,73.812708,bank_atm,bank,"Sanghvi Kesari Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,6111132444,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6447085786,Bank Of Maharashtra,18.551548,73.82432,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6447085786,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9211654010,Bank Of Maharashtra,18.55516,73.822911,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,9211654010,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9473480197,Bank Of Maharashtra,18.516539,73.781709,bank_atm,bank,"Pashan-Bavdhan Road, Pune, 411021",N/A,,finance|money|banking,openstreetmap,9473480197,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10246112201,Bank Of Maharashtra,18.50014,73.752094,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10246112201,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11097589654,Bank Of Maharashtra,18.560506,73.813172,bank_atm,bank,"Sanghvi Kesari Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,11097589654,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11237872457,Bank Of Maharashtra,18.511689,73.772237,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11237872457,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11820010812,Bank Of Maharashtra,18.5318,73.83046,bank_atm,bank,"Bharatiya Vidyabhavan Marg, Pune, 411016",N/A,,finance|money|banking,openstreetmap,11820010812,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13633132632,Bank Of Maharashtra,18.495374,73.826026,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13633132632,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2192111446,Bank Of Maharashtra,18.517139,73.843,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2192111446,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2207888045,Bank Of Maharashtra,18.508124,73.843897,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2207888045,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2858176018,Bank Of Maharashtra,18.513697,73.853945,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2858176018,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2935676181,Bank Of Maharashtra,18.501811,73.869579,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2935676181,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3379398637,Bank Of Maharashtra,18.516075,73.834129,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3379398637,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3699871696,Bank Of Maharashtra,18.517538,73.843423,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3699871696,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5324848124,Bank Of Maharashtra,18.515953,73.834078,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5324848124,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832548485,Bank Of Maharashtra,18.506711,73.851723,bank_atm,bank,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832548485,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6201856576,Bank Of Maharashtra,18.534757,73.876114,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6201856576,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_234754530,Bank Of Maharashtra,18.530207,73.837607,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,234754530,https://www.bankofmaharashtra.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4441618789,Bank Of Maharashtra,18.637055,73.844718,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4441618789,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11771854003,Bank Of Maharashtra Atm,18.517154,73.843026,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11771854003,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10956621505,Bank Of Maharashtra Overseas Branch,18.528591,73.843285,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10956621505,N/A,917030924113,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832220027,Bavdhan Merchant,18.517674,73.780176,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5832220027,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438814,Bhangini Nivedita Sahakari Bank,18.518107,73.834273,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5832438814,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832579353,Bhangini Nivedita Sahakari Bank,18.514025,73.847048,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5832579353,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6893280447,Bharati Vidyapeeth Medical Foundation Blood Bank,18.45947,73.856272,bank_atm,blood_bank,"Pune, 411043",N/A,,finance|money|banking,openstreetmap,6893280447,N/A,02040555555 02024379432,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10250100976,Buldhana Urban Co-Op Credit Society,18.554545,73.804963,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10250100976,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10091349945,Canara Bank,18.445182,73.785495,bank_atm,bank,"Sinhagad Road, Pune, 411024",N/A,,finance|money|banking,openstreetmap,10091349945,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1597812485,Canara Bank,18.461191,73.857893,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1597812485,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_10683615965,Canara Bank,18.471038,73.86388,bank_atm,bank,"Swami Vivekanand Marg, Bibvewadi, Pune,Maharashtra, India, 411037",N/A,,finance|money|banking,openstreetmap,10683615965,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6183911092,Canara Bank,18.502566,73.816999,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6183911092,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692842262,Canara Bank,18.559241,73.791188,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692842262,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3837531764,Canara Bank,18.518054,73.84391,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3837531764,https://www.canarabank.com/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9201919313,Canara Bank,18.60986,73.911141,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,9201919313,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13627040849,Canara Bank,18.593322,73.921603,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13627040849,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6986217509,Canara Bank Atm,18.528591,73.875216,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6986217509,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4746917527,"Canara Bank, Lohegaon Branch",18.593315,73.921615,bank_atm,bank,411032,N/A,,finance|money|banking,openstreetmap,4746917527,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930209,Catholic Bank,18.504068,73.90079,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2868930209,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5600220865,Central Bank,18.48626,73.856703,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5600220865,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_2787011380,Central Bank Of India,18.50591,73.816982,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2787011380,https://www.centralbankofindia.co.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12307079635,Central Bank Of India,18.564174,73.781923,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,12307079635,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12307079636,Central Bank Of India,18.564187,73.781848,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12307079636,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985520,Central Bank Of India,18.514681,73.842172,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2859985520,https://www.centralbankofindia.co.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6906524642,Chattrapati Shahu Maharaj Pratisthan Blood Bank,18.466113,73.857683,bank_atm,blood_bank,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,6906524642,N/A,2065267000,N/A,N/A,N/A,no,N/A,N/A,False,False,,Bank / ATM
+OPE_2787990502,Citi Bank Atm,18.503298,73.820214,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2787990502,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3583518399,Citibank,18.468702,73.888847,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3583518399,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6131097704,Citibank,18.56038,73.807875,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6131097704,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183569910,Citibank,18.565035,73.916348,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2183569910,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6180671587,Citibank,18.529828,73.836023,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6180671587,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5839779142,Corpbank,18.491215,73.821938,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5839779142,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3837531765,Corporation Bank,18.518195,73.844568,bank_atm,bank,"1728, Jangli Maharaj Path, 411004",N/A,,finance|money|banking,openstreetmap,3837531765,https://corpbank.com/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3837531790,Corporation Bank,18.51913,73.845291,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3837531790,N/A,N/A,24/7,N/A,N/A,no,N/A,N/A,False,True,,Bank / ATM
+OPE_6168664131,Corporation Bank,18.539001,73.885688,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6168664131,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_1715932779,Cosmos Bank,18.496028,73.801762,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1715932779,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511939,Cosmos Bank,18.537401,73.793575,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511939,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6199355622,Cosmos Bank,18.553965,73.809301,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6199355622,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_10692823599,Cosmos Bank,18.559825,73.789684,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692823599,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2801208409,Cosmos Bank,18.518183,73.837895,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2801208409,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2801208410,Cosmos Bank,18.518191,73.837818,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2801208410,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6244656805,Cosmos Bank,18.514378,73.852443,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6244656805,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6244656806,Cosmos Bank,18.514419,73.852496,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6244656806,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1202781532,Cosmos Bank Pashan Branch,18.537329,73.793595,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1202781532,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985521,"Cosmos Bank, Kothrud Branch",18.503867,73.820197,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2859985521,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1715929000,Cosmos Co-Operative Bank Ltd Branch,18.49614,73.803315,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1715929000,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692810830,Csb Bank,18.566645,73.771475,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692810830,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3837531782,Dbs Bank,18.517214,73.843676,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3837531782,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6893199116,Deenanath Mangeshkar Hospital Blood Bank,18.502014,73.8323,bank_atm,blood_bank,411004,N/A,,finance|money|banking,openstreetmap,6893199116,N/A,02026602307020266023080202660231302025420104,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6199355628,Deutsche Bank,18.555571,73.809431,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6199355628,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985522,"Dns Bank, Kothrud Branch",18.501978,73.81482,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2859985522,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6128879919,Equitas Small Finance Bank,18.566234,73.771303,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6128879919,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11539934875,Federal Bank,18.560255,73.80544,bank_atm,bank,"Ramchandra Gayakwad Path, Pune, 411007",N/A,,finance|money|banking,openstreetmap,11539934875,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985523,Federal Bank,18.523303,73.847435,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2859985523,https://www.federalbank.co.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11819983331,Federal Bank,18.528991,73.852718,bank_atm,bank,"Dr. Rajendra Prasad Path, Pune, 411005",N/A,,finance|money|banking,openstreetmap,11819983331,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_248993358,Gandhi Plaza,18.510375,73.829602,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,248993358,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5122377522,Ganesh Sahkari Bank,18.514642,73.853844,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5122377522,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930244,Hdfc,18.502845,73.901165,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2868930244,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_10593791966,Hdfc Atm,18.471508,73.889216,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10593791966,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1305074639,Hdfc Bank,18.47796,73.824035,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1305074639,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11145772676,Hdfc Bank,18.475802,73.81738,bank_atm,bank,"Suncity Road, Pune, 411051",N/A,,finance|money|banking,openstreetmap,11145772676,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11292633358,Hdfc Bank,18.443025,73.780704,bank_atm,bank,"Sinhagad Road, Pune, 411024",N/A,,finance|money|banking,openstreetmap,11292633358,N/A,N/A,Mo-Sa 10:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11330878771,Hdfc Bank,18.469973,73.822612,bank_atm,bank,"Goel Ganga road, Pune, 411051",N/A,,finance|money|banking,openstreetmap,11330878771,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11578223403,Hdfc Bank,18.459561,73.785142,bank_atm,bank,"Nanded City Road, Pune, 411041",N/A,,finance|money|banking,openstreetmap,11578223403,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3583518400,Hdfc Bank,18.46888,73.889236,bank_atm,bank,"Kondhwa Road, Pune, 411048",N/A,,finance|money|banking,openstreetmap,3583518400,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5219535658,Hdfc Bank,18.470827,73.889191,bank_atm,bank,"Kondhwa Road, Pune, 411048",N/A,,finance|money|banking,openstreetmap,5219535658,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10593752379,Hdfc Bank,18.47149,73.889213,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10593752379,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10807002308,Hdfc Bank,18.450415,73.857837,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10807002308,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1883108331,Hdfc Bank,18.504806,73.817751,bank_atm,bank,"Mayur Colony, Kothrud",N/A,,finance|money|banking,openstreetmap,1883108331,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2181156657,Hdfc Bank,18.500756,73.824494,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2181156657,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2280287357,Hdfc Bank,18.496209,73.809154,bank_atm,bank,Dahanukar Colony,N/A,,finance|money|banking,openstreetmap,2280287357,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511955,Hdfc Bank,18.545332,73.822902,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511955,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_4730095317,Hdfc Bank,18.505102,73.822539,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4730095317,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4908474897,Hdfc Bank,18.551215,73.791381,bank_atm,bank,"S R Iriz, Baner - Pashan Link Rd, Pashan Gaon, Pashan,, Pune, 411021",N/A,,finance|money|banking,openstreetmap,4908474897,N/A,N/A,Mo-Fr 09:00-15:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5713386199,Hdfc Bank,18.54381,73.785225,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5713386199,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5815976616,Hdfc Bank,18.521886,73.829381,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5815976616,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6038661591,Hdfc Bank,18.555885,73.808831,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6038661591,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111212661,Hdfc Bank,18.565507,73.804204,bank_atm,bank,"Nagras Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,6111212661,https://www.hdfcbank.com,N/A,Mo-Su 09:30-15:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111357573,Hdfc Bank,18.503225,73.798827,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6111357573,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9863982570,Hdfc Bank,18.55959,73.790283,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,9863982570,N/A,N/A,Mo-Sa 09:30-15:30,N/A,N/A,no,N/A,N/A,False,False,,Bank / ATM
+OPE_10016389135,Hdfc Bank,18.518614,73.830434,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10016389135,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10246158955,Hdfc Bank,18.500373,73.741658,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10246158955,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10258873406,Hdfc Bank,18.517448,73.780309,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10258873406,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11786356915,Hdfc Bank,18.508697,73.789946,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11786356915,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11816828820,Hdfc Bank,18.498255,73.826552,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11816828820,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12104074785,Hdfc Bank,18.557975,73.77488,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12104074785,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_359724012,Hdfc Bank,18.540636,73.817401,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,359724012,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_359790887,Hdfc Bank,18.517638,73.779423,bank_atm,bank,"Pashan-Bavdhan Road, Pune",N/A,,finance|money|banking,openstreetmap,359790887,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1911019646,Hdfc Bank,18.515294,73.866467,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1911019646,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_2858176227,Hdfc Bank,18.513703,73.850255,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2858176227,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930210,Hdfc Bank,18.502873,73.901202,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2868930210,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2935676183,Hdfc Bank,18.501935,73.86932,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2935676183,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2940513801,Hdfc Bank,18.507667,73.844411,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2940513801,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2940513857,Hdfc Bank,18.509157,73.848423,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2940513857,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3381592654,Hdfc Bank,18.518263,73.835951,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3381592654,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5554773707,Hdfc Bank,18.56215,73.838034,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5554773707,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5554773709,Hdfc Bank,18.532248,73.849246,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5554773709,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5600220877,Hdfc Bank,18.48585,73.854327,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5600220877,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832547678,Hdfc Bank,18.503158,73.856465,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5832547678,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6184010098,Hdfc Bank,18.539789,73.892304,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6184010098,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6186406665,Hdfc Bank,18.546037,73.904125,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6186406665,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7008376333,Hdfc Bank,18.520263,73.864036,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7008376333,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7008392934,Hdfc Bank,18.539344,73.878993,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7008392934,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12381845465,Hdfc Bank,18.562291,73.836461,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12381845465,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12651970686,Hdfc Bank,18.562531,73.836728,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12651970686,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13598461963,Hdfc Bank,18.527176,73.876618,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13598461963,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13598461964,Hdfc Bank,18.527126,73.876624,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,13598461964,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13624425442,Hdfc Bank,18.530104,73.851159,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13624425442,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1532852998,Hdfc Bank,18.509929,73.928587,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1532852998,https://www.hdfcbank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183587152,Hdfc Bank,18.559619,73.931041,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2183587152,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183587173,Hdfc Bank,18.549751,73.941378,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2183587173,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10747729628,Hdfc Bank,18.598654,73.90108,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10747729628,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9576745882,Hdfc Bank - Bavdhan Budruk Branch,18.5198,73.767593,bank_atm,bank,"Uttamnagar road, Pune, 411021",N/A,,finance|money|banking,openstreetmap,9576745882,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3708791951,Hdfc Bank Atm,18.510766,73.820087,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3708791951,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13598461935,Hitachi,18.528662,73.875104,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,13598461935,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930211,Hsbc,18.518917,73.830525,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2868930211,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6168664143,Hsbc,18.527407,73.878984,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6168664143,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6180459785,Hsbc,18.527412,73.87908,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6180459785,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496216,Icici,18.512009,73.828961,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657496216,https://www.icicibank.com/,09890478000,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511936,Icici,18.519948,73.778655,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511936,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3736416243,Icici Bank,18.47645,73.823382,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3736416243,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5695616152,Icici Bank,18.458152,73.807192,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5695616152,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11330873668,Icici Bank,18.47024,73.82087,bank_atm,bank,"Goel Ganga road, Pune, 411041",N/A,,finance|money|banking,openstreetmap,11330873668,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11909430134,Icici Bank,18.475804,73.817536,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11909430134,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3583518401,Icici Bank,18.469103,73.888468,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3583518401,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3583535426,Icici Bank,18.462847,73.890116,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3583535426,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1534393699,Icici Bank,18.51882,73.830977,bank_atm,bank,"Bhandarkar Path, 411004",N/A,,finance|money|banking,openstreetmap,1534393699,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1741076955,Icici Bank,18.554455,73.809654,bank_atm,bank,"Plot 1A, ITI Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,1741076955,N/A,N/A,Mo-Fr 09:00-18:00; Sa 09:00-14:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2049539521,Icici Bank,18.527172,73.829606,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2049539521,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2141596375,Icici Bank,18.507629,73.795881,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2141596375,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2165021344,Icici Bank,18.500681,73.82429,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2165021344,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2293345346,Icici Bank,18.499971,73.801923,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2293345346,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2784757579,Icici Bank,18.505081,73.817709,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2784757579,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2973207926,Icici Bank,18.554838,73.796144,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2973207926,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496178,Icici Bank,18.519986,73.77866,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496178,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496179,Icici Bank,18.544353,73.780201,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496179,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511968,Icici Bank,18.55483,73.796215,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511968,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3708768761,Icici Bank,18.509197,73.821509,bank_atm,bank,"Laxman Villa, Paud Road, Pune, 411029",N/A,,finance|money|banking,openstreetmap,3708768761,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6040932885,Icici Bank,18.560394,73.807271,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6040932885,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692828663,Icici Bank,18.559186,73.790799,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10692828663,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11159366023,Icici Bank,18.557288,73.794111,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11159366023,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11245210009,Icici Bank,18.561323,73.78698,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11245210009,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1738337108,Icici Bank,18.488983,73.856314,bank_atm,bank,Satara Road,N/A,,finance|money|banking,openstreetmap,1738337108,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1796882692,Icici Bank,18.540454,73.885229,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1796882692,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1911011643,Icici Bank,18.513088,73.862517,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1911011643,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_1911012911,Icici Bank,18.515298,73.86587,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1911012911,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_2183569908,Icici Bank,18.565859,73.918049,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2183569908,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2801208431,Icici Bank,18.50253,73.839316,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2801208431,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985546,Icici Bank,18.517032,73.854006,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2859985546,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985585,Icici Bank,18.523622,73.846552,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2859985585,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3337848266,Icici Bank,18.511751,73.837078,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3337848266,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_4225717790,Icici Bank,18.524669,73.843069,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4225717790,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4677869894,Icici Bank,18.512585,73.850228,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4677869894,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_4678263089,Icici Bank,18.518414,73.859608,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4678263089,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438809,Icici Bank,18.518333,73.83471,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5832438809,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438810,Icici Bank,18.518334,73.834825,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5832438810,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832462252,Icici Bank,18.50705,73.844555,bank_atm,atm,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832462252,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_5832547680,Icici Bank,18.504254,73.854836,bank_atm,atm,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832547680,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832548487,Icici Bank,18.507021,73.851314,bank_atm,atm,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832548487,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_5832548488,Icici Bank,18.50707,73.851249,bank_atm,bank,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832548488,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6145441617,Icici Bank,18.51172,73.837,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6145441617,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6244656793,Icici Bank,18.518624,73.849995,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6244656793,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6250078443,Icici Bank,18.542733,73.838431,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6250078443,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7008374416,Icici Bank,18.522425,73.866525,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7008374416,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7008397193,Icici Bank,18.533295,73.873822,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7008397193,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021203830,Icici Bank,18.546933,73.886481,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7021203830,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10596064428,Icici Bank,18.505829,73.862642,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10596064428,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11370940871,Icici Bank,18.511497,73.848277,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11370940871,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13633283891,Icici Bank,18.55274,73.892147,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13633283891,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183587153,Icici Bank,18.559362,73.931482,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2183587153,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2183587175,Icici Bank,18.548367,73.936237,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2183587175,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4082977297,Icici Bank,18.55301,73.949021,bank_atm,bank,"World Trade Center, Kharadi, Pune, 411014",N/A,,finance|money|banking,openstreetmap,4082977297,https://www.icicibank.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10156257892,Icici Bank,18.52199,73.931801,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10156257892,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11811105986,Icici Bank,18.533798,73.930042,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11811105986,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9201939117,Icici Bank,18.609825,73.911122,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,9201939117,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10747753744,Icici Bank,18.598132,73.901027,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10747753744,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5839779140,Icici Bank - Karve Nagar Branch,18.491294,73.821827,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5839779140,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1271226856,Icici Bank Atm,18.509773,73.814124,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1271226856,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1202781535,Idbi Bank,18.542441,73.790808,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1202781535,https://www.idbi.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1883149597,Idbi Bank,18.507517,73.822939,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1883149597,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511969,Idbi Bank,18.560796,73.810734,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511969,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5031488750,Idbi Bank,18.496201,73.809266,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5031488750,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111011973,Idbi Bank,18.540855,73.830169,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6111011973,https://www.idbi.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111212660,Idbi Bank,18.565531,73.804015,bank_atm,bank,"Nagras Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,6111212660,N/A,N/A,Mo-Su 10:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6271990590,Idbi Bank,18.545332,73.822872,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6271990590,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12770255668,Idbi Bank,18.557248,73.793473,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12770255668,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13622256824,Idbi Bank,18.512046,73.774959,bank_atm,bank,"Lane 2, Bavdhan, Pune, 411021",N/A,,finance|money|banking,openstreetmap,13622256824,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_636377478,Idbi Bank,18.566598,73.918706,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,636377478,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1534460856,Idbi Bank,18.517944,73.842496,bank_atm,bank,"Apte Road, 411004",N/A,,finance|money|banking,openstreetmap,1534460856,https://www.idbi.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2837712466,Idbi Bank,18.511095,73.843067,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2837712466,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2858176021,Idbi Bank,18.513321,73.847918,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2858176021,https://www.idbi.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3647377242,Idbi Bank,18.526461,73.841708,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3647377242,https://www.idbi.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1666439281,Idbi Bank,18.574348,73.884432,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1666439281,https://www.idbi.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5815976618,Idfc First Bank,18.520048,73.830788,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5815976618,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6038661589,Idfc First Bank,18.555675,73.808315,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6038661589,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_8377820022,Idfc First Bank,18.557172,73.95211,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,8377820022,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12484004502,Idfc First Bank - Baner Branch,18.552219,73.793287,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12484004502,https://nearme.idfcfirstbank.com/,N/A,Mo-Sa 09:30-16:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6186406657,Indian Bank,18.546902,73.901193,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6186406657,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11370957570,Indian Bank,18.511685,73.8502,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11370957570,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6367617067,Indian Bank Atm,18.461035,73.82499,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6367617067,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4666613989,Indian Overseas Bank,18.509052,73.831742,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4666613989,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5600220879,Indian Overseas Bank,18.48589,73.853759,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5600220879,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6145662566,Indian Overseas Bank,18.516464,73.8417,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6145662566,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6893199115,Indian Serological Institute Blood Bank,18.506162,73.839983,bank_atm,blood_bank,411030,N/A,,finance|money|banking,openstreetmap,6893199115,N/A,02024535244 02024538453,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_9998965648,Indusbank,18.478512,73.890351,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,9998965648,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2181156659,Indusind Bank,18.500362,73.822449,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2181156659,https://www.indusind.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6113341873,Indusind Bank,18.507628,73.795973,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6113341873,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6116153824,Indusind Bank,18.565182,73.774262,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6116153824,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6116153825,Indusind Bank,18.565188,73.774218,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6116153825,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9863982565,Indusind Bank,18.55963,73.790111,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,9863982565,N/A,N/A,N/A,N/A,N/A,no,N/A,N/A,False,False,,Bank / ATM
+OPE_10692853020,Indusind Bank,18.559496,73.788767,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692853020,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930247,Indusind Bank,18.503964,73.901126,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2868930247,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5213712131,Indusind Bank,18.563903,73.913852,bank_atm,bank,"209, Viman Nagar Road, 41104",N/A,,finance|money|banking,openstreetmap,5213712131,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832548494,Indusind Bank,18.508493,73.849609,bank_atm,atm,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832548494,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6186406677,Indusind Bank,18.544984,73.905797,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6186406677,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6884803589,Inlaks Budharani Hospital Blood Bank,18.534345,73.887426,bank_atm,blood_bank,"Pune, 411001",N/A,,finance|money|banking,openstreetmap,6884803589,N/A,02066099999 02066099727 02066099703,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6145520663,Jana Small Finance Bank,18.505901,73.832571,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6145520663,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7157834581,Janaseva Sahakari Bank,18.500655,73.935962,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,7157834581,N/A,N/A,"Mo-Fr 10:00-13:30,14:30-15:00",N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021193003,Janaseva Sahakari Bank Ltd.,18.551986,73.89719,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7021193003,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511967,Janata Sahakari Bank,18.559523,73.790576,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511967,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_217773609,Janata Sahakari Bank,18.516484,73.849728,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,217773609,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496180,Janata Sahakari Bank Baner Branch,18.559551,73.790578,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496180,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6185529693,Janata Sahakari Bank Ltd. Pune,18.523505,73.846199,bank_atm,bank,Ghole Road,N/A,,finance|money|banking,openstreetmap,6185529693,N/A,N/A,Mo-Sa 09:30-18:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3337848239,"Janata Sahakari Bank, Kothrud Branch",18.512321,73.83906,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3337848239,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6904997040,Jehangir Hospital Blood Bank,18.53033,73.876619,bank_atm,blood_bank,"Pune, 411001",N/A,,finance|money|banking,openstreetmap,6904997040,https://jehangirhospital.com/,02066811722 02066811723,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_9455705338,Karnataka Bank,18.516598,73.771949,bank_atm,bank,"Patil nagar road, Pune, 411021",N/A,,finance|money|banking,openstreetmap,9455705338,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2537620600,Karur Vysya Bank,18.503067,73.818513,bank_atm,bank,"Karve Road, Pune, 411038",N/A,,finance|money|banking,openstreetmap,2537620600,https://www.kvb.co.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6906524650,Kem Hospital Blood Bank,18.520083,73.866676,bank_atm,blood_bank,"Pune, 411001",N/A,,finance|money|banking,openstreetmap,6906524650,N/A,02026125600 02066037324 02026125603,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1884443871,Kotak Mahindra Bank,18.510682,73.817589,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1884443871,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2858176036,Kotak Mahindra Bank,18.503858,73.821013,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2858176036,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111212663,Kotak Mahindra Bank,18.565493,73.804319,bank_atm,bank,"Nagras Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,6111212663,N/A,N/A,Mo-Sa 10:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6131097705,Kotak Mahindra Bank,18.560381,73.807906,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6131097705,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6145520664,Kotak Mahindra Bank,18.503882,73.830717,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6145520664,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9473481666,Kotak Mahindra Bank,18.511935,73.782506,bank_atm,bank,"Pashan-Bavdhan Road, Pune, 411021",N/A,,finance|money|banking,openstreetmap,9473481666,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11110356722,Kotak Mahindra Bank,18.560699,73.806215,bank_atm,bank,"Ramchandra Gayakwad Path, Pune, 411007",N/A,,finance|money|banking,openstreetmap,11110356722,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12484059201,Kotak Mahindra Bank,18.551482,73.791456,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12484059201,http://kotak.com,N/A,Mo-Sa 10:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_255873671,Kotak Mahindra Bank,18.510417,73.816972,bank_atm,bank,"Paud Road, Pune, 411038",N/A,,finance|money|banking,openstreetmap,255873671,http://www.kotak.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1534419509,Kotak Mahindra Bank,18.517956,73.837515,bank_atm,bank,"Bhandarkar Road, 411004",N/A,,finance|money|banking,openstreetmap,1534419509,http://www.kotak.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2036482786,Kotak Mahindra Bank,18.485394,73.900022,bank_atm,bank,"Salunkhe Vihar Road, Pune, 411048",N/A,,finance|money|banking,openstreetmap,2036482786,http://www.kotak.com,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3647377483,Kotak Mahindra Bank,18.525641,73.841442,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3647377483,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832579350,Kotak Mahindra Bank,18.514015,73.847022,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5832579350,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6186406669,Kotak Mahindra Bank,18.546038,73.906386,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6186406669,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6201856583,Kotak Mahindra Bank,18.53323,73.876741,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6201856583,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6271990645,Kotak Mahindra Bank,18.533188,73.834911,bank_atm,bank,"Prime Centre, Gokhale Path, Model Colony, Shivajinagar, Pune, 411016",N/A,,finance|money|banking,openstreetmap,6271990645,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7008374415,Kotak Mahindra Bank,18.520208,73.863993,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7008374415,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7008380630,Kotak Mahindra Bank,18.535593,73.876257,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7008380630,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021208812,Kotak Mahindra Bank,18.539728,73.893923,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7021208812,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11707584169,Kotak Mahindra Bank - Tilak Road Branch,18.506392,73.852406,bank_atm,bank,"Lokmanya Tilak Marg, 411030",N/A,,finance|money|banking,openstreetmap,11707584169,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5803624706,Lokmanya Multipurpose Co-Op Society,18.492365,73.825298,bank_atm,bank,411052,N/A,,finance|money|banking,openstreetmap,5803624706,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6131097703,"Lokmanya Multipurpose Co-Op Society Ltd., Aundh Branch",18.560378,73.807846,bank_atm,bank,"Ramchandra Gayakwad Path, Pune, 411007",N/A,,finance|money|banking,openstreetmap,6131097703,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11546228216,Lokmanya Multipurpose Co-Op. Society Ltd.,18.56047,73.80293,bank_atm,bank,"New DP Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,11546228216,https://www.lokmanyasociety.org/,+91 915 635 6366,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12357449939,Lokmanya Multipurpose Cooperative Society,18.505527,73.901279,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12357449939,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12880272740,Lokmanya Patasanstha,18.495963,73.809195,bank_atm,bank,"Gandhibhavan Road, Pune, 411038",N/A,,finance|money|banking,openstreetmap,12880272740,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6906502281,M/S. Vidyashree Charitable Trusts Om Blood Bank,18.52344,73.8642,bank_atm,blood_bank,Pune,N/A,,finance|money|banking,openstreetmap,6906502281,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_824237873,Mahanagar Co-Operative Bank,18.624325,73.856023,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,824237873,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11330873667,Mahesh Bank,18.470268,73.820687,bank_atm,bank,"Sinhagad Road, Pune, 411041",N/A,,finance|money|banking,openstreetmap,11330873667,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4225083191,Mahesh Sahkari Bank Ltd,18.557616,73.804724,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4225083191,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6906524649,Noble Hospital Blood Bank,18.505039,73.926994,bank_atm,blood_bank,"Pune, 411013",N/A,,finance|money|banking,openstreetmap,6906524649,N/A,02066285050 02066285199,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3657496188,Oriental Bank Of Commerce,18.541331,73.793252,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496188,https://www.obcindia.co.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1534448614,Oriental Bank Of Commerce,18.513835,73.837634,bank_atm,bank,"Prabhat Road, 411004",N/A,,finance|money|banking,openstreetmap,1534448614,https://www.obcindia.co.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5554773710,Pdcc Bank,18.532168,73.849272,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5554773710,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13055758303,Pdcc Bank,18.492394,73.85302,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13055758303,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5554773711,"Pdcc Bank, Agricultural College Branch",18.532208,73.84926,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5554773711,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496190,Pmc Bank,18.541021,73.792595,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496190,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6897390629,Poona Serological Institute Blood Bank,18.517323,73.864583,bank_atm,blood_bank,"Pune, 411011",N/A,,finance|money|banking,openstreetmap,6897390629,N/A,02026133387 02026141719 02027472876,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4666543291,Pune Jila Sahkari Bank,18.500897,73.845677,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4666543291,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5839779123,Pune People'S Bank,18.490846,73.823245,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5839779123,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11546228232,Pune People'S Co-Op. Bank Ltd.,18.561997,73.802677,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11546228232,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6128879908,Pune Sahakari Bank Ltd.,18.564348,73.779931,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6128879908,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692785979,Pune Sahakari Bank Ltd.,18.56439,73.780791,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692785979,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4678217592,Pune Urban Bank,18.518698,73.858787,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4678217592,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4247914694,Punjab Bank,18.513922,73.834871,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4247914694,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5695621979,Punjab National Bank,18.45976,73.786123,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5695621979,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511940,Punjab National Bank,18.537571,73.795919,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511940,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6130922004,Punjab National Bank,18.553876,73.804767,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6130922004,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10250086751,Punjab National Bank,18.554051,73.804803,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10250086751,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3837531789,Punjab National Bank,18.519109,73.845273,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3837531789,N/A,N/A,N/A,N/A,N/A,no,N/A,N/A,False,False,,Bank / ATM
+OPE_5600220874,Punjab National Bank,18.485941,73.855305,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5600220874,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_10016346067,Punjab National Bank,18.519963,73.84106,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10016346067,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13598461932,Punjab National Bank,18.528779,73.875074,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,13598461932,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1423426157,Punjab National Bank,18.513856,73.837709,bank_atm,bank,"lane 5, opp irani cafe, Pune, 411004",N/A,,finance|money|banking,openstreetmap,1423426157,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1532853001,Punjab National Bank,18.509471,73.928625,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1532853001,https://www.pnbindia.in,N/A,N/A,N/A,N/A,N/A,N/A,Category:Punjab National Bank,False,False,,Bank / ATM
+OPE_6893280448,R.G Gholap Memorial Blood Bank,18.48721,73.856964,bank_atm,blood_bank,"Pune, 411009",N/A,,finance|money|banking,openstreetmap,6893280448,N/A,02065402140 9822442140 8554942140,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_4508436590,Rajarshi Sahu Bank,18.478492,73.824034,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4508436590,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10807153860,Rajashri Shahu Bank,18.464428,73.857865,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10807153860,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11609699355,Ramrajya Sahakari Bank,18.471566,73.863781,bank_atm,bank,"Bibvewadi, Pune,Maharashtra, India, 411037",N/A,,finance|money|banking,openstreetmap,11609699355,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11111744784,Rbl Bank,18.554811,73.799894,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11111744784,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438794,Samarth Sahakari Bank,18.518121,73.838519,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5832438794,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_5832438828,Sampada Bank,18.502433,73.816243,bank_atm,bank,"Pune, 411038",N/A,,finance|money|banking,openstreetmap,5832438828,N/A,N/A,"Mo-Sa 09:30-13:00,16:30-19:00",N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3698221213,Sampada Sahakari Bank,18.467302,73.818644,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3698221213,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657511964,Saraswat Bank,18.555288,73.796162,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3657511964,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3710571718,Saraswat Bank,18.508063,73.830572,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3710571718,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5818757673,Saraswat Bank,18.493579,73.825204,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5818757673,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6113341868,Saraswat Bank,18.507648,73.795228,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6113341868,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6113341869,Saraswat Bank,18.507646,73.79532,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6113341869,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6135560591,Saraswat Bank,18.558001,73.80882,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6135560591,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930218,Saraswat Bank,18.504123,73.900793,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2868930218,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438790,Saraswat Bank,18.517765,73.841169,bank_atm,bank,Pune,N/A,,finance|money|banking,openstreetmap,5832438790,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496194,Saraswat Bank Baner Branch,18.555302,73.796128,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496194,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496195,Saraswat Bank Bavdhan Branch,18.519171,73.778702,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496195,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3657496196,Saraswat Bank Pashan Branch,18.541372,73.793024,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3657496196,N/A,N/A,"Mo-Fr 09:00-18:00; Sa,Su 09:00-12:00",N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5213712825,Saraswat Bank Viman Nagar,18.564069,73.913894,bank_atm,bank,"209, Viman Nagar Road, 411014",N/A,,finance|money|banking,openstreetmap,5213712825,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2868930219,"Saraswat Bank, Dahanukar Colony Branch",18.49591,73.808853,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2868930219,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5122377921,Saraswat Cooperative Bank,18.516316,73.853906,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5122377921,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4359515992,Sarawat Bank,18.493538,73.825199,bank_atm,atm,411052,N/A,,finance|money|banking,openstreetmap,4359515992,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1311585979,Sarswat Bank,18.476919,73.818173,bank_atm,bank,"SunCity Road, 411051",N/A,,finance|money|banking,openstreetmap,1311585979,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6881057799,Sasoon Sarvopchar Hospital Blood Bank,18.526057,73.871697,bank_atm,blood_bank,"Pune, 411021",N/A,,finance|money|banking,openstreetmap,6881057799,N/A,02026126868 02024480431,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_3681734382,Sbi,18.458971,73.911879,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3681734382,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11329207923,Sbi Atm,18.452467,73.79335,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11329207923,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2049539520,Sbi Atm,18.525523,73.829549,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2049539520,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5796441162,Sbi Atm,18.492736,73.825042,bank_atm,atm,411052,N/A,,finance|money|banking,openstreetmap,5796441162,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3523419263,Sbi Intouch,18.565198,73.774054,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3523419263,http://onlinesbi.in,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5584430309,Sbi Intouch,18.53878,73.885701,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5584430309,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13637491798,Sbm Bank,18.530013,73.851345,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13637491798,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692759689,Seva Vikas Co-Operative Bank,18.564267,73.776884,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692759689,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3689571886,Shamrao Vithal Co-Operative (Svc) Bank Ltd.,18.47089,73.820938,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3689571886,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692842123,Shivajiorao Bhosale Sahakari Bank,18.561616,73.784831,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692842123,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6893280446,Smt Kashibai Navale General Hospital Blood Bank,18.45627,73.820792,bank_atm,blood_bank,"Pune, 411041",N/A,,finance|money|banking,openstreetmap,6893280446,N/A,020241062299 02024699884 02024106274,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_360281477,Solapur Janta Sahakari Bank,18.453328,73.811886,bank_atm,bank,"22, Dhayari Road, Pune, 411041",N/A,,finance|money|banking,openstreetmap,360281477,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6199246411,Standard Chartered,18.530973,73.82983,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6199246411,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10748147345,Standard Chartered,18.565731,73.804541,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10748147345,N/A,N/A,Mo-Sa 09:30-16:30,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4725214138,Standard Chartered,18.539579,73.886984,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4725214138,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13619851796,State Bank,18.555562,73.897029,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13619851796,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3997034216,State Bank Atm,18.546023,73.790481,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3997034216,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1309316799,State Bank Of India,18.474066,73.81354,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1309316799,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3724168560,State Bank Of India,18.460671,73.821602,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3724168560,http://onlinesbi.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3724168561,State Bank Of India,18.460581,73.821592,bank_atm,bank,411041,N/A,,finance|money|banking,openstreetmap,3724168561,https://sbi.co.in/,02024699191,Mo-Fr 09:30-15:30,N/A,Vadgaon Branch,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3728602865,State Bank Of India,18.481995,73.826195,bank_atm,bank,"Sinhagad Road, 411051",N/A,,finance|money|banking,openstreetmap,3728602865,https://sbi.co.in/,02024345335,Mo-Fr 09:30-15:30,N/A,Hingne (Khurd) Vithalwadi Branch,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4805806523,State Bank Of India,18.457719,73.806713,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4805806523,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7182051316,State Bank Of India,18.470104,73.900415,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,7182051316,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10576182036,State Bank Of India,18.470924,73.889161,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10576182036,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11609730480,State Bank Of India,18.470998,73.863884,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,11609730480,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_352928627,State Bank Of India,18.477987,73.89071,bank_atm,bank,"NIBM Road, Pune, 411048",N/A,,finance|money|banking,openstreetmap,352928627,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1041720760,State Bank Of India,18.470623,73.889242,bank_atm,bank,"Kondhwa Road, Pune, 411048",N/A,,finance|money|banking,openstreetmap,1041720760,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2049539523,State Bank Of India,18.525574,73.829548,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2049539523,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2086884762,State Bank Of India,18.545098,73.808023,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2086884762,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Bank / ATM
+OPE_2141596624,State Bank Of India,18.507651,73.795927,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2141596624,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2164185725,State Bank Of India,18.498377,73.81414,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2164185725,N/A,N/A,N/A,N/A,N/A,no,N/A,N/A,False,False,,Bank / ATM
+OPE_2165021347,State Bank Of India,18.50074,73.824452,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2165021347,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2165021348,State Bank Of India,18.507015,73.828452,bank_atm,bank,"Karve Road, Pune, 411004",N/A,,finance|money|banking,openstreetmap,2165021348,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2165021349,State Bank Of India,18.507047,73.828551,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2165021349,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2420756048,State Bank Of India,18.517086,73.780757,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2420756048,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2801208466,State Bank Of India,18.511075,73.782374,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2801208466,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3017579734,State Bank Of India,18.496174,73.804157,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3017579734,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3708768518,State Bank Of India,18.509235,73.821501,bank_atm,bank,"Laxman Villa, Paud Road, Pune, 411029",N/A,,finance|money|banking,openstreetmap,3708768518,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4548787852,State Bank Of India,18.516707,73.781606,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4548787852,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5803624713,State Bank Of India,18.492623,73.825043,bank_atm,bank,411052,N/A,,finance|money|banking,openstreetmap,5803624713,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111011974,State Bank Of India,18.54079,73.830209,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6111011974,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111132438,State Bank Of India,18.560801,73.810984,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6111132438,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6128879905,State Bank Of India,18.564299,73.781294,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6128879905,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_8090245172,State Bank Of India,18.565711,73.804696,bank_atm,bank,"Nagras Road, Pune, 411007",N/A,,finance|money|banking,openstreetmap,8090245172,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_10238002335,State Bank Of India,18.553693,73.806561,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10238002335,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692781055,State Bank Of India,18.561642,73.785759,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10692781055,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692849149,State Bank Of India,18.562053,73.785113,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10692849149,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_359962264,State Bank Of India,18.539632,73.816197,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,359962264,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2837712465,State Bank Of India,18.511054,73.843068,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2837712465,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2858176214,State Bank Of India,18.511642,73.845745,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2858176214,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2858176216,State Bank Of India,18.513485,73.85085,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,2858176216,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2929239719,State Bank Of India,18.503347,73.855866,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2929239719,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3837531780,State Bank Of India,18.514724,73.84567,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3837531780,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4547356689,State Bank Of India,18.546382,73.838631,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,4547356689,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832548493,State Bank Of India,18.508265,73.849895,bank_atm,atm,"Pune, 411030",N/A,,finance|money|banking,openstreetmap,5832548493,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832579351,State Bank Of India,18.514009,73.846973,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5832579351,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6168664136,State Bank Of India,18.53711,73.885826,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6168664136,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6186406675,State Bank Of India,18.545095,73.909852,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6186406675,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6186406676,State Bank Of India,18.545072,73.909954,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6186406676,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6201928764,State Bank Of India,18.555557,73.897019,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6201928764,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6201928765,State Bank Of India,18.559992,73.891401,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6201928765,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6250078438,State Bank Of India,18.536419,73.851137,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6250078438,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021209002,State Bank Of India,18.539362,73.893477,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,7021209002,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_8378425319,State Bank Of India,18.529344,73.858011,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,8378425319,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_8829660545,State Bank Of India,18.563378,73.918284,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,8829660545,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9354875893,State Bank Of India,18.5162,73.843305,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,9354875893,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10054090699,State Bank Of India,18.531312,73.844386,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10054090699,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10596065369,State Bank Of India,18.505885,73.862629,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10596065369,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_168423945,State Bank Of India,18.501586,73.873516,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,168423945,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4082972713,State Bank Of India,18.552969,73.949611,bank_atm,bank,"World Trade Center, Kharadi, Pune, 411014",N/A,,finance|money|banking,openstreetmap,4082972713,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4315073051,State Bank Of India,18.493473,73.932627,bank_atm,bank,"Sasane Nagar Road, 411028",N/A,,finance|money|banking,openstreetmap,4315073051,N/A,N/A,Mo-Sa 10:00-16:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1666439267,State Bank Of India,18.572928,73.883551,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,1666439267,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9201935952,State Bank Of India,18.609784,73.911096,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,9201935952,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9202103491,State Bank Of India,18.604319,73.909752,bank_atm,bank,"Porwal Road, Pune, 411047",N/A,,finance|money|banking,openstreetmap,9202103491,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10610431800,State Bank Of India,18.579089,73.876604,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10610431800,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1202794720,State Bank Of India Pashan Branch,18.543613,73.78662,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1202794720,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111357578,Svc Bank,18.502283,73.801794,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6111357578,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6111357579,Svc Bank,18.502276,73.801853,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6111357579,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6130922024,Svc Bank,18.56206,73.802666,bank_atm,bank,"New DP Road, Pune, 411045",N/A,,finance|money|banking,openstreetmap,6130922024,https://www.svcbank.com,+91 20 2729 9110+91 20 2729 9120+91 20 2729 9130,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3837531777,Svc Bank,18.518281,73.843987,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3837531777,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692770537,Svc Co-Operative Bank,18.565436,73.782339,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692770537,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10683579347,Svc Co-Operative Bank Ltd,18.470981,73.863907,bank_atm,bank,"Swami Vivekanand Marg, Bibvewadi, Pune,Maharashtra, India, 411037",N/A,,finance|money|banking,openstreetmap,10683579347,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_248993374,Syndicate Bank,18.509889,73.829823,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,248993374,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3377423145,Syndicate Bank,18.525891,73.876288,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,3377423145,https://www.syndicatebank.in,N/A,N/A,N/A,N/A,N/A,N/A,Category:Syndicate Bank,False,False,,Bank / ATM
+OPE_5815976638,The Dharampeth Mahila Multistate Coop Society,18.501947,73.814068,bank_atm,bank,"Pune, 411038",N/A,,finance|money|banking,openstreetmap,5815976638,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2859985526,"The Karad Urban Co-Op Bank Ltd., Kothrud Branch",18.504852,73.821798,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2859985526,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6111357575,The Malkapur Urban Co-Op Bank Ltd,18.503102,73.799624,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6111357575,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6888325045,The New Century Medical & Education Foundation Trust Blood Bank & Aphaeresis Centre,18.564619,73.801013,bank_atm,blood_bank,"Pune, 411007",N/A,,finance|money|banking,openstreetmap,6888325045,N/A,2046608585,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6111357576,The Yavatmal Urban Co-Op Bank Ltd,18.503079,73.799785,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6111357576,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4225083192,Tjsb Bank,18.557612,73.804596,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4225083192,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5815976627,Tjsb Bank,18.501979,73.814491,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,5815976627,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832579357,Tjsb Bank,18.513068,73.857544,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5832579357,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5815976637,Uco Bank,18.501945,73.814116,bank_atm,bank,"Pune, 411038",N/A,,finance|money|banking,openstreetmap,5815976637,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11862030072,Uco Bank,18.559676,73.911437,bank_atm,bank,"Viman Nagar Road, Pune",N/A,,finance|money|banking,openstreetmap,11862030072,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11939140549,Udyam Sahakari Bank Ltd,18.47,73.864135,bank_atm,bank,"Swami Vivekanand Marg, Bibvewadi, Pune,Maharashtra, India, 411037",N/A,,finance|money|banking,openstreetmap,11939140549,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692790205,Udyam Vikas Sahakari Bank,18.52336,73.844051,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10692790205,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10250083377,Ujjivan Small Finance Bank,18.554935,73.804683,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10250083377,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10593829022,Ujjivan Small Finance Bank Bank,18.471592,73.889216,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10593829022,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3740998698,Union Bank,18.442536,73.799246,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3740998698,N/A,N/A,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Bank / ATM
+OPE_6199246422,Union Bank,18.507147,73.80754,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6199246422,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10692814351,Union Bank,18.561764,73.783651,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,10692814351,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6241949053,Union Bank,18.524291,73.864313,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,6241949053,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6241949054,Union Bank,18.524225,73.864256,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6241949054,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3719797430,Union Bank Of India,18.442448,73.798938,bank_atm,bank,411041,N/A,,finance|money|banking,openstreetmap,3719797430,https://www.unionbankofindia.co.in/,02024380064,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_1202781542,Union Bank Of India,18.544249,73.783065,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,1202781542,https://www.unionbankofindia.co.in/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_4730189289,Union Bank Of India,18.499774,73.854095,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,4730189289,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021204605,Union Bank Of India,18.54107,73.88569,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,7021204605,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13598461933,Union Bank Of India,18.528743,73.875079,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,13598461933,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13624345015,Union Bank Of India,18.551686,73.895219,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13624345015,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_13629462628,Union Bank Of India,18.499815,73.94922,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,13629462628,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_12484059701,Unity Small Finance Bank - Pashan,18.550535,73.791299,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,12484059701,http://theunitybank.com,N/A,Mo-Sa 10:00-17:00,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11159366031,Utkarsh Small Finance Bank,18.558041,73.79308,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,11159366031,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5832438826,Vidya Sahakari Bank,18.502496,73.816626,bank_atm,bank,"Pune, 411038",N/A,,finance|money|banking,openstreetmap,5832438826,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_6199246414,Vidya Sahakari Bank,18.527732,73.830033,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,6199246414,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_10250092094,Vidya Sahakari Bank,18.553157,73.808813,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,10250092094,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021208122,Vijaya Bank,18.546505,73.901373,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,7021208122,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_2858176027,Vishweshwar Bank,18.507939,73.834899,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,2858176027,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021195551,Western Union,18.539689,73.887266,bank_atm,money_transfer,N/A,N/A,,finance|money|banking,openstreetmap,7021195551,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_7021207071,Western Union,18.539727,73.893744,bank_atm,money_transfer,N/A,N/A,,finance|money|banking,openstreetmap,7021207071,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_9863982569,Yes Bank,18.559613,73.79019,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,9863982569,N/A,N/A,N/A,N/A,N/A,no,N/A,N/A,False,False,,Bank / ATM
+OPE_3750411928,Yes Bank,18.522931,73.848422,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3750411928,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3837531783,Yes Bank,18.517287,73.843748,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3837531783,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_5600220872,Yes Bank,18.485953,73.855539,bank_atm,bank,N/A,N/A,,finance|money|banking,openstreetmap,5600220872,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_11861983581,Yes Bank,18.559438,73.911436,bank_atm,bank,"Viman Nagar Road, Pune",N/A,,finance|money|banking,openstreetmap,11861983581,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM
+OPE_3257658871,Yes Bank,18.518568,73.936825,bank_atm,atm,N/A,N/A,,finance|money|banking,openstreetmap,3257658871,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Bank / ATM

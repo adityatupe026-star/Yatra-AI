@@ -1,0 +1,18 @@
+# Core
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+
+# Jupyter (optional but useful)
+notebook
+
+# Utilities
+joblib
+
+ollama

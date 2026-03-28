@@ -1,0 +1,96 @@
+export const interestOptions = [
+  "Food",
+  "Culture",
+  "Nature",
+  "Adventure",
+  "Shopping",
+  "Luxury",
+  "Spiritual",
+  "Wildlife",
+  "Beach",
+  "Wellness",
+  "Road Trip",
+  "Nightlife",
+  "Photography",
+  "Family",
+  "Romance",
+];
+
+export const destinationPlaces = [
+  { name: "Agra", state: "Uttar Pradesh", region: "North", lat: 27.1751, lng: 78.0421, image: "https://images.pexels.com/photos/13688857/pexels-photo-13688857.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Taj Mahal sunrise, Mughal architecture and timeless marble symmetry.", tags: ["Culture", "Heritage", "Photography"], airport: "Agra Airport", rail: "Agra Cantt", road: "Yamuna Expressway", highlights: ["Taj Mahal", "Agra Fort", "Mehtab Bagh"] },
+  { name: "Jaipur", state: "Rajasthan", region: "North", lat: 26.9124, lng: 75.7873, image: "https://images.pexels.com/photos/34086724/pexels-photo-34086724.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Palaces, pink facades, bazaars and rooftop dinners.", tags: ["Culture", "Shopping", "Luxury"], airport: "Jaipur International Airport", rail: "Jaipur Junction", road: "NH 48", highlights: ["City Palace", "Hawa Mahal", "Amber Fort"] },
+  { name: "Udaipur", state: "Rajasthan", region: "North", lat: 24.5854, lng: 73.7125, image: "https://images.pexels.com/photos/28126077/pexels-photo-28126077.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Lake palaces, sunset boat rides and royal romance.", tags: ["Luxury", "Romance", "Culture"], airport: "Maharana Pratap Airport", rail: "Udaipur City", road: "NH 27", highlights: ["Lake Pichola", "City Palace", "Sajjangarh"] },
+  { name: "Jaisalmer", state: "Rajasthan", region: "North", lat: 26.9157, lng: 70.9083, image: "https://images.pexels.com/photos/34568382/pexels-photo-34568382.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Golden sandstone, desert camps and dramatic skies.", tags: ["Adventure", "Culture", "Photography"], airport: "Jaisalmer Airport", rail: "Jaisalmer Railway Station", road: "NH 11", highlights: ["Jaisalmer Fort", "Sam Sand Dunes", "Patwon Ki Haveli"] },
+  { name: "Varanasi", state: "Uttar Pradesh", region: "North", lat: 25.3176, lng: 82.9739, image: "https://images.pexels.com/photos/32998754/pexels-photo-32998754.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Ghat rituals, sacred riverfronts and a city of spiritual depth.", tags: ["Spiritual", "Culture", "Photography"], airport: "Lal Bahadur Shastri Airport", rail: "Varanasi Junction", road: "NH 19", highlights: ["Dashashwamedh Ghat", "Kashi Vishwanath", "Sarnath"] },
+  { name: "Rishikesh", state: "Uttarakhand", region: "North", lat: 30.0869, lng: 78.2676, image: "https://images.pexels.com/photos/6650502/pexels-photo-6650502.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Yoga by the Ganges, suspension bridges and rafting energy.", tags: ["Wellness", "Adventure", "Spiritual"], airport: "Jolly Grant Airport", rail: "Haridwar Junction", road: "NH 7", highlights: ["Lakshman Jhula", "Triveni Ghat", "River rafting"] },
+  { name: "Amritsar", state: "Punjab", region: "North", lat: 31.6340, lng: 74.8723, image: "https://images.pexels.com/photos/8564098/pexels-photo-8564098.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Golden Temple serenity with rich food culture.", tags: ["Spiritual", "Food", "Culture"], airport: "Sri Guru Ram Dass Jee Airport", rail: "Amritsar Junction", road: "NH 3", highlights: ["Golden Temple", "Jallianwala Bagh", "Wagah Border"] },
+  { name: "Shimla", state: "Himachal Pradesh", region: "North", lat: 31.1048, lng: 77.1734, image: "https://images.pexels.com/photos/28951426/pexels-photo-28951426.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Colonial charm, pine air and hillside promenades.", tags: ["Nature", "Family", "Road Trip"], airport: "Shimla Airport", rail: "Kalka-Shimla line", road: "NH 5", highlights: ["Mall Road", "Jakhoo Temple", "Toy train"] },
+  { name: "Srinagar", state: "Jammu and Kashmir", region: "North", lat: 34.0837, lng: 74.7973, image: "https://images.pexels.com/photos/16196742/pexels-photo-16196742.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Houseboats, mountain reflections and quiet lake mornings.", tags: ["Nature", "Romance", "Luxury"], airport: "Srinagar Airport", rail: "Srinagar Station", road: "NH 44", highlights: ["Dal Lake", "Mughal Gardens", "Old Srinagar"] },
+  { name: "Leh", state: "Ladakh", region: "Himalaya", lat: 34.1526, lng: 77.5771, image: "https://images.pexels.com/photos/17033848/pexels-photo-17033848.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "High-altitude roads, monasteries and dramatic silence.", tags: ["Adventure", "Road Trip", "Photography"], airport: "Kushok Bakula Rimpochee Airport", rail: "Nearest rail: Jammu Tawi", road: "Leh-Manali Highway", highlights: ["Shanti Stupa", "Thiksey Monastery", "Magnetic Hill"] },
+  { name: "Goa", state: "Goa", region: "West", lat: 15.2993, lng: 74.1240, image: "https://images.pexels.com/photos/32262472/pexels-photo-32262472.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Beaches, sunsets, nightlife and boutique stays.", tags: ["Beach", "Nightlife", "Food"], airport: "Manohar International Airport", rail: "Madgaon Junction", road: "NH 66", highlights: ["Anjuna", "Fontainhas", "Dudhsagar Falls"] },
+  { name: "Mumbai", state: "Maharashtra", region: "West", lat: 19.0760, lng: 72.8777, image: "https://images.pexels.com/photos/32295752/pexels-photo-32295752.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Sea-facing drives, heritage icons and after-dark energy.", tags: ["Food", "Nightlife", "Culture"], airport: "Chhatrapati Shivaji Maharaj International Airport", rail: "CSMT", road: "Mumbai-Pune Expressway", highlights: ["Gateway of India", "Marine Drive", "Kala Ghoda"] },
+  { name: "Pune", state: "Maharashtra", region: "West", lat: 18.5204, lng: 73.8567, image: "https://images.pexels.com/photos/14584660/pexels-photo-14584660.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Fort escapes, cafes, culture hubs and easy weekend routes.", tags: ["Food", "Culture", "Road Trip"], airport: "Pune Airport", rail: "Pune Junction", road: "Mumbai-Pune Expressway", highlights: ["Aga Khan Palace", "Sinhagad Fort", "FC Road"] },
+  { name: "Rann of Kutch", state: "Gujarat", region: "West", lat: 23.7337, lng: 69.8597, image: "https://images.pexels.com/photos/34568382/pexels-photo-34568382.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "White salt desert, folk culture and moonlit spectacle.", tags: ["Photography", "Culture", "Adventure"], airport: "Bhuj Airport", rail: "Bhuj Railway Station", road: "NH 341", highlights: ["White Desert", "Kala Dungar", "Tent City"] },
+  { name: "Gir", state: "Gujarat", region: "West", lat: 21.1240, lng: 70.8242, image: "https://images.pexels.com/photos/6729033/pexels-photo-6729033.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Wildlife-focused journeys into lion country.", tags: ["Wildlife", "Adventure", "Family"], airport: "Rajkot Airport", rail: "Junagadh Junction", road: "NH 351G", highlights: ["Gir Safari", "Devalia Park", "Somnath detour"] },
+  { name: "Alappuzha", state: "Kerala", region: "South", lat: 9.4981, lng: 76.3388, image: "https://images.pexels.com/photos/32262506/pexels-photo-32262506.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Backwaters, houseboats and slow-water luxury.", tags: ["Nature", "Luxury", "Romance"], airport: "Cochin International Airport", rail: "Alappuzha Station", road: "NH 66", highlights: ["Houseboat cruise", "Vembanad Lake", "Alleppey Beach"] },
+  { name: "Munnar", state: "Kerala", region: "South", lat: 10.0889, lng: 77.0595, image: "https://images.pexels.com/photos/13045091/pexels-photo-13045091.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Tea estates, mist and rolling green silence.", tags: ["Nature", "Romance", "Photography"], airport: "Cochin International Airport", rail: "Aluva Station", road: "NH 85", highlights: ["Tea Museum", "Echo Point", "Eravikulam"] },
+  { name: "Kochi", state: "Kerala", region: "South", lat: 9.9312, lng: 76.2673, image: "https://images.pexels.com/photos/25738833/pexels-photo-25738833.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Harbor views, art spaces and old-world coastal trade history.", tags: ["Culture", "Food", "Luxury"], airport: "Cochin International Airport", rail: "Ernakulam Junction", road: "NH 66", highlights: ["Fort Kochi", "Chinese Fishing Nets", "Mattancherry"] },
+  { name: "Hampi", state: "Karnataka", region: "South", lat: 15.3350, lng: 76.4600, image: "https://images.pexels.com/photos/19437422/pexels-photo-19437422.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Temple ruins and surreal boulder landscapes.", tags: ["Culture", "Adventure", "Photography"], airport: "Hubballi Airport", rail: "Hospet Junction", road: "NH 50", highlights: ["Vijaya Vittala Temple", "Matanga Hill", "Virupaksha Temple"] },
+  { name: "Mysuru", state: "Karnataka", region: "South", lat: 12.2958, lng: 76.6394, image: "https://images.pexels.com/photos/16351949/pexels-photo-16351949.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Palace grandeur, gardens and a slower cultural rhythm.", tags: ["Culture", "Family", "Food"], airport: "Mysore Airport", rail: "Mysuru Junction", road: "NH 275", highlights: ["Mysore Palace", "Chamundi Hills", "Brindavan Gardens"] },
+  { name: "Coorg", state: "Karnataka", region: "South", lat: 12.3375, lng: 75.8069, image: "https://images.pexels.com/photos/15861022/pexels-photo-15861022.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Coffee estates, rain-lush roads and retreat energy.", tags: ["Nature", "Road Trip", "Wellness"], airport: "Kannur International Airport", rail: "Mysuru Junction", road: "NH 275", highlights: ["Abbey Falls", "Coffee estates", "Dubare"] },
+  { name: "Ooty", state: "Tamil Nadu", region: "South", lat: 11.4102, lng: 76.6950, image: "https://images.pexels.com/photos/18813128/pexels-photo-18813128.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Toy train curves, eucalyptus air and hill-station nostalgia.", tags: ["Nature", "Family", "Romance"], airport: "Coimbatore Airport", rail: "Udhagamandalam Station", road: "NH 181", highlights: ["Botanical Garden", "Ooty Lake", "Toy train"] },
+  { name: "Hyderabad", state: "Telangana", region: "South", lat: 17.3850, lng: 78.4867, image: "https://images.pexels.com/photos/3889843/pexels-photo-3889843.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Historic minarets, biryani trails and a modern tech-city pulse.", tags: ["Food", "Culture", "Nightlife"], airport: "Rajiv Gandhi International Airport", rail: "Secunderabad Junction", road: "NH 44", highlights: ["Charminar", "Golconda", "Old City food walk"] },
+  { name: "Kolkata", state: "West Bengal", region: "East", lat: 22.5726, lng: 88.3639, image: "https://images.pexels.com/photos/27695336/pexels-photo-27695336.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Trams, colonial facades, literary corners and layered food culture.", tags: ["Culture", "Food", "Photography"], airport: "Netaji Subhas Chandra Bose International Airport", rail: "Howrah Junction", road: "NH 16", highlights: ["Victoria Memorial", "Kumartuli", "Park Street"] },
+  { name: "Darjeeling", state: "West Bengal", region: "East", lat: 27.0410, lng: 88.2663, image: "https://images.pexels.com/photos/9443409/pexels-photo-9443409.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Tea gardens, toy train and Himalayan views.", tags: ["Nature", "Photography", "Family"], airport: "Bagdogra Airport", rail: "New Jalpaiguri", road: "NH 110", highlights: ["Tiger Hill", "Toy train", "Tea estates"] },
+  { name: "Gangtok", state: "Sikkim", region: "East", lat: 27.3389, lng: 88.6065, image: "https://images.pexels.com/photos/14082272/pexels-photo-14082272.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Monasteries, mountain roads and polished hill-town energy.", tags: ["Adventure", "Nature", "Spiritual"], airport: "Pakyong Airport", rail: "New Jalpaiguri", road: "NH 10", highlights: ["MG Marg", "Rumtek Monastery", "Tsomgo Lake"] },
+  { name: "Puri", state: "Odisha", region: "East", lat: 19.8135, lng: 85.8312, image: "https://images.pexels.com/photos/30507077/pexels-photo-30507077.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Temple town spirituality with broad sandy beaches.", tags: ["Spiritual", "Beach", "Family"], airport: "Bhubaneswar Airport", rail: "Puri Station", road: "NH 316", highlights: ["Jagannath Temple", "Puri Beach", "Konark detour"] },
+  { name: "Shillong", state: "Meghalaya", region: "East", lat: 25.5788, lng: 91.8933, image: "https://images.pexels.com/photos/32282209/pexels-photo-32282209.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Cloud-light landscapes, music culture and dramatic nearby viewpoints.", tags: ["Nature", "Road Trip", "Photography"], airport: "Shillong Airport", rail: "Guwahati Station", road: "NH 6", highlights: ["Shillong Peak", "Cafe trail", "Elephant Falls"] },
+  { name: "Kaziranga", state: "Assam", region: "East", lat: 26.5775, lng: 93.1711, image: "https://images.pexels.com/photos/6729033/pexels-photo-6729033.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Safari landscapes, wetlands and one-horned rhino country.", tags: ["Wildlife", "Adventure", "Photography"], airport: "Jorhat Airport", rail: "Furkating Junction", road: "NH 715", highlights: ["Jeep safari", "Rhino sightings", "Tea estate drives"] },
+  { name: "Andaman", state: "Andaman and Nicobar Islands", region: "Islands", lat: 11.6234, lng: 92.7265, image: "https://images.pexels.com/photos/32262473/pexels-photo-32262473.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Tropical blues, diving spots and island-paced days.", tags: ["Beach", "Adventure", "Romance"], airport: "Veer Savarkar Airport", rail: "No rail access", road: "Local ferry + road", highlights: ["Radhanagar Beach", "Cellular Jail", "Scuba diving"] },
+];
+
+export const featuredRoutes = [
+  { title: "Royal North Circuit", places: ["Jaipur", "Agra", "Varanasi"], vibe: "Heritage-heavy route with palaces, marble and river rituals." },
+  { title: "Arabian Sea Escape", places: ["Mumbai", "Goa", "Kochi"], vibe: "Urban luxury, coastal food and beach downtime." },
+  { title: "Highland Slow Travel", places: ["Munnar", "Coorg", "Ooty"], vibe: "Tea hills, coffee estates and cool-weather drives." },
+  { title: "Wild East Passage", places: ["Shillong", "Kaziranga", "Gangtok"], vibe: "Road trip landscapes, safari moments and mountain towns." },
+];
+
+export const majorEvents = [
+  { name: "Kumbh Mela", location: "Prayagraj, Haridwar, Ujjain, Nashik", timing: "Rotational dates", type: "Spiritual", image: "https://images.pexels.com/photos/32998754/pexels-photo-32998754.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "One of the world's largest spiritual gatherings, drawing pilgrims, rituals and riverfront ceremonies." },
+  { name: "Diwali in Varanasi", location: "Varanasi, Uttar Pradesh", timing: "October to November", type: "Festival of lights", image: "https://images.pexels.com/photos/8564098/pexels-photo-8564098.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Ghats, lamps, aarti ceremonies and dramatic night-time riverfront visuals." },
+  { name: "Pushkar Camel Fair", location: "Pushkar, Rajasthan", timing: "October to November", type: "Cultural fair", image: "https://images.pexels.com/photos/34568382/pexels-photo-34568382.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Camel trading, folk performances, desert colors and a highly photogenic fairground atmosphere." },
+  { name: "Hornbill Festival", location: "Kisama, Nagaland", timing: "December", type: "Tribal culture", image: "https://images.pexels.com/photos/32282209/pexels-photo-32282209.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "A major northeast cultural festival featuring dance, food, craft and tribal heritage showcases." },
+  { name: "Goa Carnival", location: "Goa", timing: "February to March", type: "Street festival", image: "https://images.pexels.com/photos/32262472/pexels-photo-32262472.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Parades, costumes, music and festive coastal energy before Lent." },
+  { name: "Rann Utsav", location: "Kutch, Gujarat", timing: "November to February", type: "Desert festival", image: "https://images.pexels.com/photos/34568382/pexels-photo-34568382.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Tent-city stays, folk culture, crafts and moonlit desert experiences in the white salt flats." },
+  { name: "Durga Puja", location: "Kolkata, West Bengal", timing: "September to October", type: "City-wide celebration", image: "https://images.pexels.com/photos/27695336/pexels-photo-27695336.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Immersive pandals, art installations, food streets and one of India's biggest festive city experiences." },
+  { name: "International Kite Festival", location: "Ahmedabad, Gujarat", timing: "January", type: "Sky festival", image: "https://images.pexels.com/photos/13045091/pexels-photo-13045091.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Rooftops fill with color as competitive flying and festival markets take over the city." },
+  { name: "Thrissur Pooram", location: "Thrissur, Kerala", timing: "April to May", type: "Temple festival", image: "https://images.pexels.com/photos/25738833/pexels-photo-25738833.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Caparisoned elephants, percussion ensembles and dramatic temple festival pageantry." },
+  { name: "Ladakh Festival", location: "Leh, Ladakh", timing: "September", type: "Mountain culture", image: "https://images.pexels.com/photos/17033848/pexels-photo-17033848.jpeg?auto=compress&cs=tinysrgb&w=1200", blurb: "Monastic culture, mountain parades, polo, craft and high-altitude regional performances." },
+];
+
+const officialLinksByState = {
+  "Uttar Pradesh": "https://up-tourismportal.in/",
+  Rajasthan: "https://www.tourism.rajasthan.gov.in/",
+  Maharashtra: "https://maharashtratourism.gov.in/",
+  Kerala: "https://www.keralatourism.org/",
+  Karnataka: "https://karnatakatourism.org/en/",
+  "Tamil Nadu": "https://www.tamilnadutourism.com/",
+  Telangana: "https://www.tourism.telangana.gov.in/",
+  Gujarat: "https://www.gujarattourism.com/gj",
+  "West Bengal": "https://www.wbtourism.gov.in/",
+  Meghalaya: "https://www.meghalayatourism.in/",
+  Assam: "https://assamtourism.gov.in/content/Contact-Us.php",
+  Goa: "https://goatourism.gov.in/",
+  Sikkim: "https://sikkimtourism.gov.in/",
+  Odisha: "https://odishatourism.gov.in/",
+  Punjab: "https://punjabtourism.punjab.gov.in/",
+  Uttarakhand: "https://uttarakhandtourism.gov.in/",
+  "Jammu and Kashmir": "https://www.tourismjk.in/",
+  Ladakh: "https://ladakh.gov.in/tourism-2/",
+  "Andaman and Nicobar Islands": "https://tourism.andamannicobar.gov.in/",
+};
+
+destinationPlaces.forEach((place) => {
+  place.officialUrl = officialLinksByState[place.state] || "https://www.incredibleindia.gov.in/en";
+});

@@ -1,0 +1,169 @@
+place_id,place_name,latitude,longitude,category,subcategory,address,rating,rating_normalized,tags,source,osm_id,website,phone,opening_hours,cuisine,description,wheelchair,fee,image,is_free,is_open_24h,price_level,category_label
+OPE_7944597695,Agriculture College,18.533006,73.841487,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597695,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2432308802,Akurdi,18.648636,73.764716,transport,station,"ganga nagar road, pradhikaran, nigdi, pimpri chinhwad, 411044",N/A,,transport|transit|commute,openstreetmap,2432308802,N/A,N/A,N/A,N/A,"Akurdi Railway Station, pradhikaran,nigdi,pune",N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13644823988,Akurdi Railway Station,18.64822,73.764899,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13644823988,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572608815,Anandnagar,18.509703,73.813999,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572608815,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650866,Anandnagar,18.509427,73.814017,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650866,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650895,Anandnagar,18.509572,73.814821,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650895,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9599243854,Anandnagar,18.509572,73.814075,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,9599243854,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_10235274256,Atlas Copco,18.596463,73.828836,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,10235274256,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_451546311,Auto (Tum-Tum) Stand,18.500192,73.944354,transport,taxi,N/A,N/A,,transport|transit|commute,openstreetmap,451546311,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113367,Balewadi Phata,18.564186,73.779766,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113367,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584964,Balewadi Stadium,18.579709,73.761542,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584964,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113365,Baner,18.554964,73.797938,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113365,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113366,Baner Gaon,18.559196,73.790598,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113366,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1411428449,Bhekrai Nagar Pmt Depot,18.484424,73.952967,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1411428449,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_477473046,Bhekrainagar Depot,18.484417,73.953035,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,477473046,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_979384588,Bhekrainagar Depot,18.484276,73.953236,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,979384588,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_979384589,Bhekrainagar Pmpml Bus Depot Road,18.484219,73.952944,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,979384589,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_823056420,Bhosari Sadgurunagar Depot,18.632172,73.849452,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,823056420,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_822883220,Bhosari Terminal,18.624455,73.851472,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,822883220,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_7944597711,Bopodi,18.569661,73.838103,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597711,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11699340649,Bund Garden,18.540593,73.883439,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11699340649,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1429382717,Chaphekar Chowk,18.630087,73.779897,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1429382717,https://pmpml.org,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11097527718,Chhatrapati Sambhaji Udyan,18.520081,73.847383,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11097527718,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2432308544,Chinchwad,18.640355,73.791713,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2432308544,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647412355,Chinchwad,18.639173,73.794931,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647412355,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_360275604,Chinchwad Bus Station,18.627923,73.782377,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,360275604,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_218059628,Civil Court,18.52709,73.857405,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,218059628,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13649977025,Civil Court Metro,18.526694,73.857582,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13649977025,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2432308147,Dapodi,18.581447,73.832686,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2432308147,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584975,Dapodi,18.583765,73.833766,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584975,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11097527725,Deccan Gymkhana,18.516448,73.844446,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11097527725,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597685,District Court (Aqua Line),18.52672,73.857748,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597685,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13570390374,District Court (Pink Line),18.528328,73.856089,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13570390374,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11097510274,District Court (Purple Line),18.526786,73.856899,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11097510274,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13640104325,District Court Metro Station,18.526713,73.857569,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13640104325,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1210877876,Drivezy,18.510944,73.794451,transport,car_rental,"Lane 4, Pune, 411038",N/A,,transport|transit|commute,openstreetmap,1210877876,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_10115879727,Dsk Vishwa Bus Stand;Dsk Vishwa Bus Stop,18.443267,73.799002,transport,bus_station,"DSK Vishwa Road, Pune, 411041",N/A,,transport|transit|commute,openstreetmap,10115879727,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572608810,Garware College,18.511781,73.838021,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572608810,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650865,Garware College,18.512056,73.837814,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650865,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9599243857,Garware College,18.511989,73.83805,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,9599243857,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2257797308,Ghorpuri,18.528148,73.893932,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2257797308,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1078895379,Gujarwadi Phata (Katraj) Pmpml Bus Stand,18.440518,73.860244,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1078895379,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13661267088,Hadapsar,18.50367,73.922775,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13661267088,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_959539031,Hadapsar Gadital Pmpml Bus Stand,18.500293,73.9392,transport,bus_station,"Hadapsar Gadital, Pune",N/A,,transport|transit|commute,openstreetmap,959539031,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2539975310,Hadapsar Railway Station,18.526967,73.927825,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2539975310,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113368,High Street,18.570512,73.774838,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113368,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650924,Ideal Colony,18.507714,73.822935,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650924,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1480945419,Iiser,18.550307,73.808235,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,1480945419,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2006306826,Indira Vasahat,18.481568,73.900633,transport,bus_station,"Vitthal Rao Shivarkar Marg, Pune, 411048",N/A,,transport|transit|commute,openstreetmap,2006306826,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113373,Jakat Naka,18.590967,73.7463,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113373,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1762191454,Jk Hill Park Bus Stop,18.451306,73.811043,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1762191454,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11699340655,Kalyani Nagar,18.544481,73.905698,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11699340655,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_691259390,Kasarwadi,18.608093,73.820868,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,691259390,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597699,Kasarwadi,18.59962,73.827264,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597699,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572921048,Kasarwadi,18.598812,73.827365,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921048,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_9572921067,Kasarwadi,18.600847,73.827023,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921067,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_12211880200,Kasba Peth कसबा पेठ,18.521375,73.859623,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,12211880200,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_888608978,Katraj Pmpml Bus Stand,18.446902,73.858508,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,888608978,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_888608981,Katraj Pmpml Bus Stand,18.447447,73.859658,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,888608981,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_264404139,Katraj-Sarpodyan Bus Depot,18.455254,73.859242,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,264404139,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_9152005063,Kendriya Vidyalaya Lohgaon,18.577826,73.903067,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,9152005063,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9152005064,Kendriya Vidyalaya Lohgaon,18.577848,73.902988,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,9152005064,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7683563092,Kesnand Phata,18.580714,73.987587,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,7683563092,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_7683563093,Kesnand Phata,18.580704,73.98773,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,7683563093,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_674690242,Khadki,18.564172,73.840453,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,674690242,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13644302877,Khadki,18.562262,73.842083,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13644302877,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_352313352,Kondhwa Bus Stop,18.473068,73.889048,transport,bus_station,Kondhwa Road,N/A,,transport|transit|commute,openstreetmap,352313352,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2194045720,Kothrud,18.503889,73.807673,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2194045720,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_815931848,Kothrud Depot,18.50652,73.795247,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,815931848,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_5813729873,Krishi Anusandhan Stn,18.551239,73.804994,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,5813729873,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113364,Krushi Anusandhan,18.550269,73.808227,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113364,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13556672520,Late Rajiv Gandhi Udyan Brt,18.453457,73.858424,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,13556672520,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1481769133,Laxmi Nagar,18.570511,73.774849,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,1481769133,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1089388118,M M School,18.614203,73.78517,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1089388118,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1801285994,Mahalaxmi Bus Stop,18.570792,73.879203,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1801285994,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597694,Mahatma Phule Mandai,18.512898,73.85701,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597694,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_905005583,Manapa Bhavan Pmpml Bus Station,18.523076,73.853724,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,905005583,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584974,Mangalwar Peth,18.530088,73.865443,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584974,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13644330429,Mangalwar Peth Station,18.53001,73.865131,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13644330429,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2539975328,Manjari Budruk,18.512209,73.971934,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2539975328,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1105752516,Mp Group,18.491277,73.811631,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1105752516,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_10725622460,Msrtc St Pune Sation Bus Stand.,18.528133,73.872253,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,10725622460,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650893,Nalstop,18.50653,73.828023,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650893,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650898,Nalstop,18.507842,73.828781,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650898,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597706,Nashik Phata,18.609303,73.820097,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597706,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572921027,Nashik Phata,18.60853,73.821245,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921027,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_9572921049,Nashik Phata,18.610123,73.819848,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921049,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_7596799204,New Wakadewadi Msrtc Bus Stand,18.543415,73.852399,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,7596799204,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_817467530,New Wakadewadi Msrtc Bus Stand,18.542973,73.852627,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,817467530,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113369,Nicmar,18.575034,73.766062,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113369,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_5005664235,Old Sangvi Bus Stand,18.575203,73.826021,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,5005664235,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1148132542,Padmavati Bus Depot,18.47731,73.855945,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1148132542,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650843,Paud Phata,18.508355,73.822804,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650843,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650870,Paud Phata,18.508971,73.821642,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650870,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9599243855,Paud Phata,18.508885,73.822144,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,9599243855,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572921109,Pcmc Bhavan,18.62878,73.803899,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921109,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_5815976641,Pedl,18.501896,73.80932,transport,bicycle_rental,N/A,N/A,,transport|transit|commute,openstreetmap,5815976641,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584963,Phugewadi,18.591106,73.831147,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584963,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572921030,Phugewadi,18.590886,73.831537,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921030,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_9572921088,Phugewadi,18.590875,73.830858,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921088,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_2429344218,Phursungi,18.4572,74.002157,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2429344218,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1109900435,Pimple Nilakh Bus Stand,18.571525,73.794087,transport,bus_station,"Pune, 411027",N/A,,transport|transit|commute,openstreetmap,1109900435,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_2432308277,Pimpri,18.622953,73.802512,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2432308277,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_10214268972,Pimpri Chinchwad Municipal Corporation (Pcmc),18.629319,73.803286,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,10214268972,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_242682734,Pimpri-Chinchwad Bus Stand,18.615092,73.815925,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,242682734,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_359575801,Pk Stop,18.631575,73.77181,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,359575801,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584980,Pmc Bhavan,18.522744,73.85335,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584980,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_819476932,Pmpml Bhosari Depot,18.627144,73.850665,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,819476932,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_7615324875,Pmpml Bus Parking,18.533851,73.860269,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,7615324875,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_815378126,Pmpml Bus Parking,18.53382,73.860442,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,815378126,N/A,N/A,N/A,N/A,N/A,N/A,no,N/A,True,False,,Transport Hub
+OPE_817897620,Pmpml Marketyard Depot,18.483563,73.87085,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,817897620,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_819476936,Private Bus Parking Bhosari,18.627545,73.851511,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,819476936,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_118263727,Pulgate,18.506064,73.882099,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,118263727,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_343304315,Pune Junction,18.528877,73.874415,transport,station,"Near Jahangir Hospital, Sassoon Marg, Pune",N/A,,transport|transit|commute,openstreetmap,343304315,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13640056305,Pune Metro Station,18.529684,73.871902,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13640056305,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597689,Pune Railway Station,18.529751,73.872596,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597689,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13640058546,Pune Railway Station,18.528907,73.874106,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13640058546,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13644303339,Pune Railway Station,18.529201,73.872204,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13644303339,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_811249554,Pune Railway Station Bus Depot,18.526512,73.877173,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,811249554,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_675626026,Pune Railway Station Bus Terminus,18.527872,73.872255,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,675626026,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_282484443,Pune Station Bus Stand,18.527406,73.87265,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,282484443,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_359814400,Rajani Miss,18.537934,73.863038,transport,bus_station,"sangamwadi, yuvi, Pune, 411001",N/A,,transport|transit|commute,openstreetmap,359814400,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11699340657,Ramwadi,18.557028,73.908563,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11699340657,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584969,Range Hills,18.550287,73.845807,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584969,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597700,Rbi,18.536371,73.836692,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597700,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13640055161,Rto Pune Metro Station,18.529977,73.864696,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13640055161,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944584984,Ruby Hall Clinic,18.532718,73.877749,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584984,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_5600220871,Ruturang Rikshaw Stand,18.48598,73.855521,transport,taxi,N/A,N/A,,transport|transit|commute,openstreetmap,5600220871,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_4573053889,S S Tours And Travels,18.527981,73.825762,transport,car_rental,"72/672, Gokhale Nagar Road, 411016",N/A,,transport|transit|commute,openstreetmap,4573053889,https://s-s-tours-travels.business.site/,+919822238520,24/7,N/A,N/A,N/A,N/A,N/A,False,True,,Transport Hub
+OPE_1065897611,Sai Chowk Rickshaw Stand,18.543497,73.785613,transport,taxi,N/A,N/A,,transport|transit|commute,openstreetmap,1065897611,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_815335441,Sangamwadi Brt Stop,18.537438,73.863277,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,815335441,N/A,N/A,N/A,N/A,N/A,yes,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_815335442,Sangamwadi Brt Stop,18.536602,73.86243,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,815335442,N/A,N/A,N/A,N/A,N/A,yes,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_815335445,Sangamwadi Private Bus Stand 1,18.535342,73.860728,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,815335445,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_815335446,Sangamwadi Private Bus Stand 2,18.537125,73.863612,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,815335446,N/A,N/A,N/A,N/A,N/A,no,N/A,N/A,False,False,,Transport Hub
+OPE_7944597690,Sant Tukaram Nagar,18.614525,73.815746,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597690,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572921068,Sant Tukaram Nagar,18.614985,73.81576,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921068,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_9572921083,Sant Tukaram Nagar,18.615062,73.81484,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921083,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_9572921085,Sant Tukaram Nagar,18.614619,73.81609,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572921085,N/A,N/A,N/A,N/A,N/A,yes,N/A,N/A,False,False,,Transport Hub
+OPE_2429344304,Sasvad Road,18.472818,73.954518,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,2429344304,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113362,Savitribal Phule Pune University,18.542347,73.827173,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113362,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_4721561023,Shewalewadi Bus Depot,18.495486,73.971356,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,4721561023,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11097510271,Shivaji Nagar,18.532172,73.84966,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11097510271,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13640060834,Shivaji Nagar Railway Station,18.532398,73.851385,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13640060834,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_763549837,Shivajinagar,18.532591,73.851311,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,763549837,N/A,N/A,N/A,N/A,N/A,N/A,N/A,File:Shivajinagar Pune railway station illuminated.jpg,False,False,,Transport Hub
+OPE_7944584959,Shivajinagar,18.530475,73.848571,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944584959,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_243952358,Shivajinagar,18.532219,73.849926,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,243952358,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9599243856,Sndt College,18.507357,73.828782,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,9599243856,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1304739481,Sun City,18.474876,73.813655,transport,bus_station,"Suncity Road, pune, 411051",N/A,,transport|transit|commute,openstreetmap,1304739481,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_395901738,Sutarwadi Bus Terminus,18.54165,73.779095,transport,bus_station,"Sus-Sutarwadi Service Road, Pune, 411021",N/A,,transport|transit|commute,openstreetmap,395901738,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_817474247,Swargate Msrtc Bus Stand,18.499955,73.859007,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,817474247,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_817474249,Swargate Msrtc Bus Stand-2,18.49951,73.859709,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,817474249,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_817532714,Swargate Pmpml Bus Stand,18.499154,73.857899,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,817532714,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Category:Pune Mahanagar Parivahan Mahamandal Limited,False,False,,Transport Hub
+OPE_125482924,Swargate St Stand,18.499364,73.859266,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,125482924,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597710,Swargate स्वारगेट,18.499745,73.85746,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597710,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1163590562,Taxi Drop Off Stop,18.57866,73.908347,transport,taxi,N/A,N/A,,transport|transit|commute,openstreetmap,1163590562,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1163590563,Taxi Pick Up Stop,18.577852,73.907028,transport,taxi,N/A,N/A,,transport|transit|commute,openstreetmap,1163590563,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1049394556,Upper Depot,18.460525,73.872053,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1049394556,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650854,Vanaz,18.507066,73.805702,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650854,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9572650881,Vanaz,18.507367,73.805779,transport,subway_entrance,N/A,N/A,,transport|transit|commute,openstreetmap,9572650881,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_9599243853,Vanaz,18.507185,73.805195,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,9599243853,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1013534009,Vishrantwadi,18.573223,73.881342,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1013534009,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_814138922,Vrl Logistics Akurdi,18.649414,73.765106,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,814138922,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_1378473624,Vrl Vadagaon Budruk Pune Bus Stand,18.463244,73.820018,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,1378473624,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_822948570,Wagholi Kesnand Phata Pmpml Bus Stand,18.580947,73.987639,transport,bus_station,N/A,N/A,,transport|transit|commute,openstreetmap,822948570,https://www.pmpml.org/,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_7944597702,Wakad Chowk,18.590299,73.757559,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,7944597702,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13647113363,Yashada,18.546325,73.819665,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13647113363,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_13640037581,Yervada Metro Station,18.545278,73.886533,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,13640037581,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub
+OPE_11699340652,Yerwada,18.545317,73.886688,transport,station,N/A,N/A,,transport|transit|commute,openstreetmap,11699340652,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,False,False,,Transport Hub

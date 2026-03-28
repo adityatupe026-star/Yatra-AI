@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-27T06:38:10.937056Z",
+  "city": "Pune",
+  "total_places": 4179,
+  "categories": {
+    "restaurant": 1194,
+    "tourist_attraction": 764,
+    "shopping": 544,
+    "bank_atm": 542,
+    "hospital": 534,
+    "cafe": 267,
+    "transport": 168,
+    "hotel": 166
+  },
+  "sources": {
+    "openstreetmap": 4179
+  },
+  "has_rating": 4,
+  "has_phone": 400,
+  "has_website": 306,
+  "has_address": 1424,
+  "open_24h": 80,
+  "free_entry": 13
+}

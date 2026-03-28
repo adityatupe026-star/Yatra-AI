@@ -1,0 +1,100 @@
+﻿.planner-layout { grid-template-columns: minmax(0, 1.45fr) 340px; align-items: start; }
+.single-top { padding-top: 30px; }
+.planner-map-wrap {
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+}
+.planner-map {
+  height: 420px;
+}
+.map-placeholder {
+  height: 420px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 32px;
+  color: var(--muted);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+.map-placeholder strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.route-note {
+  margin-top: 14px;
+  font-size: 0.92rem;
+}
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.status-dot {
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: var(--gold-soft);
+  border: 1px solid rgba(200, 148, 46, 0.4);
+  background: rgba(200, 148, 46, 0.1);
+}
+.messages {
+  margin: 22px 0;
+  display: grid;
+  gap: 16px;
+  max-height: 420px;
+  overflow: auto;
+}
+.chat-layout {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.chat-sidebar {
+  display: grid;
+  gap: 18px;
+}
+.chat-session-list {
+  display: grid;
+  gap: 12px;
+}
+.chat-session-item {
+  width: 100%;
+  text-align: left;
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  cursor: pointer;
+}
+.chat-session-item strong,
+.chat-session-item small {
+  display: block;
+}
+.chat-session-item small {
+  margin-top: 8px;
+  color: var(--soft);
+}
+.chat-session-item.active {
+  border-color: rgba(200, 148, 46, 0.5);
+  background: rgba(200, 148, 46, 0.14);
+}
+.chat-console .messages {
+  max-height: 700px;
+  min-height: 700px;
+}
+.chat-console-wide {
+  padding: 30px;
+}
+.message { padding: 18px 18px 20px; }
+.message.user { background: rgba(24, 163, 159, 0.08); }
+.role { display: inline-block; margin-bottom: 10px; color: var(--gold-soft); }
+
