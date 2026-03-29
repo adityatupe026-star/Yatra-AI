@@ -1,0 +1,196 @@
+.topbar {
+  animation: navDrop 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link.active {
+  color: #1b1306;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  border-color: rgba(200, 148, 46, 0.4);
+  box-shadow: 0 16px 34px rgba(200, 148, 46, 0.28);
+  transform: translateY(-1px);
+}
+
+.nav-link.active::after,
+.nav-cta::after,
+.button-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 15%, rgba(255,255,255,0.28) 50%, transparent 85%);
+  transform: translateX(-140%);
+  animation: goldSweep 2.8s ease-in-out infinite;
+}
+
+.nav-cta,
+.button-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.legacy-hero {
+  animation: heroRise 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-media {
+  animation: heroDrift 14s ease-in-out infinite alternate;
+}
+
+.planner-card,
+.ai-console,
+.sidebar-card,
+.route-card,
+.workflow-card,
+.feature-card,
+.destination-card,
+.event-card,
+.planner-story-card,
+.planner-section-block,
+.chat-stage {
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 42px, 0) scale(0.975);
+  filter: blur(8px);
+  transition:
+    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 760ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+.message {
+  animation: messageIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.chat-session-item {
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.chat-session-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+}
+
+.planner-conditional-box {
+  animation: plannerGlowIn 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.planner-story-card,
+.planner-section-block {
+  animation: plannerGlowIn 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.chat-stage {
+  animation: chatStageRise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.restaurant-pick-chip,
+.transport-step-card,
+.step-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-pick-chip::after,
+.transport-step-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 18%, rgba(255,255,255,0.12) 50%, transparent 82%);
+  transform: translateX(-140%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.restaurant-pick-chip:hover::after,
+.transport-step-card:hover::after {
+  opacity: 1;
+  animation: goldSweep 1.6s ease;
+}
+
+@keyframes navDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroDrift {
+  0% {
+    transform: scale(1.05) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-18px, -10px, 0);
+  }
+}
+
+@keyframes goldSweep {
+  to {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes plannerGlowIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    box-shadow: 0 0 0 rgba(200, 148, 46, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 18px 36px rgba(200, 148, 46, 0.12);
+  }
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chatStageRise {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+    box-shadow: 0 0 0 rgba(200, 148, 46, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
+  }
+}

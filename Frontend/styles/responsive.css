@@ -1,24 +1,25 @@
-﻿@media (max-width: 1180px) {
+@media (max-width: 1180px) {
   .nav { display: none; }
-  .legacy-hero, .planner-layout, .explorer-grid, .route-grid, .workflow-list, .feature-grid, .chat-layout { grid-template-columns: 1fr; }
-  .quick-links-grid, .route-spotlight-grid, .editorial-grid, .event-grid { grid-template-columns: 1fr; }
+  .hamburger { display: inline-flex; }
+  .legacy-hero, .planner-layout, .explorer-grid, .route-grid, .workflow-list, .feature-grid, .chat-layout, .transport-step-grid, .planner-hero-card, .budget-grid, .compare-grid, .footer-grid { grid-template-columns: 1fr; }
+  .quick-links-grid, .route-spotlight-grid, .editorial-grid, .event-grid, .planner-story-strip, .planner-mini-grid { grid-template-columns: 1fr; }
   .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-content { padding-bottom: 0; }
   .legacy-hero { min-height: auto; padding-top: 124px; }
   .mini-destination-card.wide { grid-row: auto; min-height: 320px; }
   .event-card-featured { grid-column: auto; min-height: 360px; }
+  .chat-sidebar { position: static; }
 }
 
 @media (max-width: 760px) {
   .topbar { width: calc(100% - 20px); padding: 14px 18px; }
-  .nav-cta { display: none; }
   .page-shell, .site-footer { width: calc(100% - 20px); }
   .page-hero { padding-top: 56px; }
   h1 { font-size: clamp(3rem, 14vw, 4.8rem); }
   .legacy-hero { padding-inline: 18px; grid-template-columns: 1fr; }
   .hero-content h1 { max-width: 100%; }
-  .hero-meta, .destination-grid, .feature-grid, .explorer-grid, .route-grid, .workflow-list, .quick-grid, .filter-bar, .quick-links-grid, .route-spotlight-grid, .editorial-grid, .event-grid { grid-template-columns: 1fr; }
-  .planner-card, .route-card, .sidebar-card, .ai-console, .workflow-card, .site-footer { padding: 20px; }
+  .hero-meta, .destination-grid, .feature-grid, .explorer-grid, .route-grid, .workflow-list, .quick-grid, .filter-bar, .quick-links-grid, .route-spotlight-grid, .editorial-grid, .event-grid, .transport-step-grid, .planner-assist-grid, .planner-story-strip, .planner-mini-grid, .planner-hero-card, .planner-hero-stats, .destination-filter-bar, .budget-grid, .compare-grid, .footer-grid, .newsletter-form { grid-template-columns: 1fr; }
+  .planner-card, .route-card, .sidebar-card, .ai-console, .workflow-card, .site-footer, .planner-section-block { padding: 20px; }
   .site-footer { flex-direction: column; align-items: start; }
   .hero-pagination {
     left: 18px;
@@ -29,10 +30,11 @@
   .event-card {
     min-height: 320px;
   }
-  .chat-console .messages {
-    min-height: 520px;
-    max-height: 520px;
-  }
+  .chat-console { min-height: auto; }
+  .chat-stage { min-height: 56vh; padding: 14px; }
+  .chat-console .messages { min-height: 0; max-height: none; }
+  .message { max-width: 100%; }
+  .nav-cta { display: none; }
   .planner-map {
     height: 320px;
   }

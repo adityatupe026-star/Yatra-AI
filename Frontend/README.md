@@ -84,6 +84,18 @@ Important note:
 
 Because this is a static frontend, you can serve it with any simple local server.
 
+Quickest option:
+
+```text
+Double-click Frontend/start-frontend.bat
+```
+
+Then open:
+
+```text
+http://localhost:5500
+```
+
 Example using Python:
 
 ```powershell
@@ -96,6 +108,12 @@ Then open:
 ```text
 http://localhost:5500
 ```
+
+Important:
+
+- do not open `index.html` directly by double-click
+- after the modular JS refactor, the frontend should be served through a local server
+- otherwise the browser may show a blank page because ES module imports are blocked on `file://`
 
 ## Publishability Notes
 

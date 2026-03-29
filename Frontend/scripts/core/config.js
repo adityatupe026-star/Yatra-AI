@@ -13,6 +13,7 @@ export const KEYS = {
   planHistory: "yatraai.tripHistory",
   chatSessions: "yatraai.chatSessions",
   currentChatId: "yatraai.currentChatId",
+  wishlist: "yatraai.wishlist",
 };
 
 export const HOME_SLIDES = [
@@ -36,4 +37,71 @@ export const CITY_COORDS = {
   Kochi: [9.9312, 76.2673],
   Goa: [15.2993, 74.124],
   Leh: [34.1526, 77.5771],
+  Varanasi: [25.3176, 82.9739],
+  Kochi: [9.9312, 76.2673],
+  Agra: [27.1767, 78.0081],
+  Udaipur: [24.5854, 73.7125],
+  Kolkata: [22.5726, 88.3639],
+};
+
+export const REGION_SEASONS = {
+  North: {
+    bestMonths: "October to March",
+    mood: "cooler weather, heritage circuits and festival-led city breaks",
+    note: "Great for palace routes, spiritual journeys and sunrise monument visits.",
+  },
+  West: {
+    bestMonths: "November to February",
+    mood: "coastal evenings, city dining and desert festival windows",
+    note: "Best when you want food trails, beach trips and easier road conditions.",
+  },
+  South: {
+    bestMonths: "September to February",
+    mood: "lush landscapes, coffee hills and slower scenic travel",
+    note: "Monsoon shoulder months can be beautiful for greenery but require flexible planning.",
+  },
+  East: {
+    bestMonths: "October to April",
+    mood: "festival cities, mountain air and wildlife corridors",
+    note: "A strong region for photography, culture and cooler hill-town movement.",
+  },
+  Himalaya: {
+    bestMonths: "June to September",
+    mood: "high-altitude road windows and dramatic mountain visibility",
+    note: "Travel timing matters most here because snow and road closures can change access.",
+  },
+  Islands: {
+    bestMonths: "November to April",
+    mood: "blue-water escapes, diving windows and tropical relaxation",
+    note: "Aim for drier months if beaches and water activities are the priority.",
+  },
+};
+
+export const NAV_ITEMS = [
+  ["home", "./index.html", "Home"],
+  ["destinations", "./destinations.html", "Destinations"],
+  ["events", "./events.html", "Events"],
+  ["planner", "./planner.html", "Plan Trip"],
+  ["explorer", "./explorer.html", "Explorer"],
+  ["map", "./map.html", "India Map"],
+  ["history", "./history.html", "History"],
+  ["wishlist", "./wishlist.html", "Wishlist"],
+];
+
+export const STATE_PHRASES = {
+  Rajasthan: { language: "Hindi", phrases: [["Namaste", "Hello"], ["Kitna hai?", "How much is this?"], ["Shukriya", "Thank you"], ["Khaana kahan milega?", "Where can I find food?"], ["Madad chahiye", "I need help"]] },
+  Maharashtra: { language: "Marathi", phrases: [["Namaskar", "Hello"], ["Dhanyavaad", "Thank you"], ["Kuthe aahe?", "Where is it?"], ["Paani milel ka?", "Can I get water?"], ["Madat kara", "Please help"]] },
+  Karnataka: { language: "Kannada", phrases: [["Namaskara", "Hello"], ["Dhanyavaadagalu", "Thank you"], ["Idhu elli?", "Where is this?"], ["Oota elli sigutte?", "Where can I get food?"], ["Sahaya beku", "I need help"]] },
+  Kerala: { language: "Malayalam", phrases: [["Namaskaram", "Hello"], ["Nanni", "Thank you"], ["Ivide evide?", "Where is this?"], ["Bhakshanam evide?", "Where is food?"], ["Sahayam venam", "I need help"]] },
+  Telangana: { language: "Telugu", phrases: [["Namaskaram", "Hello"], ["Dhanyavaadhamulu", "Thank you"], ["Idi ekkada undi?", "Where is this?"], ["Tiffin ekkada dorukuthundi?", "Where can I get food?"], ["Sahayam kavali", "I need help"]] },
+  Goa: { language: "Konkani", phrases: [["Dev borem korum", "Hello"], ["Dev borem korum", "Thank you"], ["He khain asa?", "Where is this?"], ["Khana khain mellta?", "Where can I get food?"], ["Mhaka zai", "I need help"]] },
+  "Tamil Nadu": { language: "Tamil", phrases: [["Vanakkam", "Hello"], ["Nandri", "Thank you"], ["Idhu enga irukku?", "Where is this?"], ["Saapadu enga kidaikkum?", "Where can I get food?"], ["Udhavi venum", "I need help"]] },
+  "West Bengal": { language: "Bengali", phrases: [["Nomoshkar", "Hello"], ["Dhonnobad", "Thank you"], ["Eta kothay?", "Where is this?"], ["Khabar kothay pabo?", "Where can I get food?"], ["Amar sahajjo dorkar", "I need help"]] },
+};
+
+export const EMERGENCY_CONTACTS = {
+  default: { tourist: "1363", police: "112", ambulance: "108", note: "National tourist helpline and emergency numbers work across India." },
+  Goa: { tourist: "1363", police: "112", ambulance: "108", note: "Keep beach-area taxi and stay contact details saved offline." },
+  Ladakh: { tourist: "1363", police: "112", ambulance: "102", note: "High-altitude routes can change quickly, so verify road status locally." },
+  Kerala: { tourist: "1363", police: "112", ambulance: "108", note: "Backwater and hill routes are smoother when you save driver contacts in advance." },
 };

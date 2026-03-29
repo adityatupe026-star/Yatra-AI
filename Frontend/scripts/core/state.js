@@ -18,6 +18,17 @@ export const getChats = () => readJson(KEYS.chatSessions, []);
 export const setChats = (items) => writeJson(KEYS.chatSessions, items);
 export const getChatId = () => localStorage.getItem(KEYS.currentChatId);
 export const setChatId = (id) => localStorage.setItem(KEYS.currentChatId, id);
+export const getWishlist = () => readJson(KEYS.wishlist, []);
+export const setWishlist = (items) => writeJson(KEYS.wishlist, items);
+export const isWishlisted = (name) => getWishlist().includes(name);
+export const toggleWishlist = (name) => {
+  const current = new Set(getWishlist());
+  if (current.has(name)) current.delete(name);
+  else current.add(name);
+  const next = Array.from(current);
+  setWishlist(next);
+  return next;
+};
 
 export function archiveCurrentPlan() {
   const current = getPlan();
