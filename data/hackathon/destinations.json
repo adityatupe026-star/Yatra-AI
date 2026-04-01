@@ -1,0 +1,963 @@
+[
+  {
+    "name": "Delhi",
+    "state": "Delhi",
+    "region": "North",
+    "type": "city break",
+    "budget_range": {
+      "low": 9732,
+      "high": 15191,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Culture",
+      "Food",
+      "Shopping"
+    ],
+    "average_daily_cost": 3956,
+    "crowd_level": "Low",
+    "description": "Old forts, busy markets, Mughal layers and a fast modern city pulse.",
+    "highlights": [
+      "Red Fort",
+      "Connaught Place",
+      "Humayun's Tomb"
+    ],
+    "transport": {
+      "airport": "Indira Gandhi International Airport",
+      "rail": "New Delhi",
+      "road": "NH 44"
+    },
+    "image": "https://images.pexels.com/photos/3873688/pexels-photo-3873688.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Agra",
+    "state": "Uttar Pradesh",
+    "region": "North",
+    "type": "heritage city",
+    "budget_range": {
+      "low": 8266,
+      "high": 12902,
+      "label": "Mid-range"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Culture",
+      "Heritage",
+      "Photography"
+    ],
+    "average_daily_cost": 3360,
+    "crowd_level": "High",
+    "description": "Taj Mahal sunrise, Mughal architecture and timeless marble symmetry.",
+    "highlights": [
+      "Taj Mahal",
+      "Agra Fort",
+      "Mehtab Bagh"
+    ],
+    "transport": {
+      "airport": "Agra Airport",
+      "rail": "Agra Cantt",
+      "road": "Yamuna Expressway"
+    },
+    "image": "https://images.pexels.com/photos/13688857/pexels-photo-13688857.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "region": "North",
+    "type": "heritage city",
+    "budget_range": {
+      "low": 8266,
+      "high": 12902,
+      "label": "Mid-range"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Culture",
+      "Shopping",
+      "Luxury"
+    ],
+    "average_daily_cost": 3360,
+    "crowd_level": "High",
+    "description": "Palaces, pink facades, bazaars and rooftop dinners.",
+    "highlights": [
+      "City Palace",
+      "Hawa Mahal",
+      "Amber Fort"
+    ],
+    "transport": {
+      "airport": "Jaipur International Airport",
+      "rail": "Jaipur Junction",
+      "road": "NH 48"
+    },
+    "image": "https://images.pexels.com/photos/34086724/pexels-photo-34086724.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Udaipur",
+    "state": "Rajasthan",
+    "region": "North",
+    "type": "waterfront retreat",
+    "budget_range": {
+      "low": 9348,
+      "high": 14592,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Luxury",
+      "Romance",
+      "Culture"
+    ],
+    "average_daily_cost": 3800,
+    "crowd_level": "Medium",
+    "description": "Lake palaces, sunset boat rides and royal romance.",
+    "highlights": [
+      "Lake Pichola",
+      "City Palace",
+      "Sajjangarh"
+    ],
+    "transport": {
+      "airport": "Maharana Pratap Airport",
+      "rail": "Udaipur City",
+      "road": "NH 27"
+    },
+    "image": "https://images.pexels.com/photos/28126077/pexels-photo-28126077.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Jaisalmer",
+    "state": "Rajasthan",
+    "region": "North",
+    "type": "desert city",
+    "budget_range": {
+      "low": 7242,
+      "high": 11305,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Adventure",
+      "Culture",
+      "Photography"
+    ],
+    "average_daily_cost": 2944,
+    "crowd_level": "Low",
+    "description": "Golden sandstone, desert camps and dramatic skies.",
+    "highlights": [
+      "Jaisalmer Fort",
+      "Sam Sand Dunes",
+      "Patwon Ki Haveli"
+    ],
+    "transport": {
+      "airport": "Jaisalmer Airport",
+      "rail": "Jaisalmer Railway Station",
+      "road": "NH 11"
+    },
+    "image": "https://images.pexels.com/photos/34568382/pexels-photo-34568382.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Varanasi",
+    "state": "Uttar Pradesh",
+    "region": "North",
+    "type": "spiritual heritage city",
+    "budget_range": {
+      "low": 7715,
+      "high": 12042,
+      "label": "Mid-range"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Spiritual",
+      "Culture",
+      "Photography"
+    ],
+    "average_daily_cost": 3136,
+    "crowd_level": "High",
+    "description": "Ghat rituals, sacred riverfronts and a city of spiritual depth.",
+    "highlights": [
+      "Dashashwamedh Ghat",
+      "Kashi Vishwanath",
+      "Sarnath"
+    ],
+    "transport": {
+      "airport": "Lal Bahadur Shastri Airport",
+      "rail": "Varanasi Junction",
+      "road": "NH 19"
+    },
+    "image": "https://images.pexels.com/photos/32998754/pexels-photo-32998754.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Rishikesh",
+    "state": "Uttarakhand",
+    "region": "North",
+    "type": "spiritual heritage city",
+    "budget_range": {
+      "low": 6888,
+      "high": 10752,
+      "label": "Mid-range"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Wellness",
+      "Adventure",
+      "Spiritual"
+    ],
+    "average_daily_cost": 2800,
+    "crowd_level": "Medium",
+    "description": "Yoga by the Ganges, suspension bridges and rafting energy.",
+    "highlights": [
+      "Lakshman Jhula",
+      "Triveni Ghat",
+      "River rafting"
+    ],
+    "transport": {
+      "airport": "Jolly Grant Airport",
+      "rail": "Haridwar Junction",
+      "road": "NH 7"
+    },
+    "image": "https://images.pexels.com/photos/6650502/pexels-photo-6650502.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Amritsar",
+    "state": "Punjab",
+    "region": "North",
+    "type": "spiritual heritage city",
+    "budget_range": {
+      "low": 6337,
+      "high": 9892,
+      "label": "Budget"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Spiritual",
+      "Food",
+      "Culture"
+    ],
+    "average_daily_cost": 2576,
+    "crowd_level": "Low",
+    "description": "Golden Temple serenity with rich food culture.",
+    "highlights": [
+      "Golden Temple",
+      "Jallianwala Bagh",
+      "Wagah Border"
+    ],
+    "transport": {
+      "airport": "Sri Guru Ram Dass Jee Airport",
+      "rail": "Amritsar Junction",
+      "road": "NH 3"
+    },
+    "image": "https://images.pexels.com/photos/8564098/pexels-photo-8564098.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Shimla",
+    "state": "Himachal Pradesh",
+    "region": "North",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8856,
+      "high": 13824,
+      "label": "Mid-range"
+    },
+    "best_season": "October to March",
+    "tags": [
+      "Nature",
+      "Family",
+      "Road Trip"
+    ],
+    "average_daily_cost": 3600,
+    "crowd_level": "Medium",
+    "description": "Colonial charm, pine air and hillside promenades.",
+    "highlights": [
+      "Mall Road",
+      "Jakhoo Temple",
+      "Toy train"
+    ],
+    "transport": {
+      "airport": "Shimla Airport",
+      "rail": "Kalka-Shimla line",
+      "road": "NH 5"
+    },
+    "image": "https://images.pexels.com/photos/28951426/pexels-photo-28951426.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "region": "North",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8148,
+      "high": 12718,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Nature",
+      "Romance",
+      "Luxury"
+    ],
+    "average_daily_cost": 3312,
+    "crowd_level": "Low",
+    "description": "Houseboats, mountain reflections and quiet lake mornings.",
+    "highlights": [
+      "Dal Lake",
+      "Mughal Gardens",
+      "Old Srinagar"
+    ],
+    "transport": {
+      "airport": "Srinagar Airport",
+      "rail": "Srinagar Station",
+      "road": "NH 44"
+    },
+    "image": "https://images.pexels.com/photos/16196742/pexels-photo-16196742.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Leh",
+    "state": "Ladakh",
+    "region": "Himalaya",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8148,
+      "high": 12718,
+      "label": "Mid-range"
+    },
+    "best_season": "June to September",
+    "tags": [
+      "Adventure",
+      "Road Trip",
+      "Photography"
+    ],
+    "average_daily_cost": 3312,
+    "crowd_level": "Low",
+    "description": "High-altitude roads, monasteries and dramatic silence.",
+    "highlights": [
+      "Shanti Stupa",
+      "Thiksey Monastery",
+      "Magnetic Hill"
+    ],
+    "transport": {
+      "airport": "Kushok Bakula Rimpochee Airport",
+      "rail": "Nearest rail: Jammu Tawi",
+      "road": "Leh-Manali Highway"
+    },
+    "image": "https://images.pexels.com/photos/17033848/pexels-photo-17033848.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Goa",
+    "state": "Goa",
+    "region": "West",
+    "type": "beach destination",
+    "budget_range": {
+      "low": 11572,
+      "high": 18063,
+      "label": "Premium"
+    },
+    "best_season": "November to March",
+    "tags": [
+      "Beach",
+      "Nightlife",
+      "Food"
+    ],
+    "average_daily_cost": 4704,
+    "crowd_level": "High",
+    "description": "Beaches, sunsets, nightlife and boutique stays.",
+    "highlights": [
+      "Anjuna",
+      "Fontainhas",
+      "Dudhsagar Falls"
+    ],
+    "transport": {
+      "airport": "Manohar International Airport",
+      "rail": "Madgaon Junction",
+      "road": "NH 66"
+    },
+    "image": "https://images.pexels.com/photos/32262472/pexels-photo-32262472.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Mumbai",
+    "state": "Maharashtra",
+    "region": "West",
+    "type": "city break",
+    "budget_range": {
+      "low": 11847,
+      "high": 18493,
+      "label": "Premium"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Food",
+      "Nightlife",
+      "Culture"
+    ],
+    "average_daily_cost": 4816,
+    "crowd_level": "High",
+    "description": "Sea-facing drives, heritage icons and after-dark energy.",
+    "highlights": [
+      "Gateway of India",
+      "Marine Drive",
+      "Kala Ghoda"
+    ],
+    "transport": {
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "rail": "CSMT",
+      "road": "Mumbai-Pune Expressway"
+    },
+    "image": "https://images.pexels.com/photos/32295752/pexels-photo-32295752.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Pune",
+    "state": "Maharashtra",
+    "region": "West",
+    "type": "city break",
+    "budget_range": {
+      "low": 9732,
+      "high": 15191,
+      "label": "Mid-range"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Food",
+      "Culture",
+      "Road Trip"
+    ],
+    "average_daily_cost": 3956,
+    "crowd_level": "Low",
+    "description": "Fort escapes, cafes, culture hubs and easy weekend routes.",
+    "highlights": [
+      "Aga Khan Palace",
+      "Sinhagad Fort",
+      "FC Road"
+    ],
+    "transport": {
+      "airport": "Pune Airport",
+      "rail": "Pune Junction",
+      "road": "Mumbai-Pune Expressway"
+    },
+    "image": "https://images.pexels.com/photos/14584660/pexels-photo-14584660.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Rann of Kutch",
+    "state": "Gujarat",
+    "region": "West",
+    "type": "desert city",
+    "budget_range": {
+      "low": 7242,
+      "high": 11305,
+      "label": "Mid-range"
+    },
+    "best_season": "November to February",
+    "tags": [
+      "Photography",
+      "Culture",
+      "Adventure"
+    ],
+    "average_daily_cost": 2944,
+    "crowd_level": "Low",
+    "description": "White salt desert, folk culture and moonlit spectacle.",
+    "highlights": [
+      "White Desert",
+      "Kala Dungar",
+      "Tent City"
+    ],
+    "transport": {
+      "airport": "Bhuj Airport",
+      "rail": "Bhuj Railway Station",
+      "road": "NH 341"
+    },
+    "image": "https://images.pexels.com/photos/34568382/pexels-photo-34568382.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Gir",
+    "state": "Gujarat",
+    "region": "West",
+    "type": "wildlife reserve",
+    "budget_range": {
+      "low": 7695,
+      "high": 12012,
+      "label": "Mid-range"
+    },
+    "best_season": "November to February",
+    "tags": [
+      "Wildlife",
+      "Adventure",
+      "Family"
+    ],
+    "average_daily_cost": 3128,
+    "crowd_level": "Low",
+    "description": "Wildlife-focused journeys into lion country.",
+    "highlights": [
+      "Gir Safari",
+      "Devalia Park",
+      "Somnath detour"
+    ],
+    "transport": {
+      "airport": "Rajkot Airport",
+      "rail": "Junagadh Junction",
+      "road": "NH 351G"
+    },
+    "image": "https://images.pexels.com/photos/6729033/pexels-photo-6729033.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Alappuzha",
+    "state": "Kerala",
+    "region": "South",
+    "type": "waterfront retreat",
+    "budget_range": {
+      "low": 8600,
+      "high": 13425,
+      "label": "Mid-range"
+    },
+    "best_season": "November to February",
+    "tags": [
+      "Nature",
+      "Luxury",
+      "Romance"
+    ],
+    "average_daily_cost": 3496,
+    "crowd_level": "Low",
+    "description": "Backwaters, houseboats and slow-water luxury.",
+    "highlights": [
+      "Houseboat cruise",
+      "Vembanad Lake",
+      "Alleppey Beach"
+    ],
+    "transport": {
+      "airport": "Cochin International Airport",
+      "rail": "Alappuzha Station",
+      "road": "NH 66"
+    },
+    "image": "https://images.pexels.com/photos/32262506/pexels-photo-32262506.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Munnar",
+    "state": "Kerala",
+    "region": "South",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8856,
+      "high": 13824,
+      "label": "Mid-range"
+    },
+    "best_season": "October to March",
+    "tags": [
+      "Nature",
+      "Romance",
+      "Photography"
+    ],
+    "average_daily_cost": 3600,
+    "crowd_level": "Medium",
+    "description": "Tea estates, mist and rolling green silence.",
+    "highlights": [
+      "Tea Museum",
+      "Echo Point",
+      "Eravikulam"
+    ],
+    "transport": {
+      "airport": "Cochin International Airport",
+      "rail": "Aluva Station",
+      "road": "NH 85"
+    },
+    "image": "https://images.pexels.com/photos/13045091/pexels-photo-13045091.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Kochi",
+    "state": "Kerala",
+    "region": "South",
+    "type": "beach destination",
+    "budget_range": {
+      "low": 10332,
+      "high": 16128,
+      "label": "Premium"
+    },
+    "best_season": "November to February",
+    "tags": [
+      "Culture",
+      "Food",
+      "Luxury"
+    ],
+    "average_daily_cost": 4200,
+    "crowd_level": "Medium",
+    "description": "Harbor views, art spaces and old-world coastal trade history.",
+    "highlights": [
+      "Fort Kochi",
+      "Chinese Fishing Nets",
+      "Mattancherry"
+    ],
+    "transport": {
+      "airport": "Cochin International Airport",
+      "rail": "Ernakulam Junction",
+      "road": "NH 66"
+    },
+    "image": "https://images.pexels.com/photos/25738833/pexels-photo-25738833.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Hampi",
+    "state": "Karnataka",
+    "region": "South",
+    "type": "spiritual heritage city",
+    "budget_range": {
+      "low": 6337,
+      "high": 9892,
+      "label": "Budget"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Culture",
+      "Adventure",
+      "Photography"
+    ],
+    "average_daily_cost": 2576,
+    "crowd_level": "Low",
+    "description": "Temple ruins and surreal boulder landscapes.",
+    "highlights": [
+      "Vijaya Vittala Temple",
+      "Matanga Hill",
+      "Virupaksha Temple"
+    ],
+    "transport": {
+      "airport": "Hubballi Airport",
+      "rail": "Hospet Junction",
+      "road": "NH 50"
+    },
+    "image": "https://images.pexels.com/photos/19437422/pexels-photo-19437422.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Mysuru",
+    "state": "Karnataka",
+    "region": "South",
+    "type": "city break",
+    "budget_range": {
+      "low": 9732,
+      "high": 15191,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Culture",
+      "Family",
+      "Food"
+    ],
+    "average_daily_cost": 3956,
+    "crowd_level": "Low",
+    "description": "Palace grandeur, gardens and a slower cultural rhythm.",
+    "highlights": [
+      "Mysore Palace",
+      "Chamundi Hills",
+      "Brindavan Gardens"
+    ],
+    "transport": {
+      "airport": "Mysore Airport",
+      "rail": "Mysuru Junction",
+      "road": "NH 275"
+    },
+    "image": "https://images.pexels.com/photos/16351949/pexels-photo-16351949.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Coorg",
+    "state": "Karnataka",
+    "region": "South",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8148,
+      "high": 12718,
+      "label": "Mid-range"
+    },
+    "best_season": "October to March",
+    "tags": [
+      "Nature",
+      "Road Trip",
+      "Wellness"
+    ],
+    "average_daily_cost": 3312,
+    "crowd_level": "Low",
+    "description": "Coffee estates, rain-lush roads and retreat energy.",
+    "highlights": [
+      "Abbey Falls",
+      "Coffee estates",
+      "Dubare"
+    ],
+    "transport": {
+      "airport": "Kannur International Airport",
+      "rail": "Mysuru Junction",
+      "road": "NH 275"
+    },
+    "image": "https://images.pexels.com/photos/15861022/pexels-photo-15861022.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Ooty",
+    "state": "Tamil Nadu",
+    "region": "South",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8856,
+      "high": 13824,
+      "label": "Mid-range"
+    },
+    "best_season": "October to March",
+    "tags": [
+      "Nature",
+      "Family",
+      "Romance"
+    ],
+    "average_daily_cost": 3600,
+    "crowd_level": "Medium",
+    "description": "Toy train curves, eucalyptus air and hill-station nostalgia.",
+    "highlights": [
+      "Botanical Garden",
+      "Ooty Lake",
+      "Toy train"
+    ],
+    "transport": {
+      "airport": "Coimbatore Airport",
+      "rail": "Udhagamandalam Station",
+      "road": "NH 181"
+    },
+    "image": "https://images.pexels.com/photos/18813128/pexels-photo-18813128.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Hyderabad",
+    "state": "Telangana",
+    "region": "South",
+    "type": "city break",
+    "budget_range": {
+      "low": 11847,
+      "high": 18493,
+      "label": "Premium"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Food",
+      "Culture",
+      "Nightlife"
+    ],
+    "average_daily_cost": 4816,
+    "crowd_level": "High",
+    "description": "Historic minarets, biryani trails and a modern tech-city pulse.",
+    "highlights": [
+      "Charminar",
+      "Golconda",
+      "Old City food walk"
+    ],
+    "transport": {
+      "airport": "Rajiv Gandhi International Airport",
+      "rail": "Secunderabad Junction",
+      "road": "NH 44"
+    },
+    "image": "https://images.pexels.com/photos/3889843/pexels-photo-3889843.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Kolkata",
+    "state": "West Bengal",
+    "region": "East",
+    "type": "city break",
+    "budget_range": {
+      "low": 11847,
+      "high": 18493,
+      "label": "Premium"
+    },
+    "best_season": "October to February",
+    "tags": [
+      "Culture",
+      "Food",
+      "Photography"
+    ],
+    "average_daily_cost": 4816,
+    "crowd_level": "High",
+    "description": "Trams, colonial facades, literary corners and layered food culture.",
+    "highlights": [
+      "Victoria Memorial",
+      "Kumartuli",
+      "Park Street"
+    ],
+    "transport": {
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "rail": "Howrah Junction",
+      "road": "NH 16"
+    },
+    "image": "https://images.pexels.com/photos/27695336/pexels-photo-27695336.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Darjeeling",
+    "state": "West Bengal",
+    "region": "East",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8856,
+      "high": 13824,
+      "label": "Mid-range"
+    },
+    "best_season": "October to March",
+    "tags": [
+      "Nature",
+      "Photography",
+      "Family"
+    ],
+    "average_daily_cost": 3600,
+    "crowd_level": "Medium",
+    "description": "Tea gardens, toy train and Himalayan views.",
+    "highlights": [
+      "Tiger Hill",
+      "Toy train",
+      "Tea estates"
+    ],
+    "transport": {
+      "airport": "Bagdogra Airport",
+      "rail": "New Jalpaiguri",
+      "road": "NH 110"
+    },
+    "image": "https://images.pexels.com/photos/9443409/pexels-photo-9443409.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Gangtok",
+    "state": "Sikkim",
+    "region": "East",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8856,
+      "high": 13824,
+      "label": "Mid-range"
+    },
+    "best_season": "October to March",
+    "tags": [
+      "Adventure",
+      "Nature",
+      "Spiritual"
+    ],
+    "average_daily_cost": 3600,
+    "crowd_level": "Medium",
+    "description": "Monasteries, mountain roads and polished hill-town energy.",
+    "highlights": [
+      "MG Marg",
+      "Rumtek Monastery",
+      "Tsomgo Lake"
+    ],
+    "transport": {
+      "airport": "Pakyong Airport",
+      "rail": "New Jalpaiguri",
+      "road": "NH 10"
+    },
+    "image": "https://images.pexels.com/photos/14082272/pexels-photo-14082272.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Puri",
+    "state": "Odisha",
+    "region": "East",
+    "type": "beach destination",
+    "budget_range": {
+      "low": 11572,
+      "high": 18063,
+      "label": "Premium"
+    },
+    "best_season": "November to March",
+    "tags": [
+      "Spiritual",
+      "Beach",
+      "Family"
+    ],
+    "average_daily_cost": 4704,
+    "crowd_level": "High",
+    "description": "Temple town spirituality with broad sandy beaches.",
+    "highlights": [
+      "Jagannath Temple",
+      "Puri Beach",
+      "Konark detour"
+    ],
+    "transport": {
+      "airport": "Bhubaneswar Airport",
+      "rail": "Puri Station",
+      "road": "NH 316"
+    },
+    "image": "https://images.pexels.com/photos/30507077/pexels-photo-30507077.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Shillong",
+    "state": "Meghalaya",
+    "region": "East",
+    "type": "hill station",
+    "budget_range": {
+      "low": 8856,
+      "high": 13824,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Nature",
+      "Road Trip",
+      "Photography"
+    ],
+    "average_daily_cost": 3600,
+    "crowd_level": "Medium",
+    "description": "Cloud-light landscapes, music culture and dramatic nearby viewpoints.",
+    "highlights": [
+      "Shillong Peak",
+      "Cafe trail",
+      "Elephant Falls"
+    ],
+    "transport": {
+      "airport": "Shillong Airport",
+      "rail": "Guwahati Station",
+      "road": "NH 6"
+    },
+    "image": "https://images.pexels.com/photos/32282209/pexels-photo-32282209.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Kaziranga",
+    "state": "Assam",
+    "region": "East",
+    "type": "wildlife reserve",
+    "budget_range": {
+      "low": 7695,
+      "high": 12012,
+      "label": "Mid-range"
+    },
+    "best_season": "Year-round with seasonal planning",
+    "tags": [
+      "Wildlife",
+      "Adventure",
+      "Photography"
+    ],
+    "average_daily_cost": 3128,
+    "crowd_level": "Low",
+    "description": "Safari landscapes, wetlands and one-horned rhino country.",
+    "highlights": [
+      "Jeep safari",
+      "Rhino sightings",
+      "Tea estate drives"
+    ],
+    "transport": {
+      "airport": "Jorhat Airport",
+      "rail": "Furkating Junction",
+      "road": "NH 715"
+    },
+    "image": "https://images.pexels.com/photos/6729033/pexels-photo-6729033.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  },
+  {
+    "name": "Andaman",
+    "state": "Andaman and Nicobar Islands",
+    "region": "Islands",
+    "type": "beach destination",
+    "budget_range": {
+      "low": 11572,
+      "high": 18063,
+      "label": "Premium"
+    },
+    "best_season": "November to March",
+    "tags": [
+      "Beach",
+      "Adventure",
+      "Romance"
+    ],
+    "average_daily_cost": 4704,
+    "crowd_level": "High",
+    "description": "Tropical blues, diving spots and island-paced days.",
+    "highlights": [
+      "Radhanagar Beach",
+      "Cellular Jail",
+      "Scuba diving"
+    ],
+    "transport": {
+      "airport": "Veer Savarkar Airport",
+      "rail": "No rail access",
+      "road": "Local ferry + road"
+    },
+    "image": "https://images.pexels.com/photos/32262473/pexels-photo-32262473.jpeg?auto=compress&cs=tinysrgb&w=1200"
+  }
+]

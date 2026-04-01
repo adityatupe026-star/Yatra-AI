@@ -2,11 +2,12 @@
 
 ## Overview
 
-YatraAI is an India travel-planning project with three main parts:
+YatraAI is an India travel-planning project with four main parts:
 
 1. a data-collection pipeline
-2. a backend travel assistant engine powered by Ollama
-3. a website frontend for discovery, planning, maps, chat, and history
+2. a curated hackathon data pack
+3. a backend travel assistant engine with a FastAPI layer
+4. a website frontend for discovery, planning, maps, chat, and history
 
 The project is structured so that travel recommendations are grounded in your own collected place data rather than relying only on raw model answers.
 
@@ -39,7 +40,7 @@ Contains:
 - map
 - history
 
-Frontend README:
+Detailed feature guide:
 
 - [Frontend README](/D:/Yatraai/Frontend/README.md)
 
@@ -50,8 +51,9 @@ Backend intelligence layer.
 Contains:
 
 - Python travel assistant engine
+- FastAPI API server
 - dataset search logic
-- Ollama integration
+- optional Ollama integration
 
 Backend README:
 
@@ -75,18 +77,18 @@ Data collection README:
 
 Generated dataset output folder used by the backend.
 
-Expected main file:
+Expected main folder:
 
-- `places_dataset.csv`
+- `hackathon/`
 
 ## How The Whole Project Works
 
 End-to-end flow:
 
 1. collect tourism data using the data pipeline
-2. save the cleaned dataset into `data/`
-3. load that dataset in the Python backend
-4. use Ollama to generate grounded travel responses
+2. generate the curated hackathon pack into `data/hackathon/`
+3. load that pack in the Python backend
+4. optionally use Ollama to generate grounded travel responses
 5. show those responses in the website frontend
 
 ## Current State
@@ -95,12 +97,13 @@ What is already present:
 
 - data pipeline
 - backend travel engine
+- FastAPI API
 - multi-page frontend
 - Ollama-oriented local AI flow
+- generated hackathon data pack
 
 What is still recommended for full production deployment:
 
-- a proper backend API service
 - secure Ollama proxying
 - deployment configuration for frontend and backend
 - optional database or managed JSON storage
@@ -119,20 +122,16 @@ pip install -r requirements.txt
 
 ```powershell
 python ".\Data collection\main.py"
+node ".\YatraAI\build_data_pack.mjs"
 ```
 
-### 2. Run the backend engine
+### 2. Run the backend API
 
 ```powershell
-python ".\YatraAI\YatraAi.py"
+uvicorn YatraAI.api.app:app --reload --port 8000
 ```
 
-### 3. Serve the frontend
-
-```powershell
-cd .\Frontend
-python -m http.server 5500
-```
+The backend serves the frontend from the same origin, so one server can handle both.
 
 ## Dependencies
 
@@ -145,10 +144,12 @@ Core dependencies currently listed in [requirements.txt](/D:/Yatraai/requirement
 - `scikit-learn`
 - `notebook`
 - `joblib`
+- `fastapi`
+- `uvicorn[standard]`
 - `ollama`
 
 ## Notes
 
-- the backend currently works as a local engine, not a public API
-- the frontend currently includes static seed data and browser-side state
-- for public publishing, the clean next step is to connect the frontend to a real API layer
+- the backend now includes a real API layer
+- the frontend now points chat at the API first, with Ollama/demo fallback
+- the clean next step is deployment wiring and secrets management if you host it publicly

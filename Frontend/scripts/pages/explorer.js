@@ -15,7 +15,7 @@ export function explorerMarkup() {
             <label>Interest focus<select id="explorerInterest">${interestOptions.map((interest) => `<option value="${interest}">${interest}</option>`).join("")}</select></label>
           </div>
           <div class="hero-actions planner-actions">
-            <button class="button button-primary" type="submit">Explore Place</button>
+            <button class="button button-primary" id="explorePlaceButton" type="submit">Explore Place</button>
             <button class="button button-secondary" type="button" id="explorerUseCurrentTrip">Use Current Trip Place</button>
           </div>
           <datalist id="explorerPlaceSuggestions">${destinationPlaces.map((p) => `<option value="${p.name}"></option>`).join("")}</datalist>
@@ -52,6 +52,7 @@ export function initExplorer() {
   const weatherCard = document.getElementById("explorerWeatherCard");
   const phrasebookCard = document.getElementById("phrasebookCard");
   const emergencyCard = document.getElementById("emergencyCard");
+  const exploreButton = document.getElementById("explorePlaceButton");
   if (!searchForm || !placeInput || !interestSelect) return;
 
   const resolvePlace = () => {
@@ -120,12 +121,30 @@ export function initExplorer() {
 
   searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (exploreButton) {
+      exploreButton.textContent = "Exploring...";
+      exploreButton.classList.add("is-loading");
+    }
     paint();
+    window.setTimeout(() => {
+      if (!exploreButton) return;
+      exploreButton.textContent = "Explore Place";
+      exploreButton.classList.remove("is-loading");
+    }, 420);
   });
   document.getElementById("explorerUseCurrentTrip").addEventListener("click", () => {
+    if (exploreButton) {
+      exploreButton.textContent = "Exploring...";
+      exploreButton.classList.add("is-loading");
+    }
     const current = getPlan();
     if (current?.place?.name) placeInput.value = current.place.name;
     paint();
+    window.setTimeout(() => {
+      if (!exploreButton) return;
+      exploreButton.textContent = "Explore Place";
+      exploreButton.classList.remove("is-loading");
+    }, 420);
   });
   placeInput.addEventListener("change", paint);
   interestSelect.addEventListener("change", paint);

@@ -1,5 +1,5 @@
 import { page } from "./core/config.js";
-import { footer, initFooter, initHamburger, nav } from "./components/nav.js";
+import { footer, initFooter, initHamburger, initShellChrome, nav } from "./components/nav.js";
 import { initMotion } from "./components/motion.js";
 import { showToast } from "./components/toast.js";
 import { homeMarkup, initHome } from "./pages/home.js";
@@ -25,6 +25,15 @@ const pages = {
   events: { markup: eventsMarkup, init: initEvents },
   about: { markup: aboutMarkup, init: initAbout },
   privacy: { markup: privacyMarkup },
+  404: {
+    markup: () => `
+      <section class="page-hero"><p class="eyebrow">404</p><h1>That route does not exist.</h1><p>The page may have moved, or the link may be broken. Use the home page to jump back into YatraAI.</p></section>
+      <section class="section feature-grid">
+        <article class="feature-card"><p class="eyebrow">Quick return</p><h3>Go back home</h3><p>Start from the homepage and jump into planning, chat or destinations from there.</p><a class="button button-primary" href="./index.html">Open Home</a></article>
+        <article class="feature-card"><p class="eyebrow">Popular paths</p><h3>Jump straight in</h3><p>Planner, Explorer, Wishlist and Events are the main destinations most users need.</p><div class="hero-actions"><a class="button button-secondary" href="./planner.html">Planner</a><a class="button button-secondary" href="./explorer.html">Explorer</a><a class="button button-secondary" href="./wishlist.html">Wishlist</a></div></article>
+      </section>
+    `,
+  },
 };
 
 function renderLoader() {
@@ -54,9 +63,35 @@ function renderLoader() {
 }
 
 function registerEnhancements() {
-  if ("serviceWorker" in navigator && window.location.protocol.startsWith("http")) {
-    navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+  const cleanupKey = "yatraai.cleanup.complete";
+  if (!localStorage.getItem(cleanupKey)) {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations?.().then((registrations) => {
+        registrations?.forEach((registration) => registration.unregister().catch(() => {}));
+      }).catch(() => {});
+    }
+    if ("caches" in window) {
+      caches.keys().then((keys) => Promise.all(keys.filter((key) => key.startsWith("yatraai-")).map((key) => caches.delete(key)))).catch(() => {});
+    }
+    localStorage.setItem(cleanupKey, "true");
   }
+
+  const backToTop = document.createElement("button");
+  backToTop.className = "back-to-top";
+  backToTop.type = "button";
+  backToTop.setAttribute("aria-label", "Back to top");
+  backToTop.textContent = "Top";
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  document.body.appendChild(backToTop);
+
+  const syncBackToTop = () => {
+    backToTop.classList.toggle("visible", window.scrollY > 700);
+  };
+  window.addEventListener("scroll", syncBackToTop, { passive: true });
+  syncBackToTop();
+
   document.addEventListener("click", (event) => {
     const link = event.target.closest("a[href]");
     if (!link || link.target === "_blank" || link.href.startsWith("mailto:")) return;
@@ -83,6 +118,7 @@ const hideLoader = renderLoader();
 try {
   renderApp();
   registerEnhancements();
+  initShellChrome();
 } catch (error) {
   document.body.innerHTML = `<main class="page-shell"><section class="section"><article class="route-card"><p class="eyebrow">Something broke</p><h2>YatraAI hit a page error</h2><p>${error?.message || "Unknown frontend error."}</p></article></section></main>`;
   showToast("A page error occurred. Refresh and try again.", "warning");

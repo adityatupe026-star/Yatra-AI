@@ -4,29 +4,31 @@
 
 This folder contains the backend intelligence layer for YatraAI.
 
-Today, the backend is a local Python assistant engine in [YatraAi.py](/D:/Yatraai/YatraAI/YatraAi.py). It is not yet a full web API server, but it already contains the core travel-planning logic that the website can use through a future API wrapper.
+It now includes both:
+
+- the original local assistant engine in [YatraAi.py](/D:/Yatraai/YatraAI/YatraAi.py)
+- a FastAPI service in [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
 
 The backend combines:
 
-- structured travel data from the generated CSV dataset
+- structured travel data from the generated hackathon data pack
 - deterministic search and recommendation logic in Python
-- Ollama for local LLM responses
+- optional Ollama responses when `YATRA_USE_OLLAMA=1`
 
 ## What This Backend Does
 
 The backend is responsible for:
 
-- loading the cleaned places dataset
-- searching places by name and keywords
-- filtering recommendations by interests and budget
+- loading the curated destination, itinerary, intel and cost JSON files
+- searching places by name, state, tags and highlights
+- filtering recommendations by interests, region and budget
 - generating nearby recommendations using coordinates
 - building itinerary-style answers
 - producing place overviews
-- handling transport-style questions
-- handling emergency and hospital lookup flows
-- calling Ollama to turn structured context into natural responses
+- handling transport, weather, packing, budget and optimization questions
+- calling Ollama when available and requested
 
-## Main File
+## Main Files
 
 ### [YatraAi.py](/D:/Yatraai/YatraAI/YatraAi.py)
 
@@ -41,42 +43,48 @@ This file includes:
 - LLM prompt construction
 - interactive local chat flow
 
+### [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
+
+This is the web server entry point. It exposes:
+
+- `GET /health`
+- `GET /api/manifest`
+- `GET /api/place/{name}`
+- `GET /api/nearby/{name}`
+- `GET /api/search`
+- `POST /api/recommend`
+- `POST /api/plan`
+- `POST /api/optimize`
+- `POST /api/simulate`
+- `POST /api/chat`
+
+It also serves the frontend from the same server so the site and API can run on one origin.
+
 ## Current Architecture
 
 Current backend shape:
 
-1. Load `places_dataset.csv`
-2. Normalize and prepare searchable fields
+1. Generate the curated data pack from the frontend dataset
+2. Load destination, itinerary, local intelligence and cost data
 3. Detect user intent and preferences
 4. Collect matching records from the dataset
-5. Send grounded context to Ollama
-6. Return a travel response
-
-Important note:
-
-- this folder currently contains the travel engine
-- it does not yet expose FastAPI/Flask endpoints
-- if you want public website deployment, the next backend step is to wrap this logic in an API service
+5. Return a grounded travel response from the API or local engine
 
 ## Dataset Dependency
 
-Default dataset path:
+Generated data pack path:
 
 ```text
-D:\Yatraai\data\places_dataset.csv
+D:\Yatraai\data\hackathon
 ```
 
-The code resolves it from:
+The pack is generated from the frontend data files and contains:
 
-```python
-DATASET_DEFAULT = Path(__file__).resolve().parents[1] / "data" / "places_dataset.csv"
-```
-
-You can override it with:
-
-```text
-YATRA_DATASET
-```
+- `destinations.json`
+- `itineraries.json`
+- `local_intelligence.json`
+- `cost_benchmarks.json`
+- `manifest.json`
 
 ## Ollama Dependency
 
@@ -92,6 +100,12 @@ Override with:
 
 ```text
 OLLAMA_MODEL
+```
+
+Enable Ollama inside the FastAPI engine with:
+
+```text
+YATRA_USE_OLLAMA=1
 ```
 
 ## Key Internal Components
@@ -117,30 +131,20 @@ Tracks travel preferences across the session, including:
 
 ## How To Run
 
-From the project root:
+Generate the data pack:
+
+```powershell
+node .\YatraAI\build_data_pack.mjs
+```
+
+Run the API:
+
+```powershell
+uvicorn YatraAI.api.app:app --reload --port 8000
+```
+
+If you want the original offline assistant script, you can still run:
 
 ```powershell
 python .\YatraAI\YatraAi.py
 ```
-
-Make sure:
-
-- the dataset exists in `data/places_dataset.csv`
-- Ollama is installed and running
-- the selected model is available locally
-
-## Recommended Next Step For Web Publishing
-
-To make this backend website-ready, add an API layer such as:
-
-- FastAPI
-- Flask
-
-Recommended API endpoints:
-
-- `POST /api/chat`
-- `POST /api/plan`
-- `GET /api/place/{name}`
-- `GET /api/nearby/{name}`
-
-Then connect the frontend to that API instead of directly relying on mock/demo logic.

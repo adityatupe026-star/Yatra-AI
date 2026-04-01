@@ -1,0 +1,330 @@
+{
+  "Rajasthan": {
+    "language": "Hindi",
+    "phrases": [
+      [
+        "Namaste",
+        "Hello"
+      ],
+      [
+        "Kitna hai?",
+        "How much is this?"
+      ],
+      [
+        "Shukriya",
+        "Thank you"
+      ],
+      [
+        "Khaana kahan milega?",
+        "Where can I find food?"
+      ],
+      [
+        "Madad chahiye",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "dal baati churma",
+      "ghewar",
+      "laal maas"
+    ],
+    "scams_to_avoid": [
+      "Guide fee confusion",
+      "Camel or jeep add-ons without clear pricing"
+    ],
+    "transport_tip": "Start early to beat heat and long transfers.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "National tourist helpline and emergency numbers work across India."
+    }
+  },
+  "Maharashtra": {
+    "language": "Marathi",
+    "phrases": [
+      [
+        "Namaskar",
+        "Hello"
+      ],
+      [
+        "Dhanyavaad",
+        "Thank you"
+      ],
+      [
+        "Kuthe aahe?",
+        "Where is it?"
+      ],
+      [
+        "Paani milel ka?",
+        "Can I get water?"
+      ],
+      [
+        "Madat kara",
+        "Please help"
+      ]
+    ],
+    "food_specialties": [
+      "misal pav",
+      "vada pav",
+      "puran poli"
+    ],
+    "scams_to_avoid": [
+      "Tourist cab surcharges",
+      "Weekend package markups"
+    ],
+    "transport_tip": "Peak-hour buffers matter in the bigger cities.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "National tourist helpline and emergency numbers work across India."
+    }
+  },
+  "Karnataka": {
+    "language": "Kannada",
+    "phrases": [
+      [
+        "Namaskara",
+        "Hello"
+      ],
+      [
+        "Dhanyavaadagalu",
+        "Thank you"
+      ],
+      [
+        "Idhu elli?",
+        "Where is this?"
+      ],
+      [
+        "Oota elli sigutte?",
+        "Where can I get food?"
+      ],
+      [
+        "Sahaya beku",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "bisi bele bath",
+      "mysore pak",
+      "akki rotti"
+    ],
+    "scams_to_avoid": [
+      "Estate tour commissions",
+      "Auto fare mismatches"
+    ],
+    "transport_tip": "Road trips work best with fewer, better stops.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "National tourist helpline and emergency numbers work across India."
+    }
+  },
+  "Kerala": {
+    "language": "Malayalam",
+    "phrases": [
+      [
+        "Namaskaram",
+        "Hello"
+      ],
+      [
+        "Nanni",
+        "Thank you"
+      ],
+      [
+        "Ivide evide?",
+        "Where is this?"
+      ],
+      [
+        "Bhakshanam evide?",
+        "Where is food?"
+      ],
+      [
+        "Sahayam venam",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "appam stew",
+      "puttu",
+      "seafood curries"
+    ],
+    "scams_to_avoid": [
+      "Houseboat upgrade pressure",
+      "Unclear transfer charges"
+    ],
+    "transport_tip": "Slow pacing wins here; don't overpack the route.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "Backwater and hill routes are smoother when you save driver contacts in advance."
+    }
+  },
+  "Telangana": {
+    "language": "Telugu",
+    "phrases": [
+      [
+        "Namaskaram",
+        "Hello"
+      ],
+      [
+        "Dhanyavaadhamulu",
+        "Thank you"
+      ],
+      [
+        "Idi ekkada undi?",
+        "Where is this?"
+      ],
+      [
+        "Tiffin ekkada dorukuthundi?",
+        "Where can I get food?"
+      ],
+      [
+        "Sahayam kavali",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "hyderabadi biryani",
+      "haleem",
+      "irani chai"
+    ],
+    "scams_to_avoid": [
+      "Food tour upsells",
+      "Old city auto fare surprises"
+    ],
+    "transport_tip": "Cluster food and heritage in the same neighbourhood.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "National tourist helpline and emergency numbers work across India."
+    }
+  },
+  "Goa": {
+    "language": "Konkani",
+    "phrases": [
+      [
+        "Dev borem korum",
+        "Hello"
+      ],
+      [
+        "Dev borem korum",
+        "Thank you"
+      ],
+      [
+        "He khain asa?",
+        "Where is this?"
+      ],
+      [
+        "Khana khain mellta?",
+        "Where can I get food?"
+      ],
+      [
+        "Mhaka zai",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "fish curry",
+      "bebinca",
+      "prawn balchão"
+    ],
+    "scams_to_avoid": [
+      "Beach shack menu inflation",
+      "Taxi fare confusion"
+    ],
+    "transport_tip": "Scooters are best when your plan is compact.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "Keep beach-area taxi and stay contact details saved offline."
+    }
+  },
+  "Tamil Nadu": {
+    "language": "Tamil",
+    "phrases": [
+      [
+        "Vanakkam",
+        "Hello"
+      ],
+      [
+        "Nandri",
+        "Thank you"
+      ],
+      [
+        "Idhu enga irukku?",
+        "Where is this?"
+      ],
+      [
+        "Saapadu enga kidaikkum?",
+        "Where can I get food?"
+      ],
+      [
+        "Udhavi venum",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "dosas",
+      "filter coffee",
+      "bajji"
+    ],
+    "scams_to_avoid": [
+      "Cab price jumps",
+      "Souvenir tins sold as premium"
+    ],
+    "transport_tip": "Hill routes need weather buffers.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "National tourist helpline and emergency numbers work across India."
+    }
+  },
+  "West Bengal": {
+    "language": "Bengali",
+    "phrases": [
+      [
+        "Nomoshkar",
+        "Hello"
+      ],
+      [
+        "Dhonnobad",
+        "Thank you"
+      ],
+      [
+        "Eta kothay?",
+        "Where is this?"
+      ],
+      [
+        "Khabar kothay pabo?",
+        "Where can I get food?"
+      ],
+      [
+        "Amar sahajjo dorkar",
+        "I need help"
+      ]
+    ],
+    "food_specialties": [
+      "kathi roll",
+      "kosha mangsho",
+      "rosogolla"
+    ],
+    "scams_to_avoid": [
+      "Festival-night ride inflation",
+      "Restaurant menu swaps"
+    ],
+    "transport_tip": "Older districts reward walking and short hops.",
+    "emergency": {
+      "tourist": "1363",
+      "police": "112",
+      "ambulance": "108",
+      "note": "National tourist helpline and emergency numbers work across India."
+    }
+  }
+}

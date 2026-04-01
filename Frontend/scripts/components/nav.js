@@ -1,7 +1,8 @@
-import { NAV_ITEMS, page } from "../core/config.js";
+import { MAIN_NAV_ITEMS, MORE_NAV_ITEMS, page } from "../core/config.js";
 import { showToast } from "./toast.js";
 
 export function nav() {
+  const moreActive = MORE_NAV_ITEMS.some(([key]) => page === key);
   return `
     <a class="skip-link" href="#mainContent">Skip to content</a>
     <header class="topbar">
@@ -10,9 +11,15 @@ export function nav() {
         <span></span><span></span><span></span>
       </button>
       <nav class="nav">
-        ${NAV_ITEMS.map(([key, href, label]) => `<a class="nav-link ${page === key ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+        ${MAIN_NAV_ITEMS.map(([key, href, label]) => `<a class="nav-link ${page === key ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+        <details class="nav-more">
+          <summary class="nav-link nav-more-summary ${moreActive ? "active" : ""}">More</summary>
+          <div class="nav-more-menu">
+            ${MORE_NAV_ITEMS.map(([key, href, label]) => `<a class="nav-more-link ${page === key ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+          </div>
+        </details>
       </nav>
-      <a class="nav-cta ${page === "chat" ? "active" : ""}" href="./chat.html"><span class="nav-cta-icon">AI</span><span>Yatra AI</span></a>
+      <a class="nav-cta ${page === "planner" ? "active" : ""}" href="./planner.html"><span class="nav-cta-icon">GO</span><span>Plan a Trip</span></a>
       <div class="mobile-drawer" id="mobileDrawer">
         <div class="mobile-drawer-panel">
           <div class="mobile-drawer-head">
@@ -20,12 +27,23 @@ export function nav() {
             <button class="drawer-close" id="drawerClose" type="button" aria-label="Close navigation">X</button>
           </div>
           <nav class="mobile-nav">
-            ${NAV_ITEMS.map(([key, href, label]) => `<a class="mobile-nav-link ${page === key ? "active" : ""}" href="${href}">${label}</a>`).join("")}
-            <a class="mobile-nav-link mobile-nav-chat ${page === "chat" ? "active" : ""}" href="./chat.html"><span class="nav-cta-icon">AI</span><span>Yatra AI</span></a>
+            ${MAIN_NAV_ITEMS.map(([key, href, label]) => `<a class="mobile-nav-link ${page === key ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+            <details class="mobile-more">
+              <summary class="mobile-nav-link ${moreActive ? "active" : ""}">More</summary>
+              <div class="mobile-more-list">
+                ${MORE_NAV_ITEMS.map(([key, href, label]) => `<a class="mobile-nav-link mobile-more-link ${page === key ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+              </div>
+            </details>
           </nav>
         </div>
       </div>
     </header>
+    <nav class="mobile-bottom-nav" aria-label="Quick navigation">
+      <a class="mobile-bottom-link ${page === "home" ? "active" : ""}" href="./index.html">Home</a>
+      <a class="mobile-bottom-link ${page === "planner" ? "active" : ""}" href="./planner.html">Plan</a>
+      <a class="mobile-bottom-link ${page === "chat" ? "active" : ""}" href="./chat.html">Chat</a>
+      <a class="mobile-bottom-link ${page === "wishlist" ? "active" : ""}" href="./wishlist.html">Wishlist</a>
+    </nav>
   `;
 }
 
@@ -85,6 +103,27 @@ export function initHamburger() {
   drawer.addEventListener("click", (event) => {
     if (event.target === drawer) shut();
   });
+}
+
+export function initShellChrome() {
+  const bannerId = "offlineBanner";
+  const ensureBanner = () => {
+    let banner = document.getElementById(bannerId);
+    if (navigator.onLine) {
+      banner?.remove();
+      return;
+    }
+    if (!banner) {
+      banner = document.createElement("div");
+      banner.id = bannerId;
+      banner.className = "offline-banner";
+      banner.innerHTML = `<strong>Offline</strong><span>You can keep browsing saved content.</span>`;
+      document.body.appendChild(banner);
+    }
+  };
+  ensureBanner();
+  window.addEventListener("online", ensureBanner);
+  window.addEventListener("offline", ensureBanner);
 }
 
 export function initFooter() {

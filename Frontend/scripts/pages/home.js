@@ -16,12 +16,14 @@ export function homeMarkup() {
           <a class="button button-primary" href="./planner.html?new=1">Start planning</a>
           <a class="button button-secondary" href="./wishlist.html">Build wishlist</a>
           <a class="button button-secondary" href="./chat.html">Open Yatra AI</a>
+          <a class="button button-secondary" href="./explorer.html" id="surpriseMeButton">Surprise me</a>
         </div>
         <div class="hero-meta hero-stats">
           ${statBlock("Destinations", 30, "Curated places across India")}
           ${statBlock("Travel modes", 3, "Air, road and train planning")}
           ${statBlock("Major events", 10, "Festival-led travel moments")}
         </div>
+        <p class="hero-swipe-hint">Swipe the hero image to switch stories</p>
       </div>
       <aside class="planner-card">
         <p class="eyebrow">Quick jump</p>
@@ -62,6 +64,9 @@ export function initHome() {
   const pager = document.getElementById("homeHeroPagination");
   if (!media || !title || !copy || !pager) return;
   let index = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let timer = null;
   pager.innerHTML = HOME_SLIDES.map((_, slideIndex) => `<button class="hero-dot ${slideIndex === 0 ? "active" : ""}" type="button" data-slide="${slideIndex}"></button>`).join("");
   const sync = (nextIndex) => {
     index = nextIndex;
@@ -79,5 +84,33 @@ export function initHome() {
     if (!button) return;
     sync(Number(button.dataset.slide));
   });
-  window.setInterval(() => sync((index + 1) % HOME_SLIDES.length), 5200);
+  const startRotation = () => {
+    timer = window.setInterval(() => sync((index + 1) % HOME_SLIDES.length), 5200);
+  };
+  const stopRotation = () => {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+  };
+  media.addEventListener("touchstart", (event) => {
+    const touch = event.changedTouches?.[0];
+    if (!touch) return;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }, { passive: true });
+  media.addEventListener("touchend", (event) => {
+    const touch = event.changedTouches?.[0];
+    if (!touch) return;
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = Math.abs(touch.clientY - touchStartY);
+    if (Math.abs(deltaX) < 48 || deltaY > 70) return;
+    sync((index + (deltaX < 0 ? 1 : HOME_SLIDES.length - 1)) % HOME_SLIDES.length);
+  });
+  media.addEventListener("mouseenter", stopRotation);
+  media.addEventListener("mouseleave", startRotation);
+  startRotation();
+  document.getElementById("surpriseMeButton")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    const randomPlace = destinationPlaces[Math.floor(Math.random() * destinationPlaces.length)];
+    window.location.href = `./explorer.html?place=${encodeURIComponent(randomPlace.name)}`;
+  });
 }

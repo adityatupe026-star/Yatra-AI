@@ -1,8 +1,11 @@
 export const page = document.body.dataset.page;
 
 export const API_CONFIG = {
-  provider: "ollama",
-  endpoint: window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+  provider: "backend",
+  chatEndpoint: window.location.protocol === "file:"
+    ? "http://localhost:8000/api/chat"
+    : "/api/chat",
+  ollamaEndpoint: window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
     ? "http://localhost:11434/api/generate"
     : "/api/ollama",
   model: "llama3.1:8b-instruct",
@@ -77,16 +80,24 @@ export const REGION_SEASONS = {
   },
 };
 
-export const NAV_ITEMS = [
+export const MAIN_NAV_ITEMS = [
   ["home", "./index.html", "Home"],
   ["destinations", "./destinations.html", "Destinations"],
-  ["events", "./events.html", "Events"],
   ["planner", "./planner.html", "Plan Trip"],
+  ["chat", "./chat.html", "Chat"],
+];
+
+export const MORE_NAV_ITEMS = [
   ["explorer", "./explorer.html", "Explorer"],
   ["map", "./map.html", "India Map"],
+  ["events", "./events.html", "Events"],
   ["history", "./history.html", "History"],
   ["wishlist", "./wishlist.html", "Wishlist"],
+  ["about", "./about.html", "About"],
+  ["privacy", "./privacy.html", "Privacy"],
 ];
+
+export const NAV_ITEMS = [...MAIN_NAV_ITEMS, ...MORE_NAV_ITEMS];
 
 export const STATE_PHRASES = {
   Rajasthan: { language: "Hindi", phrases: [["Namaste", "Hello"], ["Kitna hai?", "How much is this?"], ["Shukriya", "Thank you"], ["Khaana kahan milega?", "Where can I find food?"], ["Madad chahiye", "I need help"]] },

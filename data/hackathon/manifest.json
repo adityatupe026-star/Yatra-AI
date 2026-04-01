@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-03-31T17:56:50.354Z",
+  "source_frontend": "Frontend\\scripts\\data\\site-data.js",
+  "source_config": "Frontend\\scripts\\core\\config.js",
+  "destination_count": 31,
+  "itinerary_count": 23,
+  "states": [
+    "Goa",
+    "Karnataka",
+    "Kerala",
+    "Maharashtra",
+    "Rajasthan",
+    "Tamil Nadu",
+    "Telangana",
+    "West Bengal"
+  ]
+}

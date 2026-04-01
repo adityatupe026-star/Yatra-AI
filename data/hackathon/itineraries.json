@@ -1,0 +1,1277 @@
+[
+  {
+    "name": "Royal Triangle",
+    "origin": "Delhi",
+    "destination": "Jaipur",
+    "days": 4,
+    "transport": "Train",
+    "theme": "heritage loop",
+    "best_for": [
+      "culture",
+      "food",
+      "family"
+    ],
+    "season_note": "Best in the cooler months when walking feels easy.",
+    "savings_tip": "Choose train for balance and use central stays to cut transfers.",
+    "budget": {
+      "low": 11021,
+      "high": 17203,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "City Palace",
+      "Hawa Mahal",
+      "Amber Fort"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Arrive and settle into the old city. Start with City Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Hawa Mahal.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Fort and palace day. Start with Hawa Mahal.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Amber Fort.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Market and café day. Start with Amber Fort.",
+        "afternoon": "Use the middle of the day for a stronger local experience around City Palace.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Easy departure day. Start with City Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Hawa Mahal.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Golden Triangle Plus",
+    "origin": "Delhi",
+    "destination": "Agra",
+    "days": 5,
+    "transport": "Road",
+    "theme": "iconic north route",
+    "best_for": [
+      "heritage",
+      "photography",
+      "food"
+    ],
+    "season_note": "Cool mornings make the Taj and old city easier to enjoy.",
+    "savings_tip": "Keep one overnight near the center instead of switching hotels daily.",
+    "budget": {
+      "low": 13776,
+      "high": 21504,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Taj Mahal",
+      "Agra Fort",
+      "Mehtab Bagh"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Arrive and settle. Start with Taj Mahal.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Agra Fort.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Sunrise monument day. Start with Agra Fort.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mehtab Bagh.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Museum and bazaar day. Start with Mehtab Bagh.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Taj Mahal.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Slow café and garden day. Start with Taj Mahal.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Agra Fort.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return with buffer. Start with Agra Fort.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mehtab Bagh.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Royal Rajasthan Loop",
+    "origin": "Jaipur",
+    "destination": "Udaipur",
+    "days": 5,
+    "transport": "Road",
+    "theme": "palaces and lakes",
+    "best_for": [
+      "luxury",
+      "romance",
+      "heritage"
+    ],
+    "season_note": "Winter is best for comfortable road movement.",
+    "savings_tip": "Road travel works well if you want detours and craft shopping.",
+    "budget": {
+      "low": 15580,
+      "high": 24320,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Lake Pichola",
+      "City Palace",
+      "Sajjangarh"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Fort start. Start with Lake Pichola.",
+        "afternoon": "Use the middle of the day for a stronger local experience around City Palace.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Palace and bazaar day. Start with City Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Sajjangarh.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Travel into lake country. Start with Sajjangarh.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Lake Pichola.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Boat and rooftop evening. Start with Lake Pichola.",
+        "afternoon": "Use the middle of the day for a stronger local experience around City Palace.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Easy return. Start with City Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Sajjangarh.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Desert to Dunes",
+    "origin": "Jaisalmer",
+    "destination": "Rann of Kutch",
+    "days": 5,
+    "transport": "Road",
+    "theme": "desert photography",
+    "best_for": [
+      "photography",
+      "adventure",
+      "culture"
+    ],
+    "season_note": "Night skies and winter temperatures make this route strongest.",
+    "savings_tip": "Book desert camps with full inclusions so you do not pay twice.",
+    "budget": {
+      "low": 12070,
+      "high": 18842,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "White Desert",
+      "Kala Dungar",
+      "Tent City"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Desert fort start. Start with White Desert.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Kala Dungar.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Dune camp day. Start with Kala Dungar.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Tent City.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Road into salt flats. Start with Tent City.",
+        "afternoon": "Use the middle of the day for a stronger local experience around White Desert.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "White desert sunrise. Start with White Desert.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Kala Dungar.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return with buffer. Start with Kala Dungar.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Tent City.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Sacred River Days",
+    "origin": "Varanasi",
+    "destination": "Agra",
+    "days": 4,
+    "transport": "Train",
+    "theme": "spiritual + heritage",
+    "best_for": [
+      "spiritual",
+      "culture",
+      "photography"
+    ],
+    "season_note": "October to March gives the most comfortable sightseeing window.",
+    "savings_tip": "Train keeps the route budget-friendly and reduces road fatigue.",
+    "budget": {
+      "low": 11021,
+      "high": 17203,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Taj Mahal",
+      "Agra Fort",
+      "Mehtab Bagh"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Dawn ghats. Start with Taj Mahal.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Agra Fort.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Old city and temple day. Start with Agra Fort.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mehtab Bagh.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Travel into monument country. Start with Mehtab Bagh.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Taj Mahal.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Sunrise monument slot. Start with Taj Mahal.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Agra Fort.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Himalayan Reset",
+    "origin": "Rishikesh",
+    "destination": "Shimla",
+    "days": 6,
+    "transport": "Road",
+    "theme": "wellness and hills",
+    "best_for": [
+      "wellness",
+      "nature",
+      "family"
+    ],
+    "season_note": "Shoulder seasons reduce crowd pressure and keep the trip flexible.",
+    "savings_tip": "If the budget is tight, keep one segment by train and the rest by road.",
+    "budget": {
+      "low": 17712,
+      "high": 27648,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Mall Road",
+      "Jakhoo Temple",
+      "Toy train"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "River calm. Start with Mall Road.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Jakhoo Temple.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Wellness and food day. Start with Jakhoo Temple.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Toy train.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Transfer day. Start with Toy train.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mall Road.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Hill walk day. Start with Mall Road.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Jakhoo Temple.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Garden and café day. Start with Jakhoo Temple.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Toy train.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 6,
+        "morning": "Return buffer. Start with Toy train.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mall Road.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "North Frontier",
+    "origin": "Srinagar",
+    "destination": "Leh",
+    "days": 6,
+    "transport": "Road",
+    "theme": "high-altitude adventure",
+    "best_for": [
+      "adventure",
+      "photography",
+      "road trip"
+    ],
+    "season_note": "Summer is the safest road window.",
+    "savings_tip": "Long transfers are easier when you keep one buffer day.",
+    "budget": {
+      "low": 16295,
+      "high": 25436,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Shanti Stupa",
+      "Thiksey Monastery",
+      "Magnetic Hill"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Lake calm. Start with Shanti Stupa.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Thiksey Monastery.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Acclimatize. Start with Thiksey Monastery.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Magnetic Hill.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Road day. Start with Magnetic Hill.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Shanti Stupa.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Monastery day. Start with Shanti Stupa.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Thiksey Monastery.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Scenic loop day. Start with Thiksey Monastery.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Magnetic Hill.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 6,
+        "morning": "Return buffer. Start with Magnetic Hill.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Shanti Stupa.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Food and Faith",
+    "origin": "Amritsar",
+    "destination": "Delhi",
+    "days": 3,
+    "transport": "Train",
+    "theme": "food-first city break",
+    "best_for": [
+      "food",
+      "spiritual",
+      "culture"
+    ],
+    "season_note": "Winter keeps the temple and street-food circuit comfortable.",
+    "savings_tip": "Train is the easiest way to keep this short and simple.",
+    "budget": {
+      "low": 9732,
+      "high": 15191,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Red Fort",
+      "Connaught Place",
+      "Humayun's Tomb"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Golden temple morning. Start with Red Fort.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Connaught Place.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Food crawl. Start with Connaught Place.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Humayun's Tomb.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Return day. Start with Humayun's Tomb.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Red Fort.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Coastal Weekend",
+    "origin": "Mumbai",
+    "destination": "Goa",
+    "days": 4,
+    "transport": "Road",
+    "theme": "sea and nightlife",
+    "best_for": [
+      "beach",
+      "nightlife",
+      "food"
+    ],
+    "season_note": "November to February is the sweet spot.",
+    "savings_tip": "If time is short, flights work better than road for this pair.",
+    "budget": {
+      "low": 15429,
+      "high": 24084,
+      "label": "Premium"
+    },
+    "highlight_chain": [
+      "Anjuna",
+      "Fontainhas",
+      "Dudhsagar Falls"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Leave city early. Start with Anjuna.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Fontainhas.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Beach day. Start with Fontainhas.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Dudhsagar Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Night market and café day. Start with Dudhsagar Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Anjuna.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Return buffer. Start with Anjuna.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Fontainhas.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Konkan Escape",
+    "origin": "Pune",
+    "destination": "Goa",
+    "days": 3,
+    "transport": "Road",
+    "theme": "short break",
+    "best_for": [
+      "food",
+      "beach",
+      "road trip"
+    ],
+    "season_note": "Avoid monsoon if your plan depends on beach time.",
+    "savings_tip": "Keep this simple and do not over-plan.",
+    "budget": {
+      "low": 11572,
+      "high": 18063,
+      "label": "Premium"
+    },
+    "highlight_chain": [
+      "Anjuna",
+      "Fontainhas",
+      "Dudhsagar Falls"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Leave Pune early. Start with Anjuna.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Fontainhas.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Beach and fort day. Start with Fontainhas.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Dudhsagar Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Café return. Start with Dudhsagar Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Anjuna.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Backwater and Tea Trail",
+    "origin": "Kochi",
+    "destination": "Munnar",
+    "days": 5,
+    "transport": "Road",
+    "theme": "green slow travel",
+    "best_for": [
+      "nature",
+      "romance",
+      "food"
+    ],
+    "season_note": "September to February gives the most comfortable weather.",
+    "savings_tip": "Road transfer feels best when you are not squeezing too many stops.",
+    "budget": {
+      "low": 14760,
+      "high": 23040,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Tea Museum",
+      "Echo Point",
+      "Eravikulam"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Coast start. Start with Tea Museum.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Echo Point.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Backwater lane. Start with Echo Point.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Eravikulam.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Transfer to tea country. Start with Eravikulam.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Tea Museum.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Tea and viewpoint day. Start with Tea Museum.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Echo Point.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return buffer. Start with Echo Point.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Eravikulam.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Kerala Slow Arc",
+    "origin": "Alappuzha",
+    "destination": "Kochi",
+    "days": 4,
+    "transport": "Road",
+    "theme": "water and heritage",
+    "best_for": [
+      "luxury",
+      "nature",
+      "culture"
+    ],
+    "season_note": "Cooler months are the most pleasant.",
+    "savings_tip": "Avoid too many transfers; this route works best with a calm pace.",
+    "budget": {
+      "low": 13776,
+      "high": 21504,
+      "label": "Premium"
+    },
+    "highlight_chain": [
+      "Fort Kochi",
+      "Chinese Fishing Nets",
+      "Mattancherry"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Houseboat day. Start with Fort Kochi.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Chinese Fishing Nets.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Shore and beach day. Start with Chinese Fishing Nets.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mattancherry.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Heritage and café day. Start with Mattancherry.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Fort Kochi.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Easy return. Start with Fort Kochi.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Chinese Fishing Nets.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Temple and Ruins",
+    "origin": "Hampi",
+    "destination": "Mysuru",
+    "days": 5,
+    "transport": "Road",
+    "theme": "culture + family",
+    "best_for": [
+      "culture",
+      "photography",
+      "family"
+    ],
+    "season_note": "October to February gives the best weather for outdoor heritage.",
+    "savings_tip": "Road is useful because the route itself is part of the story.",
+    "budget": {
+      "low": 16220,
+      "high": 25318,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Mysore Palace",
+      "Chamundi Hills",
+      "Brindavan Gardens"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Ruins at sunrise. Start with Mysore Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Chamundi Hills.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Temple and boulder day. Start with Chamundi Hills.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Brindavan Gardens.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Transfer to palace city. Start with Brindavan Gardens.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mysore Palace.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Palace and garden day. Start with Mysore Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Chamundi Hills.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Easy return. Start with Chamundi Hills.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Brindavan Gardens.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Coffee Hills",
+    "origin": "Mysuru",
+    "destination": "Coorg",
+    "days": 4,
+    "transport": "Road",
+    "theme": "easy hill break",
+    "best_for": [
+      "nature",
+      "food",
+      "road trip"
+    ],
+    "season_note": "Winter and early spring are easiest.",
+    "savings_tip": "Road travel keeps the trip flexible and scenic.",
+    "budget": {
+      "low": 10863,
+      "high": 16957,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Abbey Falls",
+      "Coffee estates",
+      "Dubare"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Palace morning. Start with Abbey Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Coffee estates.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Transfer into coffee hills. Start with Coffee estates.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Dubare.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Estate day. Start with Dubare.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Abbey Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Return buffer. Start with Abbey Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Coffee estates.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Hill Station Pairing",
+    "origin": "Ooty",
+    "destination": "Coorg",
+    "days": 5,
+    "transport": "Road",
+    "theme": "cool weather break",
+    "best_for": [
+      "nature",
+      "romance",
+      "family"
+    ],
+    "season_note": "October to March is ideal.",
+    "savings_tip": "This works well when you want a calming, not hurried, route.",
+    "budget": {
+      "low": 13579,
+      "high": 21197,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Abbey Falls",
+      "Coffee estates",
+      "Dubare"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Toy train and lake day. Start with Abbey Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Coffee estates.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Tea and garden day. Start with Coffee estates.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Dubare.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Transfer to coffee country. Start with Dubare.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Abbey Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Estate and waterfall day. Start with Abbey Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Coffee estates.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return buffer. Start with Coffee estates.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Dubare.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "East India Peaks",
+    "origin": "Kolkata",
+    "destination": "Darjeeling",
+    "days": 5,
+    "transport": "Train",
+    "theme": "culture + hills",
+    "best_for": [
+      "culture",
+      "photography",
+      "food"
+    ],
+    "season_note": "October to April keeps the hills clearer.",
+    "savings_tip": "Train plus a hill transfer gives the best value.",
+    "budget": {
+      "low": 14760,
+      "high": 23040,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Tiger Hill",
+      "Toy train",
+      "Tea estates"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "City food start. Start with Tiger Hill.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Toy train.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Heritage lane day. Start with Toy train.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Tea estates.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Transfer to tea country. Start with Tea estates.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Tiger Hill.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Sunrise hill day. Start with Tiger Hill.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Toy train.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return buffer. Start with Toy train.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Tea estates.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Northeast Loop",
+    "origin": "Gangtok",
+    "destination": "Shillong",
+    "days": 6,
+    "transport": "Road",
+    "theme": "mountains + cafés",
+    "best_for": [
+      "nature",
+      "road trip",
+      "photography"
+    ],
+    "season_note": "Avoid the wettest weeks if road certainty matters.",
+    "savings_tip": "Road transport is the point here, not just the transfer.",
+    "budget": {
+      "low": 17712,
+      "high": 27648,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Shillong Peak",
+      "Cafe trail",
+      "Elephant Falls"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Monastery morning. Start with Shillong Peak.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Cafe trail.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Lake and market day. Start with Cafe trail.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Elephant Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Road into café country. Start with Elephant Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Shillong Peak.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Viewpoint day. Start with Shillong Peak.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Cafe trail.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Slow café day. Start with Cafe trail.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Elephant Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 6,
+        "morning": "Return buffer. Start with Elephant Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Shillong Peak.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Wildlife Circuit",
+    "origin": "Kaziranga",
+    "destination": "Shillong",
+    "days": 5,
+    "transport": "Road",
+    "theme": "safari and scenic drives",
+    "best_for": [
+      "wildlife",
+      "adventure",
+      "photography"
+    ],
+    "season_note": "November to April is the best wildlife window.",
+    "savings_tip": "Road keeps the wildlife and hill segments connected cleanly.",
+    "budget": {
+      "low": 14760,
+      "high": 23040,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Shillong Peak",
+      "Cafe trail",
+      "Elephant Falls"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Safari morning. Start with Shillong Peak.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Cafe trail.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Tea estate day. Start with Cafe trail.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Elephant Falls.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Road day. Start with Elephant Falls.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Shillong Peak.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Viewpoint and café day. Start with Shillong Peak.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Cafe trail.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return buffer. Start with Cafe trail.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Elephant Falls.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Island Reset",
+    "origin": "Andaman",
+    "destination": "Andaman",
+    "days": 4,
+    "transport": "Flight",
+    "theme": "beach holiday",
+    "best_for": [
+      "beach",
+      "adventure",
+      "romance"
+    ],
+    "season_note": "Dry months matter a lot for sea visibility and ferry reliability.",
+    "savings_tip": "Flight is the only sensible arrival mode here.",
+    "budget": {
+      "low": 15429,
+      "high": 24084,
+      "label": "Premium"
+    },
+    "highlight_chain": [
+      "Radhanagar Beach",
+      "Cellular Jail",
+      "Scuba diving"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Beach day. Start with Radhanagar Beach.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Cellular Jail.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "History day. Start with Cellular Jail.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Scuba diving.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Water sports day. Start with Scuba diving.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Radhanagar Beach.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Buffer day. Start with Radhanagar Beach.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Cellular Jail.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Western Heritage Sprint",
+    "origin": "Mumbai",
+    "destination": "Udaipur",
+    "days": 5,
+    "transport": "Flight",
+    "theme": "premium city break",
+    "best_for": [
+      "luxury",
+      "culture",
+      "food"
+    ],
+    "season_note": "Winter gives the smoothest sightseeing rhythm.",
+    "savings_tip": "Flights save the most time on this pair.",
+    "budget": {
+      "low": 15580,
+      "high": 24320,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Lake Pichola",
+      "City Palace",
+      "Sajjangarh"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "City arrival. Start with Lake Pichola.",
+        "afternoon": "Use the middle of the day for a stronger local experience around City Palace.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Palace day. Start with City Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Sajjangarh.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Lake day. Start with Sajjangarh.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Lake Pichola.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Rooftop evening. Start with Lake Pichola.",
+        "afternoon": "Use the middle of the day for a stronger local experience around City Palace.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Return buffer. Start with City Palace.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Sajjangarh.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Sacred South",
+    "origin": "Kochi",
+    "destination": "Puri",
+    "days": 6,
+    "transport": "Flight",
+    "theme": "culture and temple coast",
+    "best_for": [
+      "spiritual",
+      "culture",
+      "beach"
+    ],
+    "season_note": "Cooler months make temple and beach movement better.",
+    "savings_tip": "Flights reduce the fatigue of a long cross-country route.",
+    "budget": {
+      "low": 23144,
+      "high": 36127,
+      "label": "Premium"
+    },
+    "highlight_chain": [
+      "Jagannath Temple",
+      "Puri Beach",
+      "Konark detour"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Coast start. Start with Jagannath Temple.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Puri Beach.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Heritage day. Start with Puri Beach.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Konark detour.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Travel day. Start with Konark detour.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Jagannath Temple.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Temple day. Start with Jagannath Temple.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Puri Beach.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Beach and food day. Start with Puri Beach.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Konark detour.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 6,
+        "morning": "Return buffer. Start with Konark detour.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Jagannath Temple.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Royal Mountain Contrast",
+    "origin": "Jaipur",
+    "destination": "Shimla",
+    "days": 6,
+    "transport": "Train",
+    "theme": "palace to pine",
+    "best_for": [
+      "family",
+      "culture",
+      "nature"
+    ],
+    "season_note": "October to March is the sweet spot for both ends.",
+    "savings_tip": "Train plus a last-mile road transfer gives a comfortable rhythm.",
+    "budget": {
+      "low": 17712,
+      "high": 27648,
+      "label": "Mid-range"
+    },
+    "highlight_chain": [
+      "Mall Road",
+      "Jakhoo Temple",
+      "Toy train"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Royal city start. Start with Mall Road.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Jakhoo Temple.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Craft and food day. Start with Jakhoo Temple.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Toy train.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Transfer to hills. Start with Toy train.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mall Road.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Hill walk day. Start with Mall Road.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Jakhoo Temple.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 5,
+        "morning": "Tea and market day. Start with Jakhoo Temple.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Toy train.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 6,
+        "morning": "Return buffer. Start with Toy train.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Mall Road.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  },
+  {
+    "name": "Budget City Circuit",
+    "origin": "Pune",
+    "destination": "Hyderabad",
+    "days": 4,
+    "transport": "Train",
+    "theme": "food and city breaks",
+    "best_for": [
+      "food",
+      "culture",
+      "nightlife"
+    ],
+    "season_note": "October to February works well for food walks.",
+    "savings_tip": "Train keeps the budget under control and frees money for meals.",
+    "budget": {
+      "low": 15796,
+      "high": 24658,
+      "label": "Premium"
+    },
+    "highlight_chain": [
+      "Charminar",
+      "Golconda",
+      "Old City food walk"
+    ],
+    "day_plan": [
+      {
+        "day": 1,
+        "morning": "Food start. Start with Charminar.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Golconda.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 2,
+        "morning": "Heritage day. Start with Golconda.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Old City food walk.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 3,
+        "morning": "Biryani and market day. Start with Old City food walk.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Charminar.",
+        "evening": "Finish with local food and one slower stop."
+      },
+      {
+        "day": 4,
+        "morning": "Return buffer. Start with Charminar.",
+        "afternoon": "Use the middle of the day for a stronger local experience around Golconda.",
+        "evening": "Finish with local food and one slower stop."
+      }
+    ]
+  }
+]

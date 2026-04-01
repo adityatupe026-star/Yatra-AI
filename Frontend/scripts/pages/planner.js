@@ -1,4 +1,5 @@
 import { interestOptions, destinationPlaces } from "../data/site-data.js";
+import { EMERGENCY_CONTACTS, STATE_PHRASES } from "../core/config.js";
 import { archiveCurrentPlan, getPlan, setPlan } from "../core/state.js";
 import { findCoords, formatCurrency, getPlace } from "../utils/helpers.js";
 import { isDiningIntent, isRestaurantPreference, getRestaurantSuggestions, getNearbySuggestions } from "../utils/restaurants.js";
@@ -68,6 +69,34 @@ function renderRouteMemory(place, stayPreference, restaurantName, visitFocus = "
   `;
 }
 
+function renderTripSupportCards(place) {
+  const phrasebook = STATE_PHRASES[place.state] || STATE_PHRASES.Rajasthan;
+  const emergency = EMERGENCY_CONTACTS[place.state] || EMERGENCY_CONTACTS.default;
+  return `
+    <article class="sidebar-card">
+      <p class="eyebrow">Local phrasebook</p>
+      <h3>${phrasebook.language} essentials</h3>
+      <ul>${phrasebook.phrases.map(([native, english]) => `<li><strong>${native}</strong>: ${english}</li>`).join("")}</ul>
+    </article>
+    <article class="sidebar-card">
+      <p class="eyebrow">Emergency contacts</p>
+      <h3>Keep these numbers handy</h3>
+      <ul>
+        <li>Tourist helpline: ${emergency.tourist}</li>
+        <li>Police: ${emergency.police}</li>
+        <li>Ambulance: ${emergency.ambulance}</li>
+        <li>${emergency.note}</li>
+      </ul>
+    </article>
+  `;
+}
+
+function updatePlannerSupportCards(place) {
+  const holder = document.getElementById("plannerSupportCards");
+  if (!holder) return;
+  holder.innerHTML = renderTripSupportCards(place);
+}
+
 function showPlannerAssist(fieldKey, place, currentValue) {
   const panel = document.getElementById("plannerAssistPanel");
   const title = document.getElementById("plannerAssistTitle");
@@ -111,12 +140,20 @@ function hidePlannerAssist() {
 }
 
 function renderPlan(plan) {
+  updatePlannerSupportCards(plan.place);
   const transportPlan = buildTransportPlan(plan);
   const diningEnabled = isDiningIntent(plan.stayPreference, plan.visitFocus, plan.nearbyFocus);
   const diningPlan = getDiningPlan(plan);
   const startCoords = findCoords(plan.start);
   const budget = buildBudgetBreakdown(plan, startCoords);
   const packingList = buildPackingList(plan);
+  const co2Rates = { Air: 255, Road: 120, Train: 35 };
+  const distanceKm = Number(budget.distanceKm || 0);
+  const currentKg = (distanceKm * co2Rates[plan.mode]) / 1000;
+  const trainKg = (distanceKm * co2Rates.Train) / 1000;
+  const comparisonText = plan.mode === "Train"
+    ? "This trip already uses the lowest-emission mode in this planner."
+    : `Compared with train, this route is about ${(currentKg - trainKg).toFixed(1)} kg CO2 heavier.`;
   document.getElementById("routeOutput").innerHTML = `
     <article class="route-card hero-route planner-hero-card">
       <div class="planner-hero-copy">
@@ -142,13 +179,14 @@ function renderPlan(plan) {
     ${diningEnabled ? `<article class="workflow-card dining-plan-card"><p class="eyebrow">Dining flow</p><h3>Restaurants now influence this trip</h3><div class="transport-step-grid">${diningPlan.picks.map((pick, idx) => `<div class="transport-step-card dining-step-card"><strong>Dining stop ${idx + 1}</strong><p>${pick}</p></div>`).join("")}</div><p class="route-note">${diningPlan.note}</p></article>` : ""}
     <article class="workflow-card"><p class="eyebrow">Budget calculator</p><h3>Estimated trip spend</h3><div class="transport-step-grid budget-grid"><div class="transport-step-card"><strong>Transport</strong><p>${formatCurrency(budget.transport.low)} to ${formatCurrency(budget.transport.high)}</p><small>${budget.distanceKm} km estimated distance</small></div><div class="transport-step-card"><strong>Stay</strong><p>${formatCurrency(budget.stay.low)} to ${formatCurrency(budget.stay.high)}</p><small>Based on ${plan.stayPreference || "standard"} stay type</small></div><div class="transport-step-card"><strong>Food</strong><p>${formatCurrency(budget.food.low)} to ${formatCurrency(budget.food.high)}</p><small>Dining intensity changes this range</small></div><div class="transport-step-card"><strong>Activities</strong><p>${formatCurrency(budget.activities.low)} to ${formatCurrency(budget.activities.high)}</p><small>Sightseeing, tickets and local experiences</small></div><div class="transport-step-card budget-total-card"><strong>Total</strong><p>${formatCurrency(budget.total.low)} to ${formatCurrency(budget.total.high)}</p><small>Use as a practical planning band, not a final booking quote</small></div></div></article>
     <article class="workflow-card transport-summary-card"><p class="eyebrow">Transport plan</p><h3>${plan.mode} route breakdown</h3><div class="transport-step-grid">${transportPlan.steps.map((step, idx) => `<div class="transport-step-card"><strong>Step ${idx + 1}</strong><p>${step}</p></div>`).join("")}</div></article>
+    <article class="workflow-card carbon-card"><p class="eyebrow">Carbon check</p><h3>Estimated CO2 footprint</h3><div class="transport-step-grid budget-grid"><div class="transport-step-card"><strong>${plan.mode}</strong><p>${currentKg.toFixed(1)} kg CO2</p><small>${co2Rates[plan.mode]} g CO2 per km per person</small></div><div class="transport-step-card"><strong>Train baseline</strong><p>${trainKg.toFixed(1)} kg CO2</p><small>35 g CO2 per km per person</small></div><div class="transport-step-card budget-total-card"><strong>Comparison</strong><p>${plan.mode === "Train" ? "Best-in-class" : `${(currentKg / Math.max(trainKg, 0.1)).toFixed(1)}x train`}</p><small>${comparisonText}</small></div></div></article>
     <article class="workflow-card"><p class="eyebrow">Workflow</p><h3>How this trip flows</h3><div class="workflow-list">${plan.workflow.map((step, idx) => `<div class="workflow-item"><strong>${idx + 1}</strong><p>${step}</p></div>`).join("")}</div></article>
     <article class="workflow-card"><p class="eyebrow">Packing list</p><h3>What to carry for this trip</h3><div class="prompt-list">${packingList.map((item) => `<span class="prompt-chip">${item}</span>`).join("")}</div></article>
     <article class="route-card"><p class="eyebrow">YatraAI data policy</p><h3>Grounded planning</h3><p>YatraAI should use your own places, stays, routes, nearby picks and planning data as the source of truth, with Ollama handling local inference for trip planning and chat.</p></article>
   `;
   const mapLinks = document.getElementById("plannerMapLinks");
   if (mapLinks) {
-    mapLinks.innerHTML = `<a class="button button-secondary" href="${buildGoogleMapsDirectionsLink(plan)}" target="_blank" rel="noreferrer">Open route in Google Maps</a><a class="button button-secondary" href="${buildGoogleMapsPlaceLink(plan.place)}" target="_blank" rel="noreferrer">Open destination in Google Maps</a><button class="button button-secondary" type="button" id="copyTripLink">Copy share link</button><button class="button button-secondary" type="button" id="downloadTripPdf">Download PDF</button>`;
+    mapLinks.innerHTML = `<a class="button button-secondary" href="${buildGoogleMapsDirectionsLink(plan)}" target="_blank" rel="noreferrer">Open route in Google Maps</a><a class="button button-secondary" href="${buildGoogleMapsPlaceLink(plan.place)}" target="_blank" rel="noreferrer">Open destination in Google Maps</a><button class="button button-secondary" type="button" id="copyTripLink">Copy share link</button><button class="button button-secondary" type="button" id="downloadTripPdf">Export to PDF</button>`;
   }
   document.getElementById("copyTripLink")?.addEventListener("click", async () => {
     const url = `${window.location.origin}${window.location.pathname}?trip=${encodeURIComponent(encodeSharePlan(plan))}`;
@@ -245,7 +283,11 @@ export function plannerMarkup() {
         <datalist id="placeSuggestions">${destinationPlaces.map((p) => `<option value="${p.name}"></option>`).join("")}</datalist>
         <datalist id="restaurantSuggestions"></datalist>
       </div>
-      <aside class="planner-sidebar"><article class="sidebar-card route-memory-card" id="routeMemoryCard"></article><article class="sidebar-card" id="plannerWeatherCard"><div class="weather-skeleton skeleton shimmer"></div></article></aside>
+      <aside class="planner-sidebar">
+        <article class="sidebar-card route-memory-card" id="routeMemoryCard"></article>
+        <article class="sidebar-card" id="plannerWeatherCard"><div class="weather-skeleton skeleton shimmer"></div></article>
+        <div id="plannerSupportCards"></div>
+      </aside>
     </section>
     <section class="section">
       <div class="planner-map-wrap"><div id="plannerMap" class="planner-map"></div></div>
@@ -281,6 +323,7 @@ export function initPlanner() {
     restaurantWrap.classList.toggle("hidden-field", !showRestaurantField);
     if (!showRestaurantField) restaurantNameInput.value = "";
     renderRouteMemory(activePlace, stayPreferenceInput.value, restaurantNameInput.value.trim(), visitFocusInput.value.trim());
+    updatePlannerSupportCards(activePlace);
   };
 
   const bindAssist = (field, fieldKey) => {
@@ -315,6 +358,7 @@ export function initPlanner() {
     const start = document.getElementById("startCity").value.trim() || "Your city";
     return {
       id: Date.now(),
+      createdAtTs: Date.now(),
       start,
       place,
       mode,
@@ -390,6 +434,7 @@ export function initPlanner() {
   const sharedTrip = params.get("trip");
   const decodedTrip = sharedTrip ? decodeSharePlan(sharedTrip) : null;
   if (destinationFromQuery) destinationInput.value = destinationFromQuery;
+  if (params.get("days")) document.getElementById("tripDays").value = params.get("days");
   if (params.get("new") === "1") archiveCurrentPlan();
   if (decodedTrip) {
     plannerReadOnly = true;
@@ -410,4 +455,5 @@ export function initPlanner() {
     });
   }
   syncRestaurantPreference();
+  updatePlannerSupportCards(getPlace(destinationInput.value.trim() || getPlan()?.place?.name || "Pune"));
 }
