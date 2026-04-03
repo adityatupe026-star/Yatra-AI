@@ -1,16 +1,20 @@
 from __future__ import annotations
 
 import base64
+import html
 import json
+import os
 from pathlib import Path
 from typing import Any, Dict
+from urllib import error as urlerror
+from urllib import request as urlrequest
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .engine import engine
-from .schemas import ChatRequest, OptimizeRequest, PlanRequest, RecommendRequest, SimulateRequest
+from .schemas import ChatRequest, OptimizeRequest, PlanRequest, RecommendRequest, SimulateRequest, TranslateRequest
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -84,6 +88,46 @@ def chat(payload: ChatRequest) -> Dict[str, Any]:
     if payload.model:
         result["model"] = payload.model
     return result
+
+
+@app.post("/api/translate")
+def translate(payload: TranslateRequest) -> Dict[str, Any]:
+    api_key = os.environ.get("GOOGLE_TRANSLATE_API_KEY", "").strip()
+    if not api_key:
+        raise HTTPException(status_code=503, detail="Set GOOGLE_TRANSLATE_API_KEY on the backend to enable Google Translate.")
+
+    endpoint = os.environ.get("GOOGLE_TRANSLATE_API_URL", "https://translation.googleapis.com/language/translate/v2").strip()
+    request_payload: Dict[str, Any] = {
+        "q": payload.text,
+        "target": payload.targetLanguage,
+        "format": "text",
+    }
+    if payload.sourceLanguage and payload.sourceLanguage != "auto":
+        request_payload["source"] = payload.sourceLanguage
+
+    req = urlrequest.Request(
+        f"{endpoint}?key={api_key}",
+        data=json.dumps(request_payload).encode("utf-8"),
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        method="POST",
+    )
+    try:
+        with urlrequest.urlopen(req, timeout=20) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except urlerror.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="ignore") if hasattr(exc, "read") else str(exc)
+        raise HTTPException(status_code=502, detail=f"Google Translate error: {detail}") from exc
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Google Translate request failed: {exc}") from exc
+
+    translations = data.get("data", {}).get("translations", [])
+    first = translations[0] if translations else {}
+    return {
+        "translatedText": html.unescape(first.get("translatedText", "")),
+        "detectedSourceLanguage": first.get("detectedSourceLanguage"),
+        "targetLanguage": payload.targetLanguage,
+        "provider": "Google Cloud Translation",
+    }
 
 
 @app.get("/api/share/{token}")

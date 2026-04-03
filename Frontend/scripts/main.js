@@ -5,6 +5,7 @@ import { showToast } from "./components/toast.js";
 import { homeMarkup, initHome } from "./pages/home.js";
 import { destinationsMarkup, initDestinations } from "./pages/destinations.js";
 import { plannerMarkup, initPlanner } from "./pages/planner.js";
+import { transletMarkup, initTranslet } from "./pages/translet.js";
 import { chatMarkup, initChat } from "./pages/chat.js";
 import { explorerMarkup, initExplorer } from "./pages/explorer.js";
 import { mapMarkup, initMap } from "./pages/map.js";
@@ -17,6 +18,7 @@ const pages = {
   home: { markup: homeMarkup, init: initHome, shell: "page-shell full-bleed-shell" },
   destinations: { markup: destinationsMarkup, init: initDestinations },
   planner: { markup: plannerMarkup, init: initPlanner },
+  translet: { markup: transletMarkup, init: initTranslet },
   chat: { markup: chatMarkup, init: initChat, shell: "page-shell chat-shell" },
   explorer: { markup: explorerMarkup, init: initExplorer },
   map: { markup: mapMarkup, init: initMap },

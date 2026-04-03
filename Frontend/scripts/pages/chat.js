@@ -120,6 +120,7 @@ export function chatMarkup() {
         <div class="console-header">
           <div><strong id="chatSessionTitle">New chat</strong><small id="chatPlanContext">No planned trip linked yet</small></div>
           <div class="console-header-actions">
+            <button class="button button-secondary" type="button" id="listenReplyButton" aria-label="Speech output unavailable" title="Speech output unavailable">🔊</button>
             <button class="button button-secondary" type="button" id="saveAsTripButton">Save as Trip</button>
             <a class="status-dot" href="./planner.html">Open Planner</a>
           </div>
@@ -128,7 +129,7 @@ export function chatMarkup() {
         <form class="chat-form" id="dedicatedChatForm">
           <textarea id="dedicatedChatInput" rows="3" placeholder="Ask about your route, destination, nearby places, transport or trip ideas"></textarea>
           <div class="hero-actions">
-            <button class="button button-secondary" type="button" id="voiceInputButton">🎙️ Voice</button>
+            <button class="button button-secondary" type="button" id="voiceInputButton" aria-label="Speech input unavailable" title="Speech input unavailable">🎤</button>
             <button class="button button-primary" type="submit">Send</button>
           </div>
         </form>
@@ -141,9 +142,13 @@ export function initChat() {
   if (!activeChat()) createChat();
   const input = document.getElementById("dedicatedChatInput");
   const voiceButton = document.getElementById("voiceInputButton");
+  const listenButton = document.getElementById("listenReplyButton");
   const saveButton = document.getElementById("saveAsTripButton");
   const clearAllButton = document.getElementById("clearAllChatsButton");
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const showAudioUnavailable = () => {
+    showToast("Speech input and playback are currently unavailable.", "warning");
+  };
 
   const openTripFromAssistant = () => {
     const session = activeChat();
@@ -219,30 +224,7 @@ export function initChat() {
     button.classList.remove("is-loading");
     renderChatUi();
   });
-  voiceButton?.addEventListener("click", () => {
-    if (!SpeechRecognition) {
-      showToast("Voice input is not supported in this browser.", "warning");
-      return;
-    }
-    try {
-      const recognition = new SpeechRecognition();
-      recognition.lang = "en-IN";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
-      recognition.onresult = (event) => {
-        const transcript = Array.from(event.results).map((result) => result[0]?.transcript || "").join(" ").trim();
-        if (!transcript) return;
-        input.value = `${input.value ? `${input.value} ` : ""}${transcript}`;
-        input.focus();
-        showToast("Voice input added to the message box.", "success");
-      };
-      recognition.onerror = () => {
-        showToast("Voice input could not start.", "warning");
-      };
-      recognition.start();
-    } catch {
-      showToast("Voice input could not start.", "warning");
-    }
-  });
+  voiceButton?.addEventListener("click", showAudioUnavailable);
+  listenButton?.addEventListener("click", showAudioUnavailable);
   renderChatUi();
 }

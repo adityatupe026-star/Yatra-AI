@@ -83,8 +83,26 @@ export const REGION_SEASONS = {
 export const MAIN_NAV_ITEMS = [
   ["home", "./index.html", "Home"],
   ["destinations", "./destinations.html", "Destinations"],
-  ["planner", "./planner.html", "Plan Trip"],
+  ["translet", "./translet.html", "Translet"],
   ["chat", "./chat.html", "Chat"],
+];
+
+export const TRANSLATE_LANGUAGES = [
+  ["auto", "Auto Detect"],
+  ["en", "English"],
+  ["hi", "Hindi"],
+  ["mr", "Marathi"],
+  ["bn", "Bengali"],
+  ["ta", "Tamil"],
+  ["te", "Telugu"],
+  ["kn", "Kannada"],
+  ["ml", "Malayalam"],
+  ["gu", "Gujarati"],
+  ["pa", "Punjabi"],
+  ["ur", "Urdu"],
+  ["or", "Odia"],
+  ["as", "Assamese"],
+  ["kok", "Konkani"],
 ];
 
 export const MORE_NAV_ITEMS = [

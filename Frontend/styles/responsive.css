@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 760px) {
-  .topbar { width: calc(100% - 20px); padding: 14px 18px; }
+  .topbar { width: calc(100% - 20px); padding: 6px 12px; }
   .page-shell, .site-footer { width: calc(100% - 20px); }
   .page-shell { padding-bottom: 94px; }
   .site-footer { margin-bottom: 112px; }

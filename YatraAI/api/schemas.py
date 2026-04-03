@@ -42,3 +42,8 @@ class OptimizeRequest(BaseModel):
 class SimulateRequest(BaseModel):
     plan: Dict[str, Any]
 
+
+class TranslateRequest(BaseModel):
+    text: str
+    targetLanguage: str
+    sourceLanguage: Optional[str] = None
