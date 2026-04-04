@@ -4,7 +4,7 @@ const APP_SHELL = [
   "./index.html",
   "./destinations.html",
   "./planner.html",
-  "./translet.html",
+  "./translate.html",
   "./chat.html",
   "./explorer.html",
   "./events.html",

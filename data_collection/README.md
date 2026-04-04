@@ -1,14 +1,8 @@
-# YatraAI Data Collection README
+# YatraAI Data Collection Pipeline
 
-## Overview
+This folder contains the place-data pipeline for YatraAI.
 
-This folder contains the data-ingestion pipeline for YatraAI.
-
-Its job is to collect tourism and travel-support place data, clean and normalize it, enrich it with assistant-friendly fields, and save the final dataset used by the backend and website.
-
-Default target today:
-
-- Pune, India
+Its job is to collect tourism and travel-support POIs, clean and normalize them, enrich them with useful fields, and save the final dataset used by the backend and frontend.
 
 ## Main Purpose
 
@@ -18,7 +12,7 @@ The pipeline creates the structured dataset that powers:
 - nearby recommendations
 - logistics lookup
 - itinerary generation
-- grounded Ollama prompts
+- grounded travel answers
 
 ## Files In This Folder
 
@@ -26,31 +20,23 @@ The pipeline creates the structured dataset that powers:
 
 Pipeline entry point.
 
-It handles:
-
-- CLI arguments
-- logging setup
-- running collection, cleaning, and saving
-
 ### [collector.py](/D:/Yatraai/Data%20collection/collector.py)
 
-Responsible for raw place collection from supported sources.
+Collects raw place data from supported sources.
 
 ### [cleaner.py](/D:/Yatraai/Data%20collection/cleaner.py)
 
-Responsible for merging, normalization, deduplication, and enrichment.
+Normalizes, deduplicates, and enriches the records.
 
 ### [saver.py](/D:/Yatraai/Data%20collection/saver.py)
 
-Responsible for writing the cleaned outputs and summary files.
+Writes the cleaned outputs and summary files.
 
 ## Data Sources
 
 ### OpenStreetMap Overpass API
 
-Primary source.
-
-Used for:
+Primary source for:
 
 - attractions
 - restaurants
@@ -63,25 +49,15 @@ Used for:
 
 ### Foursquare Places API
 
-Optional enrichment source.
-
-Used only if you pass an API key.
+Optional enrichment source when an API key is available.
 
 ## Pipeline Flow
 
-The pipeline runs in 3 steps:
-
-1. Collect raw records from OSM and optionally Foursquare
-2. Clean, merge, normalize, and enrich the records
-3. Save final dataset files into the project `data/` folder
+1. Collect raw records
+2. Clean and enrich the records
+3. Save final dataset files into `data/`
 
 ## Output Files
-
-By default, the pipeline writes into:
-
-```text
-D:\Yatraai\data
-```
 
 Typical outputs:
 
@@ -128,29 +104,23 @@ The generated dataset includes fields such as:
 From the project root:
 
 ```powershell
-python ".\Data collection\main.py"
+python ".\data_collection\main.py"
 ```
 
-Example with a different city:
+You can change the city if needed:
 
 ```powershell
-python ".\Data collection\main.py" --city Mumbai
-```
-
-Example with Foursquare:
-
-```powershell
-python ".\Data collection\main.py" --city Goa --fsq-key YOUR_API_KEY
+python ".\data_collection\main.py" --city Mumbai
 ```
 
 ## Notes
 
-- logs are also written to `pipeline.log` in the project root
+- logs are written to `pipeline.log`
 - per-category CSV splitting is enabled by default
 - if the city is not predefined, the pipeline attempts a fallback geocoding lookup
 
 ## Relationship To The Rest Of The Project
 
-- this folder creates the dataset
+- this folder creates the place dataset
 - the backend consumes that dataset
-- the frontend should eventually consume backend/API responses based on that dataset
+- the dashboard reads the tourism datasets from `data/`

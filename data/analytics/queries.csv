@@ -1,0 +1,2 @@
+query_id,session_id,user_id,query_type,raw_query,source,page,timestamp,language,trip_mode,destination_hint,budget_hint,days_hint
+query_11ebeafa8998,chat-1775239181500-j18fk3,,chat,Travel expert mode active.  User question: i was thinking of planning a holiday,chat_input,chat,2026-04-03T18:00:22.190445+00:00,en-IN,expert,,,

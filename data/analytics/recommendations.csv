@@ -1,0 +1,2 @@
+rec_id,query_id,session_id,recommendation_type,top_pick,all_picks,estimated_cost,estimated_days,ai_mode,created_at
+rec_621e87752e00,query_11ebeafa8998,chat-1775239181500-j18fk3,chat_answer,,,,,expert,2026-04-03T18:00:22.193226+00:00

@@ -11,8 +11,8 @@ export function planContextText() {
   return `Current trip: ${plan.start} to ${plan.place.name} by ${plan.mode}, ${plan.days} days, budget Rs.${plan.budget}, vibe ${plan.vibe}, interests ${(plan.interests || []).join(", ")}, highlights ${(plan.place.highlights || []).join(", ")}, nearby ${nearby.join(", ") || "none"}, best season ${season?.bestMonths || "n/a"}.`;
 }
 
-export function demoResponse(prompt) {
-  const tripHint = getPlan() ? `\n\nCurrent trip context: ${getPlan().start} to ${getPlan().place.name} by ${getPlan().mode}.` : "";
+export function demoResponse(prompt, includeTripContext = true) {
+  const tripHint = includeTripContext && getPlan() ? `\n\nCurrent trip context: ${getPlan().start} to ${getPlan().place.name} by ${getPlan().mode}.` : "";
   const text = prompt.toLowerCase();
   if (text.includes("budget")) return `Budget guide\n\n- Keep transport and stay as the biggest slices.\n- Use one premium anchor meal and save on the rest.\n- Leave a buffer for tickets, taxis and small surprises.${tripHint}`;
   if (text.includes("weather") || text.includes("rain") || text.includes("season")) return `Weather note\n\n- Check the best season for the region before locking dates.\n- Pack one light layer and one rain-friendly backup.\n- If the trip is coastal or hill-based, build in flexible timing.${tripHint}`;
@@ -25,9 +25,10 @@ export function demoResponse(prompt) {
   return `Trip sketch\n\nDay 1\n- Arrival and check-in\n- Landmark visit\n- Evening food stop\n\nDay 2\n- Culture-heavy route\n- Scenic midday break\n- Premium dinner or local dining cluster\n\nDay 3\n- Nearby exploration or road-trip extension\n\nWhy it fits\nThis route balances discovery, food and visual highlights while keeping the pace practical.${tripHint}`;
 }
 
-export async function queryBackend(prompt) {
+export async function queryBackend(prompt, options = {}) {
+  const useTripContext = options.useTripContext ?? true;
+  const responseMode = useTripContext ? "trip" : "expert";
   const context = {
-    trip: getPlan(),
     featuredRoutes,
     places: destinationPlaces.map((place) => ({
       name: place.name,
@@ -42,15 +43,22 @@ export async function queryBackend(prompt) {
       lng: place.lng,
     })),
   };
+  if (options.sessionId) {
+    context.sessionId = options.sessionId;
+  }
+  if (useTripContext) {
+    context.trip = getPlan();
+  }
   const backendPayload = {
     prompt,
     model: API_CONFIG.model,
     context,
+    responseMode,
   };
   const ollamaPayload = {
     model: API_CONFIG.model,
     stream: false,
-    prompt: `You are YatraAI, an India travel planning assistant.\nUse this structured context when answering:\n${JSON.stringify(context)}\n\nUser prompt:\n${prompt}`,
+    prompt: `You are YatraAI, an India ${useTripContext ? "travel planning assistant" : "travel and tourism expert"}.\nUse this structured context when answering:\n${JSON.stringify(context)}\n\nUser prompt:\n${prompt}`,
   };
   const candidates = [
     { endpoint: API_CONFIG.chatEndpoint, body: backendPayload, expect: "chat" },
@@ -72,7 +80,7 @@ export async function queryBackend(prompt) {
       continue;
     }
   }
-  return demoResponse(prompt);
+  return demoResponse(prompt, useTripContext);
 }
 
 export function renderChatBody(content, role) {

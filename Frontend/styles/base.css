@@ -449,8 +449,8 @@ button, input, select, textarea { font: inherit; }
 .chat-shell {
   width: min(calc(100% - 28px), 1480px);
 }
-.page-hero, .section { padding-top: 56px; }
-.page-hero { padding-top: 80px; max-width: 900px; }
+.page-hero, .section { padding-top: 72px; }
+.page-hero { padding-top: 96px; max-width: 900px; }
 .page-hero p, .hero-copy, .destination-copy p, .feature-card p, .route-card p, .sidebar-card p, .site-footer a, .section-note, .message p, .workflow-item p { color: var(--muted); line-height: 1.75; }
 
 h1, h2, h3 {
@@ -649,7 +649,7 @@ h3 { font-size: 2.1rem; }
 }
 
 .planner-card, .portal-card, .feature-card, .route-card, .sidebar-card, .ai-console, .workflow-card {
-  padding: 24px;
+  padding: 28px;
 }
 .planner-card {
   align-self: end;
@@ -659,10 +659,10 @@ h3 { font-size: 2.1rem; }
 }
 .planner-card h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 16px; }
 
-.quick-planner, .chat-form { display: grid; gap: 22px; }
+.quick-planner, .chat-form { display: grid; gap: 28px; }
 .quick-grid, .section-head, .planner-layout, .explorer-grid, .feature-grid, .route-grid, .workflow-list {
   display: grid;
-  gap: 22px;
+  gap: 28px;
 }
 .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .quick-grid.triple { grid-template-columns: repeat(3, minmax(0, 1fr)); }

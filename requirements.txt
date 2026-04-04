@@ -19,4 +19,9 @@ joblib
 fastapi
 uvicorn[standard]
 
+# Dev / UX
+streamlit
+SpeechRecognition
+pyttsx3
+
 ollama

@@ -1,51 +1,56 @@
 # YatraAI Backend README
 
-## Overview
-
 This folder contains the backend intelligence layer for YatraAI.
 
-It now includes both:
+It includes:
 
-- the original local assistant engine in [YatraAi.py](/D:/Yatraai/YatraAI/YatraAi.py)
-- a FastAPI service in [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
+- the local assistant engine in [yatra_ai.py](/D:/Yatraai/YatraAI/yatra_ai.py)
+- the FastAPI service in [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
+- CSV analytics helpers in [api/analytics.py](/D:/Yatraai/YatraAI/api/analytics.py)
+- the tourism dashboard in [dev_dashboard.py](/D:/Yatraai/YatraAI/dev_dashboard.py)
 
-The backend combines:
+## What The Backend Does
 
-- structured travel data from the generated hackathon data pack
-- deterministic search and recommendation logic in Python
-- optional Ollama responses when `YATRA_USE_OLLAMA=1`
+The backend:
 
-## What This Backend Does
+- loads the curated tourism data pack
+- searches destinations and places
+- builds planner responses
+- handles trip-aware and expert chat modes
+- proxies translation requests
+- writes structured CSV logs
+- serves the frontend from the same origin
 
-The backend is responsible for:
+## Data Sources
 
-- loading the curated destination, itinerary, intel and cost JSON files
-- searching places by name, state, tags and highlights
-- filtering recommendations by interests, region and budget
-- generating nearby recommendations using coordinates
-- building itinerary-style answers
-- producing place overviews
-- handling transport, weather, packing, budget and optimization questions
-- calling Ollama when available and requested
+The generated tourism pack lives in:
+
+```text
+D:\Yatraai\data\hackathon
+```
+
+It contains:
+
+- `destinations.json`
+- `itineraries.json`
+- `local_intelligence.json`
+- `cost_benchmarks.json`
+- `manifest.json`
+
+The dashboard also reads:
+
+- `data/places_dataset.csv`
+- `data/hackathon/*.json`
 
 ## Main Files
 
-### [YatraAi.py](/D:/Yatraai/YatraAI/YatraAi.py)
+### [yatra_ai.py](/D:/Yatraai/YatraAI/yatra_ai.py)
 
-This file includes:
-
-- dataset loading and normalization
-- user profile tracking
-- place search utilities
-- recommendation logic
-- nearby place lookup with Haversine distance
-- emergency place search
-- LLM prompt construction
-- interactive local chat flow
+Local assistant script with dataset loading, recommendation logic, and offline chat flow.
 
 ### [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
 
-This is the web server entry point. It exposes:
+FastAPI entry point that exposes:
 
 - `GET /health`
 - `GET /api/manifest`
@@ -57,94 +62,58 @@ This is the web server entry point. It exposes:
 - `POST /api/optimize`
 - `POST /api/simulate`
 - `POST /api/chat`
+- `POST /translate`
+- `POST /api/translate`
 
-It also serves the frontend from the same server so the site and API can run on one origin.
+### [api/analytics.py](/D:/Yatraai/YatraAI/api/analytics.py)
 
-## Current Architecture
+CSV logger and table schema helpers for:
 
-Current backend shape:
-
-1. Generate the curated data pack from the frontend dataset
-2. Load destination, itinerary, local intelligence and cost data
-3. Detect user intent and preferences
-4. Collect matching records from the dataset
-5. Return a grounded travel response from the API or local engine
-
-## Dataset Dependency
-
-Generated data pack path:
-
-```text
-D:\Yatraai\data\hackathon
-```
-
-The pack is generated from the frontend data files and contains:
-
-- `destinations.json`
-- `itineraries.json`
-- `local_intelligence.json`
-- `cost_benchmarks.json`
-- `manifest.json`
-
-## Ollama Dependency
-
-The backend uses local Ollama inference through the Python `ollama` package.
-
-Default model:
-
-```text
-llama3.2
-```
-
-Override with:
-
-```text
-OLLAMA_MODEL
-```
-
-Enable Ollama inside the FastAPI engine with:
-
-```text
-YATRA_USE_OLLAMA=1
-```
-
-## Key Internal Components
-
-### `PlacesDB`
-
-Main data access class. It handles:
-
-- interest detection
-- budget filtering
-- text search
+- sessions
+- queries
+- intent parses
 - recommendations
-- nearby-place queries
-- emergency-place lookup
+- interactions
+- conversions
+- translations
+- chat messages
+- events
 
-### `UserProfile`
+### [api/translation/](/D:/Yatraai/YatraAI/api/translation/)
 
-Tracks travel preferences across the session, including:
+Local LibreTranslate-backed translation module with request models, caching, and router wiring.
 
-- budget
-- interests
-- travel type
+### [dev_dashboard.py](/D:/Yatraai/YatraAI/dev_dashboard.py)
 
-## How To Run
+Streamlit dashboard for India tourism analysis.
 
-Generate the data pack:
+## Architecture
 
-```powershell
-node .\YatraAI\build_data_pack.mjs
-```
+The backend flow is:
 
-Run the API:
+1. load the tourism datasets
+2. detect user intent
+3. build grounded travel responses
+4. log usage to CSV
+5. return the result to the frontend or dashboard
+
+## Running The API
+
+From the repo root:
 
 ```powershell
 uvicorn YatraAI.api.app:app --reload --port 8000
 ```
 
-If you want the original offline assistant script, you can still run:
+Start LibreTranslate locally on port 5000 before using translation:
 
 ```powershell
-python .\YatraAI\YatraAi.py
+docker run --rm -p 5000:5000 libretranslate/libretranslate
 ```
+
+## Notes
+
+- The backend supports India-wide tourism analysis.
+- The dashboard is separate from app telemetry.
+- The translate endpoint falls back to the original text if LibreTranslate is unavailable.
+- Ollama can still be enabled through environment settings when needed.

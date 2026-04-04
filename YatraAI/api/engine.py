@@ -351,16 +351,19 @@ class TravelEngine:
             )
         return {"days": days, "season": season, "summary": "This simulation keeps the trip practical by spreading budget and energy across the route.", "timeline": timeline}
 
-    def _ollama_chat(self, prompt: str, context: Dict[str, Any]) -> Optional[str]:
+    def _ollama_chat(self, prompt: str, context: Dict[str, Any], response_mode: str = "trip") -> Optional[str]:
         if os.getenv("YATRA_USE_OLLAMA", "").lower() not in {"1", "true", "yes"}:
             return None
         if ollama is None:
             return None
         try:
+            system_prompt = "You are YatraAI, a travel planner for India. Use the supplied data and keep answers grounded."
+            if response_mode != "trip":
+                system_prompt = "You are YatraAI, an India travel and tourism expert. Answer broadly without using any saved trip context."
             response = ollama.chat(
                 model=MODEL_NAME,
                 messages=[
-                    {"role": "system", "content": "You are YatraAI, a travel planner for India. Use the supplied data and keep answers grounded."},
+                    {"role": "system", "content": system_prompt},
                     {"role": "user", "content": f"Context: {json.dumps(context, ensure_ascii=False)}\n\nUser prompt: {prompt}"},
                 ],
             )
@@ -368,9 +371,12 @@ class TravelEngine:
         except Exception:
             return None
 
-    def chat(self, prompt: str, context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    def chat(self, prompt: str, context: Optional[Dict[str, Any]] = None, response_mode: str = "trip") -> Dict[str, Any]:
         context = context or {}
+        if response_mode != "trip":
+            context = {key: value for key, value in context.items() if key != "trip"}
         trip = context.get("trip") or {}
+        allow_trip_flow = response_mode == "trip" and bool(trip)
         place_name = ""
         if isinstance(trip, dict):
             destination = trip.get("destination") or trip.get("place") or {}
@@ -380,14 +386,14 @@ class TravelEngine:
         if not place and isinstance(trip, dict) and trip.get("destination"):
             place = self._find_destination(trip.get("destination"))
 
-        if (llm := self._ollama_chat(prompt, context)) is not None:
+        if (llm := self._ollama_chat(prompt, context, response_mode)) is not None:
             return {"response": llm, "intent": "llm", "place": place}
 
         lowered = _normalize(prompt)
-        if any(term in lowered for term in ["optimize", "better", "improve", "reduce cost", "less travel time"]):
+        if allow_trip_flow and any(term in lowered for term in ["optimize", "better", "improve", "reduce cost", "less travel time"]):
             result = self.optimize_plan({"plan": trip, "objective": lowered})
             return {"response": self._format_optimize(result), "intent": "optimize", "place": place, "result": result}
-        if any(term in lowered for term in ["simulate", "day by day", "walk me through"]):
+        if allow_trip_flow and any(term in lowered for term in ["simulate", "day by day", "walk me through"]):
             result = self.simulate_trip({"plan": trip})
             return {"response": self._format_simulation(result, place), "intent": "simulate", "place": place, "result": result}
         if any(term in lowered for term in ["weather", "season", "best time", "when should i go"]):

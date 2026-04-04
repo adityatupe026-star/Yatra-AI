@@ -3,6 +3,17 @@ import { destinationPlaces } from "../data/site-data.js";
 import { uid } from "../utils/helpers.js";
 import { demoResponse, planContextText, queryBackend, renderChatBody } from "../utils/ai.js";
 import { showToast } from "../components/toast.js";
+import { speakText } from "../utils/speech.js";
+
+const CHAT_CONTEXT_KEY = "yatraai.chatContextMode";
+
+function getChatContextMode() {
+  return window.localStorage.getItem(CHAT_CONTEXT_KEY) || "trip";
+}
+
+function setChatContextMode(mode) {
+  window.localStorage.setItem(CHAT_CONTEXT_KEY, mode === "expert" ? "expert" : "trip");
+}
 
 function activeChat() {
   const sessions = getChats();
@@ -67,7 +78,11 @@ function renderChatUi() {
   const session = activeChat();
   if (!session) return;
   document.getElementById("chatSessionTitle").textContent = session.title;
-  document.getElementById("chatPlanContext").textContent = planContextText();
+  document.getElementById("chatPlanContext").textContent = getChatContextMode() === "trip" ? planContextText() : "Travel expert mode active. The current trip is not used as context.";
+  document.querySelectorAll("[data-chat-mode]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.chatMode === getChatContextMode());
+    button.setAttribute("aria-pressed", button.dataset.chatMode === getChatContextMode() ? "true" : "false");
+  });
   document.getElementById("chatMessages").innerHTML = session.messages.map((msg) => `
     <article class="message ${msg.role === "assistant" ? "assistant" : "user"} ${msg.typing ? "typing-message" : ""}">
       <div class="message-meta">
@@ -120,7 +135,11 @@ export function chatMarkup() {
         <div class="console-header">
           <div><strong id="chatSessionTitle">New chat</strong><small id="chatPlanContext">No planned trip linked yet</small></div>
           <div class="console-header-actions">
-            <button class="button button-secondary" type="button" id="listenReplyButton" aria-label="Speech output unavailable" title="Speech output unavailable">🔊</button>
+            <div class="chat-context-toggle" role="group" aria-label="Chat context mode">
+              <button class="button button-secondary chat-context-button" type="button" data-chat-mode="trip" aria-pressed="true">Trip: Yes</button>
+              <button class="button button-secondary chat-context-button" type="button" data-chat-mode="expert" aria-pressed="false">Trip: No</button>
+            </div>
+            <button class="button button-secondary" type="button" id="listenReplyButton" aria-label="Listen latest reply" title="Listen latest reply">🔊</button>
             <button class="button button-secondary" type="button" id="saveAsTripButton">Save as Trip</button>
             <a class="status-dot" href="./planner.html">Open Planner</a>
           </div>
@@ -145,9 +164,25 @@ export function initChat() {
   const listenButton = document.getElementById("listenReplyButton");
   const saveButton = document.getElementById("saveAsTripButton");
   const clearAllButton = document.getElementById("clearAllChatsButton");
+  const modeButtons = Array.from(document.querySelectorAll("[data-chat-mode]"));
 
   const showAudioUnavailable = () => {
     showToast("Speech input and playback are currently unavailable.", "warning");
+  };
+
+  const speakLatestReply = () => {
+    const session = activeChat();
+    const assistantMessage = [...(session?.messages || [])].reverse().find((message) => message.role === "assistant" && !message.typing && message.content?.trim());
+    if (!assistantMessage) {
+      showToast("No assistant reply is ready to speak.", "warning");
+      return;
+    }
+    const spoken = speakText(assistantMessage.content, "en-IN");
+    if (!spoken) {
+      showToast("Speech output is unavailable in this browser.", "warning");
+      return;
+    }
+    showToast("Speaking the latest assistant reply.", "success");
   };
 
   const openTripFromAssistant = () => {
@@ -211,9 +246,9 @@ export function initChat() {
     renderChatUi();
     let reply;
     try {
-      reply = await queryBackend(`${planContextText()}\n\nUser question: ${prompt}`);
+      reply = await queryBackend(`${getChatContextMode() === "trip" ? planContextText() : "Travel expert mode active."}\n\nUser question: ${prompt}`, { useTripContext: getChatContextMode() === "trip", sessionId: session.id });
     } catch {
-      reply = `${demoResponse(prompt)}\n\nThe live backend endpoint is not connected yet, so this is a demo response.`;
+      reply = `${demoResponse(prompt, getChatContextMode() === "trip")}\n\nThe live backend endpoint is not connected yet, so this is a demo response.`;
     }
     updateChat(session.id, (current) => {
       current.messages = current.messages.filter((message) => message.id !== typingId);
@@ -225,6 +260,13 @@ export function initChat() {
     renderChatUi();
   });
   voiceButton?.addEventListener("click", showAudioUnavailable);
-  listenButton?.addEventListener("click", showAudioUnavailable);
+  listenButton?.addEventListener("click", speakLatestReply);
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setChatContextMode(button.dataset.chatMode);
+      showToast(getChatContextMode() === "trip" ? "Trip context enabled." : "Travel expert mode enabled.", "default");
+      renderChatUi();
+    });
+  });
   renderChatUi();
 }

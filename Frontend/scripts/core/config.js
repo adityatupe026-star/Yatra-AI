@@ -83,7 +83,7 @@ export const REGION_SEASONS = {
 export const MAIN_NAV_ITEMS = [
   ["home", "./index.html", "Home"],
   ["destinations", "./destinations.html", "Destinations"],
-  ["translet", "./translet.html", "Translet"],
+  ["translate", "./translate.html", "Translate"],
   ["chat", "./chat.html", "Chat"],
 ];
 

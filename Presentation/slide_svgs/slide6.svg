@@ -1,0 +1,38 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'>
+<defs><linearGradient id='bg' x1='0' y1='0' x2='1600' y2='900'><stop offset='0' stop-color='#F7F9FC'/><stop offset='0.65' stop-color='#FFFFFF'/><stop offset='1' stop-color='#EEF3F8'/></linearGradient><linearGradient id='g1' x1='180' y1='140' x2='640' y2='360'><stop offset='0' stop-color='#1F3640'/><stop offset='1' stop-color='#1F3640' stop-opacity='0'/></linearGradient><linearGradient id='g2' x1='1000' y1='120' x2='1400' y2='460'><stop offset='0' stop-color='#9BBB59'/><stop offset='1' stop-color='#9BBB59' stop-opacity='0'/></linearGradient></defs>
+<rect width='1600' height='900' fill='url(#bg)'/>
+<circle cx='270' cy='170' r='160' fill='url(#g1)' fill-opacity='0.45'/><circle cx='1290' cy='160' r='150' fill='url(#g2)' fill-opacity='0.18'/><circle cx='1400' cy='740' r='170' fill='#4BACC6' fill-opacity='0.05'/>
+<path d='M0 700C180 650 320 658 452 690C580 722 682 744 804 724C918 704 1020 660 1148 662C1280 664 1440 736 1600 720' stroke='#4BACC6' stroke-opacity='0.12' stroke-width='4' fill='none'/>
+<path d='M0 742C180 712 304 720 420 748C546 780 666 786 792 764C930 740 1048 698 1168 700C1298 702 1450 760 1600 748' stroke='#4F81BD' stroke-opacity='0.1' stroke-width='4' fill='none'/>
+<text x='70' y='110' fill='#4F81BD' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='900' text-anchor='start'>Data and architecture</text>
+<text x='70' y='184' fill='#172B4D' font-family='Aptos,Segoe UI,Arial' font-size='54' font-weight='900' text-anchor='start'><tspan x='70' dy='0'>Tourism data becomes product intelligence</tspan><tspan x='70' dy='57'>through a simple, traceable pipeline</tspan></text>
+<rect x='70' y='360' width='240' height='220' rx='28' fill='rgba(79,129,189,0.07)' fill-opacity='1' stroke='rgba(79,129,189,0.13)' stroke-width='2'/>
+<rect x='90' y='380' width='72' height='8' rx='999' fill='#4F81BD' fill-opacity='1' stroke='none' stroke-width='0'/>
+<text x='92' y='432' fill='#FFF7E2' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='800' text-anchor='start'>Data sources</text>
+<text x='92' y='476' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18' font-weight='400' text-anchor='start'><tspan x='92' dy='0'>places.csv, destinations.json, itineraries.json</tspan></text>
+<rect x='370' y='360' width='240' height='220' rx='28' fill='rgba(79,129,189,0.07)' fill-opacity='1' stroke='rgba(79,129,189,0.13)' stroke-width='2'/>
+<rect x='390' y='380' width='72' height='8' rx='999' fill='#4BACC6' fill-opacity='1' stroke='none' stroke-width='0'/>
+<text x='392' y='432' fill='#FFF7E2' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='800' text-anchor='start'>FastAPI backend</text>
+<text x='392' y='476' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18' font-weight='400' text-anchor='start'><tspan x='392' dy='0'>planner, chat, translate, logging</tspan></text>
+<rect x='670' y='360' width='240' height='220' rx='28' fill='rgba(79,129,189,0.07)' fill-opacity='1' stroke='rgba(79,129,189,0.13)' stroke-width='2'/>
+<rect x='690' y='380' width='72' height='8' rx='999' fill='#9BBB59' fill-opacity='1' stroke='none' stroke-width='0'/>
+<text x='692' y='432' fill='#FFF7E2' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='800' text-anchor='start'>CSV analytics</text>
+<text x='692' y='476' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18' font-weight='400' text-anchor='start'><tspan x='692' dy='0'>sessions, queries, interactions, translations</tspan></text>
+<rect x='970' y='360' width='240' height='220' rx='28' fill='rgba(79,129,189,0.07)' fill-opacity='1' stroke='rgba(79,129,189,0.13)' stroke-width='2'/>
+<rect x='990' y='380' width='72' height='8' rx='999' fill='#C0504D' fill-opacity='1' stroke='none' stroke-width='0'/>
+<text x='992' y='432' fill='#FFF7E2' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='800' text-anchor='start'>Streamlit dashboard</text>
+<text x='992' y='476' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18' font-weight='400' text-anchor='start'><tspan x='992' dy='0'>charts, trends, insights</tspan></text>
+<rect x='1270' y='360' width='240' height='220' rx='28' fill='rgba(79,129,189,0.07)' fill-opacity='1' stroke='rgba(79,129,189,0.13)' stroke-width='2'/>
+<rect x='1290' y='380' width='72' height='8' rx='999' fill='#8064A2' fill-opacity='1' stroke='none' stroke-width='0'/>
+<text x='1292' y='432' fill='#FFF7E2' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='800' text-anchor='start'>Business view</text>
+<text x='1292' y='476' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18' font-weight='400' text-anchor='start'><tspan x='1292' dy='0'>destination demand, budgets, seasons</tspan></text>
+<line x1='310' y1='470' x2='370' y2='470' stroke='#4F81BD' stroke-width='8' stroke-opacity='0.7' stroke-linecap='round'/>
+<line x1='610' y1='470' x2='670' y2='470' stroke='#4F81BD' stroke-width='8' stroke-opacity='0.7' stroke-linecap='round'/>
+<line x1='910' y1='470' x2='970' y2='470' stroke='#4F81BD' stroke-width='8' stroke-opacity='0.7' stroke-linecap='round'/>
+<line x1='1210' y1='470' x2='1270' y2='470' stroke='#4F81BD' stroke-width='8' stroke-opacity='0.7' stroke-linecap='round'/>
+<rect x='130' y='640' width='1340' height='150' rx='28' fill='rgba(79,129,189,0.07)' fill-opacity='1' stroke='rgba(79,129,189,0.13)' stroke-width='2'/>
+<rect x='150' y='660' width='72' height='8' rx='999' fill='#4F81BD' fill-opacity='1' stroke='none' stroke-width='0'/>
+<text x='152' y='712' fill='#FFF7E2' font-family='Aptos,Segoe UI,Arial' font-size='28' font-weight='800' text-anchor='start'>Why this matters</text>
+<text x='152' y='756' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18' font-weight='400' text-anchor='start'><tspan x='152' dy='0'>The product separates user experience, language support, and business intelligence so each layer can grow independently.</tspan></text>
+<rect x='0' y='852' width='1600' height='48' fill='#EEF4FB' fill-opacity='0.95'/><text x='40' y='883' fill='rgba(31,41,55,0.78)' font-family='Aptos,Segoe UI,Arial' font-size='18'>YatraAI | India Travel Intelligence</text><text x='1540' y='883' fill='rgba(31,41,55,0.56)' font-family='Aptos,Segoe UI,Arial' font-size='18' text-anchor='end'>Slide 6</text>
+</svg>

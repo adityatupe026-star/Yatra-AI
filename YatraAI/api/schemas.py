@@ -9,6 +9,7 @@ class ChatRequest(BaseModel):
     prompt: str
     model: Optional[str] = None
     context: Dict[str, Any] = Field(default_factory=dict)
+    responseMode: str = "trip"
 
 
 class RecommendRequest(BaseModel):
@@ -45,5 +46,8 @@ class SimulateRequest(BaseModel):
 
 class TranslateRequest(BaseModel):
     text: str
-    targetLanguage: str
-    sourceLanguage: Optional[str] = None
+    target: str
+
+
+class TranslateResponse(BaseModel):
+    translated: str
