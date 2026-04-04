@@ -87,23 +87,17 @@ FSQ_DELAY      = 0.5
 FSQ_CATEGORIES: dict[str, list[str]] = {
     "tourist_attraction": ["16000", "16032", "16020", "16024", "10000", "10027"],
     "restaurant":         ["13065", "13002", "13049", "13056", "13145", "13064"],
-    "cafe":               ["13032", "13035", "13040", "13028", "13031"],
     "hospital":           ["15014", "15039", "15058", "15021", "15005"],
     "hotel":              ["19014", "19009", "19010", "19012"],
-    "transport":          ["19040", "19046", "19044", "19050"],
-    "shopping":           ["17000", "17069", "17114", "17145"],
-    "bank_atm":           ["11093", "11095"],
+    "bank_atm":           ["11093", "11095"]
 }
 
 SEMANTIC_TAGS: dict[str, list[str]] = {
     "tourist_attraction": ["tourism", "culture", "sightseeing", "landmark"],
     "restaurant":         ["food", "dining", "eat_out"],
-    "cafe":               ["food", "coffee", "casual", "hangout"],
     "hospital":           ["health", "medical", "emergency"],
     "hotel":              ["accommodation", "stay", "lodging"],
-    "transport":          ["transport", "transit", "commute"],
-    "shopping":           ["shopping", "retail", "market"],
-    "bank_atm":           ["finance", "money", "banking"],
+    "bank_atm":           ["finance", "money", "banking"]
 }
 
 log = logging.getLogger(__name__)

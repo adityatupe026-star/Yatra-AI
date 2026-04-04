@@ -77,6 +77,32 @@ class TravelEngine:
             "old delhi": "Delhi",
         }
 
+    def _has_trip_context(self, context: Dict[str, Any]) -> bool:
+        trip = context.get("trip")
+        return isinstance(trip, dict) and bool(trip)
+
+    def _estimate_trip_days(self, place: Optional[Dict[str, Any]]) -> int:
+        if not isinstance(place, dict) or not place:
+            return 2
+        text = " ".join(
+            str(place.get(key, ""))
+            for key in ["name", "type", "region", "state", "blurb"]
+        ).lower()
+        if any(term in text for term in ["beach", "island", "hill", "trek", "wildlife", "heritage", "spiritual"]):
+            return 3
+        if any(term in text for term in ["city", "food", "shopping", "nightlife", "museum", "fort"]):
+            return 2
+        return 2
+
+    def _estimate_budget_band(self, place: Optional[Dict[str, Any]], days: int) -> Dict[str, Any]:
+        daily = _safe_int(place.get("average_daily_cost"), 3200) if isinstance(place, dict) else 3200
+        return {
+            "days": days,
+            "daily": daily,
+            "low": int(daily * days * 0.85),
+            "high": int(daily * days * 1.25),
+        }
+
     def _key(self, value: Any) -> str:
         return _normalize(value)
 
@@ -263,12 +289,15 @@ class TravelEngine:
         if not place:
             return {"found": False, "query": query, "matches": self.search_destinations(query)}
         routes = [route for route in self.itineraries if route.get("destination") == place.get("name") or route.get("origin") == place.get("name")]
+        days = self._estimate_trip_days(place)
         return {
             "found": True,
             "place": place,
             "state_info": self.local_intelligence.get(place.get("state"), {}),
             "nearby": self.nearby_places(place["name"]),
             "routes": routes[:4],
+            "suggested_days": days,
+            "suggested_budget": self._estimate_budget_band(place, days),
         }
 
     def _budget_breakdown(self, place: Dict[str, Any], days: int, mode: str) -> Dict[str, Any]:
@@ -428,20 +457,35 @@ class TravelEngine:
         if ollama is None:
             return None
         try:
-            system_prompt = (
-                "You are YatraAI, a travel planner for India. Use the supplied data and keep answers grounded. "
-                "Be specific about actual destinations, why they fit, what to see, when to go, where to stay, "
-                "what food or nearby places matter, and why the user should trust this route. "
-                "Write in clear sections and aim for detailed answers with 12 or more useful lines when the user asks for guidance. "
-                "If the user asks where to go, name actual places first and explain why each one fits the trip."
-            )
-            if response_mode != "trip":
+            trip = context.get("trip") if self._has_trip_context(context) else {}
+            expert_mode = response_mode != "trip" or not trip
+            if expert_mode:
                 system_prompt = (
-                    "You are YatraAI, an India travel and tourism expert. Answer broadly without using any saved trip context. "
-                    "Give destination-specific guidance, explain why places are worth visiting, and avoid generic travel filler. "
-                    "Use clear sections, detailed bullets and at least 12 useful lines when the answer is planning-related."
+                    "You are YatraAI, an India travel and tourism expert. Answer without relying on trip context unless the user supplied it. "
+                    "When the user names a city, district, or place, respond with the best tourist places in that location, why each place is worth visiting, "
+                    "what to see, and how long a default visit should take. If budget or trip length are not given, propose a sensible default budget plan "
+                    "and trip duration instead of asking the user to fill in the blanks. Keep the answer practical, specific, and grounded in the supplied data."
+                )
+            else:
+                system_prompt = (
+                    "You are YatraAI, a travel planner for India. Use the supplied trip context and keep answers grounded. "
+                    "Be specific about actual destinations, why they fit, what to see, when to go, where to stay, "
+                    "what food or nearby places matter, and why the user should trust this route. "
+                    "Write in clear sections and aim for detailed answers with 12 or more useful lines when the user asks for guidance. "
+                    "If the user asks where to go, name actual places first and explain why each one fits the trip."
                 )
             num_predict = max(512, _safe_int(max_tokens, DEFAULT_NUM_PREDICT))
+            place = self._find_destination(prompt)
+            trip_hint = ""
+            if isinstance(place, dict):
+                days = self._estimate_trip_days(place)
+                budget = self._estimate_budget_band(place, days)
+                trip_hint = (
+                    f"\nSuggested trip defaults if the user did not provide them:\n"
+                    f"- Trip length: {days} days\n"
+                    f"- Budget range: Rs.{budget['low']} to Rs.{budget['high']}\n"
+                    f"- Reasoning cue: {place.get('blurb', 'Use the destination itself as the anchor and build around its main highlights.')}\n"
+                )
             response = ollama.chat(
                 model=MODEL_NAME,
                 options={
@@ -453,8 +497,10 @@ class TravelEngine:
                     {"role": "user", "content": (
                         "Context: "
                         f"{json.dumps(context, ensure_ascii=False)}\n\n"
+                        f"{trip_hint}"
                         "Respond with the actual destination names from the context when relevant. "
-                        "Start with why the place matters, then cover what to see, where to stay, food, nearby places, season, and next steps.\n\n"
+                        "If the user gave only a city or place, start with the best tourist places in that city/place, then explain why they matter, "
+                        "what to see, how long to stay, and what budget to expect if not already provided.\n\n"
                         f"User prompt: {prompt}"
                     )},
                 ],
@@ -463,7 +509,7 @@ class TravelEngine:
         except Exception:
             return None
 
-    def chat(self, prompt: str, context: Optional[Dict[str, Any]] = None, response_mode: str = "trip", max_tokens: Optional[int] = None) -> Dict[str, Any]:
+    def chat(self, prompt: str, context: Optional[Dict[str, Any]] = None, response_mode: str = "expert", max_tokens: Optional[int] = None) -> Dict[str, Any]:
         context = context or {}
         if response_mode != "trip":
             context = {key: value for key, value in context.items() if key != "trip"}
@@ -511,6 +557,8 @@ class TravelEngine:
         state_info = self.local_intelligence.get(place.get("state"), {})
         highlights = place.get("highlights", [])[:3]
         daily_cost = place.get("average_daily_cost")
+        trip_days = self._estimate_trip_days(place)
+        budget = self._estimate_budget_band(place, trip_days)
         stay_tip = state_info.get("stay_tip", "Use a central stay to cut transfer time.")
         food_angle = state_info.get("food_angle", "Pair one local meal with one relaxed evening stop.")
         pieces = [
@@ -518,6 +566,8 @@ class TravelEngine:
             f"It sits in **{place.get('state')}** and works best as a {place.get('type', 'travel stop')}.",
             f"Why people go: {place.get('blurb', 'It gives the trip a clear visual identity and an easy route anchor.')}",
             f"Best season: {place.get('best_season', 'Year-round with seasonal planning')}.",
+            f"Suggested trip length: {trip_days} days.",
+            f"Suggested budget if the user does not provide one: Rs.{budget['low']} to Rs.{budget['high']}.",
             f"Top highlights: {', '.join(highlights) if highlights else 'Local highlights from the destination data.'}",
             f"Best for: {', '.join(place.get('tags', [])[:3]) if place.get('tags') else 'balanced travel'} travelers.",
             f"Stay vibe: {stay_tip}",
@@ -630,11 +680,10 @@ class TravelEngine:
             current = f"\n\nCurrent trip context: {trip.get('start', 'your starting city')} to {destination or 'your destination'}."
         return (
             "**Trip sketch**\n\n"
-            "- Tell me a destination, budget, or interest and I'll turn it into a grounded plan.\n"
-            "- I can explain why a place fits your trip, not just name the place.\n"
+            "- Tell me a destination, city, or interest and I'll turn it into a grounded plan.\n"
+            "- If you only give a city, I will suggest the best tourist places there and why they are worth visiting.\n"
+            "- If budget or days are missing, I will give a practical default budget and trip length.\n"
             "- I can also help with weather, packing, food, nearby places and optimization.\n"
-            "- If you already know the city, I’ll turn it into a route with nearby pairings and timing.\n"
-            "- If you do not know where to go, I can suggest actual places based on mood, budget and season.\n"
             "- I can compare 2 or 3 destinations and explain which one is better for your plan.\n"
             "- I can turn one city into a 2 to 5 day route with nearby stops and a realistic budget."
             f"{current}"

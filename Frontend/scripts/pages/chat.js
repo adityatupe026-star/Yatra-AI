@@ -1,7 +1,7 @@
 import { getChatId, getChats, setChatId, setChats } from "../core/state.js";
 import { destinationPlaces } from "../data/site-data.js";
 import { uid } from "../utils/helpers.js";
-import { demoResponse, planContextText, queryBackend, renderChatBody } from "../utils/ai.js";
+import { planContextText, queryBackend, renderChatBody } from "../utils/ai.js";
 import { showToast } from "../components/toast.js";
 import { speakText } from "../utils/speech.js";
 
@@ -27,7 +27,7 @@ function createChat() {
     id: uid("chat"),
     title: "New chat",
     updatedAt: new Date().toLocaleString(),
-    messages: [{ role: "assistant", content: "Tell me your vibe, budget or city idea. I can recommend actual places, explain why they fit, and turn one destination into a route with nearby stops, season timing and budget logic." }],
+    messages: [{ role: "assistant", content: "Tell me where you want to go. I can use your current planned trip as context when one is available." }],
   };
   sessions.unshift(session);
   setChats(sessions.slice(0, 40));
@@ -120,10 +120,10 @@ export function chatMarkup() {
           <p class="eyebrow">Ask better</p>
           <h3>Prompt ideas</h3>
           <div class="prompt-list" id="chatPromptList">
-            <button class="prompt-chip" type="button" data-prompt="Recommend 3 destinations for a cultural trip and explain why each place is worth going to.">Best destination</button>
             <button class="prompt-chip" type="button" data-prompt="Create a 3 day trip plan with food, culture and one premium dinner stop.">3 day trip idea</button>
             <button class="prompt-chip" type="button" data-prompt="Suggest transport, cost and the best stay zone for my current destination.">Transport help</button>
             <button class="prompt-chip" type="button" data-prompt="Show nearby places, restaurants and one evening route around my trip place.">Nearby picks</button>
+            <button class="prompt-chip" type="button" data-prompt="Give me a premium but practical itinerary with headings and bullet points.">Premium itinerary</button>
           </div>
         </article>
         <div class="hero-actions chat-sidebar-actions">
@@ -247,8 +247,9 @@ export function initChat() {
     let reply;
     try {
       reply = await queryBackend(`${getChatContextMode() === "trip" ? planContextText() : "Travel expert mode active."}\n\nUser question: ${prompt}`, { useTripContext: getChatContextMode() === "trip", sessionId: session.id });
-    } catch {
-      reply = `${demoResponse(prompt, getChatContextMode() === "trip")}\n\nThe live backend endpoint is not connected yet, so this is a demo response.`;
+    } catch (error) {
+      reply = error?.message || "YatraAI backend is unavailable. Start the backend first.";
+      showToast(reply, "warning");
     }
     updateChat(session.id, (current) => {
       current.messages = current.messages.filter((message) => message.id !== typingId);

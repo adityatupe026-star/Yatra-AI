@@ -124,3 +124,17 @@ python ".\data_collection\main.py" --city Mumbai
 - this folder creates the place dataset
 - the backend consumes that dataset
 - the dashboard reads the tourism datasets from `data/`
+
+## Hotel / Stay Pipeline
+
+For hotel and stay-specific data, use the nested `hotel data collection/` folder.
+
+That pipeline writes the enriched stay dataset into:
+
+- `data/stay/hotel_stay_dataset.csv`
+- `data/stay/raw/`
+- `data/stay/cleaned/`
+- `data/stay/features/`
+- `data/stay/model/artifacts/`
+
+The stay pipeline accepts `--city`, `--district`, `--place`, and optional `--state` so you can narrow collection to a specific locality or landmark.

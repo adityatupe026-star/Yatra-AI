@@ -1,0 +1,38 @@
+/* Page-specific styles for translate */
+.translate-widget-shell {
+  animation: plannerGlowIn 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.translate-widget-shell .google-translate-host {
+  min-height: 72px;
+  padding: 16px 18px 8px;
+  border-radius: 18px;
+  border: 1px solid rgba(200, 148, 46, 0.22);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(200, 148, 46, 0.05));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+}
+.translate-widget-shell .google-translate-host:empty {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+.translate-widget-shell .goog-te-gadget {
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.translate-widget-shell .goog-te-gadget select,
+.translate-widget-shell .goog-te-combo {
+  width: min(100%, 320px);
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(6, 16, 29, 0.92);
+  color: var(--text);
+  font: inherit;
+}
+.translate-widget-shell iframe {
+  max-width: 100%;
+}
+

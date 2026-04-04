@@ -20,6 +20,7 @@ from .analytics import (
     log_recommendation,
     log_translation,
 )
+from .bookings.router import router as bookings_router
 from .engine import engine
 from .schemas import ChatRequest, OptimizeRequest, PlanRequest, RecommendRequest, SimulateRequest
 from .translation.router import router as translation_router
@@ -38,6 +39,7 @@ app.add_middleware(
 )
 
 app.include_router(translation_router)
+app.include_router(bookings_router)
 
 
 @app.get("/health")

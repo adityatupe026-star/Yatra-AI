@@ -1,0 +1,7 @@
+/* Page-specific styles for history */
+.route-output,
+.history-list {
+  display: grid;
+  gap: 22px;
+}
+

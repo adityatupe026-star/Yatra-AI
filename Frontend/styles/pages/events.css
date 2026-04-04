@@ -1,0 +1,84 @@
+/* Page-specific styles for events */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.event-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.04);
+}
+.event-card-featured {
+  grid-column: span 2;
+  min-height: 420px;
+}
+.event-card-media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.08) 10%, rgba(0,0,0,0.86) 92%),
+    linear-gradient(120deg, rgba(24, 163, 159, 0.12), transparent 38%);
+}
+.event-card-copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: 28px;
+}
+.events-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.events-view-toggle {
+  display: flex;
+  gap: 10px;
+}
+.events-view-toggle .button {
+  min-width: 110px;
+}
+.events-view-toggle .button.is-active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #1b1306;
+  border-color: transparent;
+  box-shadow: 0 16px 34px rgba(200, 148, 46, 0.24);
+}
+.events-calendar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.cal-month {
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+.cal-month h4 {
+  margin: 0 0 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  color: var(--gold-soft);
+}
+.cal-event-chip {
+  display: block;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(200, 148, 46, 0.24);
+  background: rgba(200, 148, 46, 0.08);
+  color: var(--text);
+  line-height: 1.45;
+}
+

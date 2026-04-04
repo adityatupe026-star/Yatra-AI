@@ -10,7 +10,7 @@ class ChatRequest(BaseModel):
     model: Optional[str] = None
     maxTokens: Optional[int] = None
     context: Dict[str, Any] = Field(default_factory=dict)
-    responseMode: str = "trip"
+    responseMode: str = "expert"
 
 
 class RecommendRequest(BaseModel):

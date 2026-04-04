@@ -1,6 +1,7 @@
 import { showToast } from "../components/toast.js";
 import { speakText } from "../utils/speech.js";
 import { initGoogleTranslateWidget } from "../utils/google-translate.js";
+import { API_CONFIG } from "../core/config.js";
 
 const LANGUAGE_OPTIONS = [
   ["en", "English"],
@@ -21,7 +22,7 @@ function languageOptions(selectedCode) {
 }
 
 async function translate(text, lang) {
-  const response = await fetch("/translate", {
+  const response = await fetch(API_CONFIG.translateEndpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text, target: lang }),
@@ -153,9 +154,9 @@ export function initTranslate() {
         : `Translated into ${languageLabel(lang)}.`;
     } catch (error) {
       if (currentRequest !== requestId) return;
-      output.textContent = text;
-      meta.textContent = error.message || "Translation is unavailable right now.";
-      showToast("Showing original text for now.", "warning");
+      output.textContent = error.message || "Translation is unavailable right now.";
+      meta.textContent = "Start the backend to translate through the Python API.";
+      showToast("Translation needs the backend to be running.", "warning");
     } finally {
       if (currentRequest === requestId) {
         setLoading(false);

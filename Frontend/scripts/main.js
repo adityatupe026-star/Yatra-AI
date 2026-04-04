@@ -2,11 +2,11 @@ import { page } from "./core/config.js";
 import { footer, initFooter, initHamburger, initShellChrome, nav } from "./components/nav.js";
 import { initMotion } from "./components/motion.js";
 import { showToast } from "./components/toast.js";
-import { bootstrapGoogleTranslatePersistence } from "./utils/google-translate.js";
 import { homeMarkup, initHome } from "./pages/home.js";
 import { destinationsMarkup, initDestinations } from "./pages/destinations.js";
+import { bookingsMarkup, initBookings } from "./pages/bookings.js";
 import { plannerMarkup, initPlanner } from "./pages/planner.js";
-import { translateMarkup, initTranslate } from "./pages/translate.js";
+import { transletMarkup, initTranslet } from "./pages/translet.js";
 import { chatMarkup, initChat } from "./pages/chat.js";
 import { explorerMarkup, initExplorer } from "./pages/explorer.js";
 import { mapMarkup, initMap } from "./pages/map.js";
@@ -18,8 +18,9 @@ import { aboutMarkup, initAbout, privacyMarkup } from "./pages/info.js";
 const pages = {
   home: { markup: homeMarkup, init: initHome, shell: "page-shell full-bleed-shell" },
   destinations: { markup: destinationsMarkup, init: initDestinations },
+  bookings: { markup: bookingsMarkup, init: initBookings },
   planner: { markup: plannerMarkup, init: initPlanner },
-  translate: { markup: translateMarkup, init: initTranslate },
+  translet: { markup: transletMarkup, init: initTranslet },
   chat: { markup: chatMarkup, init: initChat, shell: "page-shell chat-shell" },
   explorer: { markup: explorerMarkup, init: initExplorer },
   map: { markup: mapMarkup, init: initMap },
@@ -122,7 +123,6 @@ try {
   renderApp();
   registerEnhancements();
   initShellChrome();
-  bootstrapGoogleTranslatePersistence();
 } catch (error) {
   document.body.innerHTML = `<main class="page-shell"><section class="section"><article class="route-card"><p class="eyebrow">Something broke</p><h2>YatraAI hit a page error</h2><p>${error?.message || "Unknown frontend error."}</p></article></section></main>`;
   showToast("A page error occurred. Refresh and try again.", "warning");

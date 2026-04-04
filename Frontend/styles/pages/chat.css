@@ -1,0 +1,185 @@
+/* Page-specific styles for chat */
+.chat-layout {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.chat-sidebar {
+  display: grid;
+  gap: 22px;
+  position: sticky;
+  top: 120px;
+}
+.chat-sidebar-actions {
+  margin-top: -4px;
+}
+.chat-assist-card h3 {
+  font-size: 1.7rem;
+}
+.chat-assist-card .prompt-list {
+  display: grid;
+  gap: 10px;
+}
+.chat-assist-card .prompt-chip {
+  justify-content: flex-start;
+  text-align: left;
+}
+.chat-session-list {
+  display: grid;
+  gap: 14px;
+}
+.chat-session-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 38px;
+  gap: 10px;
+  align-items: stretch;
+}
+.chat-session-item {
+  width: 100%;
+  text-align: left;
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  cursor: pointer;
+}
+.chat-session-item strong,
+.chat-session-item small {
+  display: block;
+}
+.chat-session-item small {
+  margin-top: 8px;
+  color: var(--soft);
+}
+.chat-session-item.active {
+  border-color: rgba(200, 148, 46, 0.5);
+  background: rgba(200, 148, 46, 0.14);
+}
+.chat-session-delete {
+  width: 38px;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--soft);
+}
+.chat-console {
+  min-height: calc(100vh - 240px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 28px;
+}
+.chat-stage {
+  min-height: min(72vh, 860px);
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01)),
+    radial-gradient(circle at top right, rgba(200, 148, 46, 0.08), transparent 34%);
+  overflow: hidden;
+}
+.chat-console .messages {
+  height: 100%;
+  min-height: 0;
+  padding-right: 6px;
+}
+.chat-console-wide {
+  padding: 34px;
+}
+.message {
+  padding: 20px 20px 22px;
+  max-width: min(88%, 860px);
+  position: relative;
+}
+.message.assistant {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(200, 148, 46, 0.07));
+  justify-self: start;
+}
+.message.user {
+  background: linear-gradient(135deg, rgba(24, 163, 159, 0.13), rgba(255, 255, 255, 0.03));
+  justify-self: end;
+}
+.message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.message-badge {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  background: rgba(200, 148, 46, 0.14);
+  border: 1px solid rgba(200, 148, 46, 0.22);
+}
+.message.user .message-badge {
+  color: #9fe4e1;
+  background: rgba(24, 163, 159, 0.14);
+  border-color: rgba(24, 163, 159, 0.2);
+}
+.message-body {
+  display: grid;
+  gap: 12px;
+}
+.chat-body-paragraph {
+  margin: 0;
+}
+.chat-rich-block {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+.chat-rich-block h4 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: var(--gold-soft);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.01em;
+}
+.chat-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.chat-form textarea {
+  min-height: 122px;
+  resize: vertical;
+}
+.chat-context-toggle {
+  display: inline-flex;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+.chat-context-button {
+  min-width: 96px;
+  padding-inline: 12px;
+}
+.typing-message {
+  position: relative;
+  overflow: hidden;
+}
+.typing-message::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+.role {
+  display: inline-block;
+  margin-bottom: 0;
+  color: var(--gold-soft);
+}
+

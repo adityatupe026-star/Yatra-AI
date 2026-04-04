@@ -206,7 +206,39 @@
   color: var(--muted);
   line-height: 1.5;
 }
-.story-section .feature-card {
+/* ── Booking Buttons ────────────────────────────────────── */
+.booking-buttons-card {
+  text-align: center;
+}
+
+.booking-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.booking-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.booking-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.booking-icon {
+  font-size: 1.2rem;
+}.story-section .feature-card {
   min-height: 220px;
 }
 .editorial-grid-shell {
@@ -478,10 +510,8 @@
   display: grid;
   gap: 14px;
   margin: 20px 0;
-  padding: 0;
-  list-style: none;
 }
-.explorer-detail-list li {
+.explorer-detail-list div {
   display: grid;
   gap: 6px;
   padding-bottom: 14px;

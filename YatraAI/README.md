@@ -18,6 +18,7 @@ The backend:
 - builds planner responses
 - handles trip-aware and expert chat modes
 - proxies translation requests
+- powers booking confirmations and hotel summary generation
 - writes structured CSV logs
 - serves the frontend from the same origin
 
@@ -62,6 +63,8 @@ FastAPI entry point that exposes:
 - `POST /api/optimize`
 - `POST /api/simulate`
 - `POST /api/chat`
+- `POST /api/bookings/hotel-summary`
+- `POST /api/bookings/confirm`
 - `POST /translate`
 - `POST /api/translate`
 
@@ -99,7 +102,13 @@ The backend flow is:
 
 ## Running The API
 
-From the repo root:
+From the repo root, use the launcher:
+
+```text
+D:\Yatraai\start.bat
+```
+
+Or start the API manually:
 
 ```powershell
 uvicorn YatraAI.api.app:app --reload --port 8000

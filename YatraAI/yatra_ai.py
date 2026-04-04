@@ -269,6 +269,13 @@ class PlacesDB:
             return None
 
         row = result.iloc[0]
+        trip_days = 3 if any(term in str(row["search_text"]) for term in ["beach", "hill", "heritage", "spiritual", "wildlife"]) else 2
+        try:
+            daily = int(row.get("average_daily_cost") or 3200)
+        except Exception:
+            daily = 3200
+        budget_low = int(max(1800, daily) * trip_days * 0.85)
+        budget_high = int(max(1800, daily) * trip_days * 1.25)
         return {
             "place_name": row["place_name"],
             "category": row["category_label"] or row["category"],
@@ -281,6 +288,8 @@ class PlacesDB:
             "tags": row["tags"] or "",
             "website": row["website"] or "Not available",
             "phone": row["phone"] or "Not available",
+            "suggested_days": f"{trip_days}",
+            "suggested_budget": f"Rs.{budget_low} to Rs.{budget_high}",
         }
 
 
@@ -373,6 +382,27 @@ class OllamaTravelAgent:
         if row["is_free"]:
             return 0
         return PRICE_ESTIMATES.get(row["price_level"], 250)
+
+    def estimate_trip_days(self, place: Dict[str, Any]) -> int:
+        text = " ".join(
+            str(place.get(key, ""))
+            for key in ["name", "type", "region", "state", "blurb"]
+        ).lower()
+        if any(term in text for term in ["beach", "island", "hill", "trek", "wildlife", "heritage", "spiritual"]):
+            return 3
+        if any(term in text for term in ["city", "food", "shopping", "nightlife", "museum", "fort"]):
+            return 2
+        return 2
+
+    def estimate_budget_band(self, place: Dict[str, Any], days: int) -> Tuple[int, int]:
+        try:
+            daily = int(place.get("average_daily_cost") or 3200)
+        except Exception:
+            daily = 3200
+        daily = max(1800, daily)
+        low = int(daily * days * 0.85)
+        high = int(daily * days * 1.25)
+        return low, high
 
     def create_trip_plan(self, request: Dict[str, object]) -> Dict[str, object]:
         days = int(request["days"])
@@ -477,7 +507,8 @@ class OllamaTravelAgent:
 
         system_prompt = (
             "You are a travel guide. Write a concise overview of the place using only the provided facts. "
-            "Include what kind of place it is, why someone might visit, practical info, and one short travel tip."
+            "Include what kind of place it is, why someone might visit, practical info, a suggested trip length, "
+            "and a default budget range if the user did not provide one. Do not ask for budget or days unless the user wants a custom plan."
         )
         user_prompt = "\n".join(f"{key}: {value}" for key, value in context.items())
         return self.ask_llm(system_prompt, user_prompt)
@@ -554,7 +585,9 @@ class OllamaTravelAgent:
 
         system_prompt = (
             "You are YatraAI, a travel assistant built on a local place dataset and Ollama. "
-            "Answer naturally, stay travel-focused, and prefer the supplied dataset context."
+            "Answer naturally, stay travel-focused, and prefer the supplied dataset context. "
+            "If the user gives only a city, suggest the best tourist places in that city, explain why they matter, "
+            "and include a default trip length and budget if the user did not provide them."
         )
         user_prompt = "\n".join(context_lines + [f"User message: {message}"])
         return self.ask_llm(system_prompt, user_prompt)

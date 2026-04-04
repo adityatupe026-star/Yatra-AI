@@ -1,0 +1,51 @@
+/* Page-specific styles for map */
+.map-shell {
+  height: 72vh;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.map-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.map-sidebar {
+  position: sticky;
+  top: 120px;
+}
+.map-place-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  max-height: 68vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+.map-place-item {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.map-place-item strong {
+  color: var(--gold-soft);
+}
+.map-place-item span {
+  color: var(--muted);
+  line-height: 1.45;
+}
+.map-link-bar {
+  margin: 18px 0 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+

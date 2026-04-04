@@ -17,7 +17,6 @@ It includes:
 - [Frontend](/D:/Yatraai/Frontend)
 - [YatraAI](/D:/Yatraai/YatraAI)
 - [Audio](/D:/Yatraai/Audio)
-- [Run](/D:/Yatraai/Run)
 - [data](/D:/Yatraai/data)
 
 ## How The System Fits Together
@@ -43,6 +42,7 @@ The frontend is a multi-page India travel app:
 - Home
 - Destinations
 - Planner
+- Bookings
 - Chat
 - Translate
 - Explorer
@@ -137,12 +137,17 @@ The tourism dashboard uses the India tourism datasets in:
 
 ## Run Commands
 
-Use the scripts in [Run](/D:/Yatraai/Run):
+Use `start.bat` from the repo root to start the FastAPI backend and open the app in one step.
 
-- `run_backend.ps1` starts the FastAPI backend
-- `run_frontend.ps1` starts the backend and opens the app
-- `run_dashboard.ps1` starts the tourism dashboard
-- `run_all.ps1` starts backend + dashboard together
+```text
+D:\Yatraai\start.bat
+```
+
+If you want to run the backend manually, use:
+
+```powershell
+uvicorn YatraAI.api.app:app --reload --port 8000
+```
 
 Copy `.env.example` to `.env`, set `GOOGLE_TRANSLATE_API_KEY`, then start the backend. You can also export it in PowerShell before starting the backend.
 

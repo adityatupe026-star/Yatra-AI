@@ -130,6 +130,19 @@ TABLE_SCHEMAS: dict[str, list[str]] = {
         "intent",
         "timestamp",
     ],
+    "bookings": [
+        "booking_id",
+        "session_id",
+        "query_id",
+        "module",
+        "label",
+        "summary",
+        "price",
+        "reference",
+        "status",
+        "payload",
+        "created_at",
+    ],
 }
 
 TABLE_FILES: dict[str, Path] = {name: ANALYTICS_DIR / f"{name}.csv" for name in TABLE_SCHEMAS}

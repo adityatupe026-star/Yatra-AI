@@ -40,7 +40,7 @@ export function nav() {
     </header>
     <nav class="mobile-bottom-nav" aria-label="Quick navigation">
       <a class="mobile-bottom-link ${page === "home" ? "active" : ""}" href="./index.html">Home</a>
-      <a class="mobile-bottom-link ${page === "explorer" ? "active" : ""}" href="./explorer.html">Explorer</a>
+      <a class="mobile-bottom-link ${page === "translet" ? "active" : ""}" href="./translet.html">Translet</a>
       <a class="mobile-bottom-link ${page === "chat" ? "active" : ""}" href="./chat.html">Chat</a>
       <a class="mobile-bottom-link ${page === "wishlist" ? "active" : ""}" href="./wishlist.html">Wishlist</a>
     </nav>

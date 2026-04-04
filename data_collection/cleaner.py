@@ -22,11 +22,9 @@ SCHEMA_COLUMNS = [
 CATEGORY_LABELS = {
     "tourist_attraction": "Tourist Attraction",
     "restaurant":         "Restaurant / Eatery",
-    "cafe":               "Café / Coffee Shop",
+
     "hospital":           "Hospital / Medical",
     "hotel":              "Hotel / Accommodation",
-    "transport":          "Transport Hub",
-    "shopping":           "Shopping",
     "bank_atm":           "Bank / ATM",
 }
 

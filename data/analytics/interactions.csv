@@ -1,1 +1,2 @@
 interaction_id,session_id,query_id,event_type,entity_type,entity_value,timestamp,page,meta
+interaction_7fe9f08cb6ef,sess_test,,booking_confirmed,flights,Flight: Test,2026-04-04T20:27:57.402811+00:00,bookings,FLI-1520466E

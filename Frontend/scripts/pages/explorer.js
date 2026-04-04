@@ -71,21 +71,6 @@ export function initExplorer() {
     const emergency = EMERGENCY_CONTACTS[place.state] || EMERGENCY_CONTACTS.default;
     const related = destinationPlaces.filter((item) => item.region === place.region && item.name !== place.name).slice(0, 4);
     const currentInterest = interestSelect.value;
-    const detailLines = [
-      { label: "Why go", value: place.blurb },
-      { label: "Best season", value: season.bestMonths },
-      { label: "Region mood", value: season.mood },
-      { label: "Planning note", value: season.note },
-      { label: "Ideal traveler", value: `${currentInterest} travelers who want a destination-led trip.` },
-      { label: "Top highlights", value: place.highlights.join(", ") },
-      { label: "Air access", value: place.airport },
-      { label: "Rail access", value: place.rail },
-      { label: "Road access", value: place.road },
-      { label: "Nearby pairings", value: related.map((item) => item.name).join(", ") || "Other nearby regional places" },
-      { label: "What Explorer adds", value: "It gives you a clear anchor for planning, instead of a generic place list." },
-      { label: "Why use YatraAI", value: "Use Explorer when you know the city but want the reason, route logic and nearby add-ons." },
-      { label: "Trip value", value: "It turns a place into a usable circuit with timing, access and neighborhood context." },
-    ];
     placeInput.value = place.name;
     overview.innerHTML = `
       <div class="explorer-overview-media" style="background-image:url('${place.image}')"></div>
@@ -94,7 +79,12 @@ export function initExplorer() {
         <h3>${place.name}</h3>
         <p>${place.blurb}</p>
         <div class="meta">${place.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-        <ul class="explorer-detail-list">${detailLines.map((item) => `<li><strong>${item.label}</strong><span>${item.value}</span></li>`).join("")}</ul>
+        <div class="explorer-detail-list">
+          <div><strong>State</strong><span>${place.state}</span></div>
+          <div><strong>Region</strong><span>${place.region}</span></div>
+          <div><strong>Best fit</strong><span>${currentInterest} travelers, short getaways and destination-led planning</span></div>
+          <div><strong>Must-see highlights</strong><span>${place.highlights.join(", ")}</span></div>
+        </div>
         <div class="hero-actions">
           <a class="button button-secondary" href="${place.officialUrl}" target="_blank" rel="noreferrer">Official tourism page</a>
           <a class="button button-secondary" href="${buildGoogleMapsPlaceLink(place)}" target="_blank" rel="noreferrer">Open in Google Maps</a>
@@ -105,32 +95,22 @@ export function initExplorer() {
       <p class="eyebrow">Access + season</p>
       <h3>${place.name} logistics</h3>
       <ul>
-        <li>State: ${place.state}</li>
-        <li>Region: ${place.region}</li>
-        <li>Best fit: ${currentInterest} travelers, short getaways and destination-led planning</li>
         <li>Air access: ${place.airport}</li>
         <li>Rail access: ${place.rail}</li>
         <li>Road access: ${place.road}</li>
         <li>Best season window: ${season.bestMonths}</li>
         <li>Region mood: ${season.mood}</li>
         <li>Planning note: ${season.note}</li>
-        <li>Must-see highlights: ${place.highlights.join(", ")}</li>
-        <li>Why use Explorer: it shows why a place matters, not just where it is.</li>
-        <li>Route cue: pair it with ${related.map((item) => item.name).join(", ") || "nearby regional choices"} for a fuller trip.</li>
       </ul>
     `;
     nearby.innerHTML = `
       <p class="eyebrow">Nearby style picks</p>
       <h3>${place.region} circuit</h3>
       <p>${related.map((item) => item.name).join(", ")} pair well with ${place.name} for a broader route.</p>
-      <ul>
-        ${related.map((item) => `<li><strong>${item.name}</strong>: ${item.blurb} Highlights: ${item.highlights.join(", ")}.</li>`).join("")}
-        <li>Nearby planning works best when you keep one anchor city and add one or two close-by stops.</li>
-        <li>That is the main reason someone would use YatraAI here: it converts a known place into a useful circuit.</li>
-      </ul>
+      <ul>${related.map((item) => `<li><strong>${item.name}</strong>: ${item.blurb} Highlights: ${item.highlights.join(", ")}.</li>`).join("")}</ul>
     `;
-    phrasebookCard.innerHTML = `<p class="eyebrow">Local phrasebook</p><h3>${phrasebook.language} travel phrases</h3><ul>${phrasebook.phrases.map(([native, english]) => `<li><strong>${native}</strong>: ${english}</li>`).join("")}<li>Use these when you need quick help in taxis, markets or restaurants.</li><li>Explorer keeps this context close so the trip feels practical, not abstract.</li></ul>`;
-    emergencyCard.innerHTML = `<p class="eyebrow">Emergency contacts</p><h3>Keep these numbers handy</h3><ul><li>Tourist helpline: ${emergency.tourist}</li><li>Police: ${emergency.police}</li><li>Ambulance: ${emergency.ambulance}</li><li>${emergency.note}</li><li>Save these offline before traveling.</li><li>This is another reason to use YatraAI: one place page carries planning and safety context together.</li></ul>`;
+    phrasebookCard.innerHTML = `<p class="eyebrow">Local phrasebook</p><h3>${phrasebook.language} travel phrases</h3><ul>${phrasebook.phrases.map(([native, english]) => `<li><strong>${native}</strong>: ${english}</li>`).join("")}</ul>`;
+    emergencyCard.innerHTML = `<p class="eyebrow">Emergency contacts</p><h3>Keep these numbers handy</h3><ul><li>Tourist helpline: ${emergency.tourist}</li><li>Police: ${emergency.police}</li><li>Ambulance: ${emergency.ambulance}</li><li>${emergency.note}</li></ul>`;
     weatherCard.innerHTML = `<div class="weather-skeleton skeleton shimmer"></div>`;
     fetchWeather(place.lat, place.lng).then((weather) => {
       weatherCard.innerHTML = `<p class="eyebrow">Live weather</p><h3>${place.name} forecast</h3><ul><li>Temperature: ${weather.temperature}°C</li><li>Rain chance: ${weather.rainChance}%</li><li>Verdict: ${weather.verdict}</li></ul>`;

@@ -1,0 +1,45 @@
+/* Page-specific styles for wishlist */
+.wishlist-card-head,
+.wishlist-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.wishlist-card-actions {
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.wishlist-compare-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--soft);
+  font-size: 0.82rem;
+}
+.wishlist-compare-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold);
+}
+.wishlist-card-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.wishlist-card-summary div {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+.wishlist-card-summary strong,
+.wishlist-card-summary span {
+  display: block;
+}
+.wishlist-card-summary strong {
+  margin-bottom: 6px;
+  color: var(--gold-soft);
+}
+

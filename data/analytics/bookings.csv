@@ -1,0 +1,2 @@
+booking_id,session_id,query_id,module,label,summary,price,reference,status,payload,created_at
+booking_3676c419066d,sess_test,,flights,Flight: Test,Test booking,1234,FLI-1520466E,CONFIRMED,"{""seat"": ""12A""}",2026-04-04T20:27:57.396250+00:00

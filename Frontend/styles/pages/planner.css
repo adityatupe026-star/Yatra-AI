@@ -1,0 +1,466 @@
+/* Page-specific styles for planner */
+.planner-layout {
+  grid-template-columns: minmax(0, 1.45fr) 340px;
+  align-items: start;
+}
+.single-top {
+  padding-top: 52px;
+}
+.planner-story-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.planner-story-card,
+.planner-section-block,
+.planner-mini-note,
+.chat-stage {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.035);
+}
+.planner-story-card {
+  padding: 18px 18px 20px;
+}
+.planner-story-card h3,
+.planner-section-head h3 {
+  font-size: 1.5rem;
+}
+.planner-story-card-primary {
+  background: linear-gradient(135deg, rgba(200, 148, 46, 0.14), rgba(255, 255, 255, 0.035));
+  border-color: rgba(200, 148, 46, 0.26);
+}
+.planner-section-block {
+  padding: 28px;
+}
+.planner-section-block-soft {
+  background: linear-gradient(135deg, rgba(24, 163, 159, 0.08), rgba(255, 255, 255, 0.03));
+}
+.planner-section-head {
+  margin-bottom: 22px;
+}
+.planner-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.planner-recommendation-shell {
+  margin-top: 10px;
+  display: grid;
+  gap: 20px;
+}
+.planner-recommendation-summary {
+  padding: 20px;
+}
+.planner-selection-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.planner-selection-summary div {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+.planner-selection-summary strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--gold-soft);
+}
+.planner-selection-summary span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+}
+.planner-ai-brief-slot {
+  margin-top: 18px;
+}
+.planner-recommendation-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.planner-recommendation-column {
+  display: grid;
+  gap: 16px;
+}
+.recommendation-grid {
+  display: grid;
+  gap: 16px;
+}
+.recommendation-card {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.035);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.recommendation-card.is-selected {
+  border-color: rgba(200, 148, 46, 0.46);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.16);
+}
+.recommendation-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 148, 46, 0.32);
+}
+.recommendation-card-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.recommendation-card-head h3 {
+  font-size: 1.5rem;
+}
+.recommendation-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--soft);
+  font-size: 0.85rem;
+}
+.recommendation-select input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold-soft);
+}
+.recommendation-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+.recommendation-meta div,
+.recommendation-copy div {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+.recommendation-meta strong,
+.recommendation-copy strong {
+  display: block;
+  color: var(--gold-soft);
+}
+.recommendation-meta span,
+.recommendation-copy span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.recommendation-tags {
+  margin-top: 12px;
+}
+.recommendation-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.planner-mini-note {
+  padding: 18px 20px;
+}
+.planner-mini-note strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-soft);
+}
+.planner-memory-points {
+  margin-top: 18px;
+  display: grid;
+  gap: 16px;
+}
+.planner-memory-points div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--line);
+}
+.planner-memory-points strong {
+  color: var(--gold-soft);
+}
+.planner-map-wrap {
+  margin-bottom: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+}
+.planner-map {
+  height: 420px;
+}
+.map-placeholder {
+  height: 420px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 32px;
+  color: var(--muted);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+.map-placeholder strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.route-note {
+  margin-top: 18px;
+  font-size: 0.92rem;
+}
+.planner-conditional-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+.planner-conditional-box {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(200, 148, 46, 0.35);
+  background: linear-gradient(135deg, rgba(200, 148, 46, 0.08), rgba(255,255,255,0.02));
+  animation: fadeUp 0.35s ease;
+}
+.planner-assist-frame {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(24, 163, 159, 0.28);
+  background: linear-gradient(135deg, rgba(24, 163, 159, 0.1), rgba(255,255,255,0.03));
+}
+.planner-assist-open {
+  animation: fadeUp 0.35s ease;
+}
+.planner-assist-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+.planner-assist-close {
+  padding-inline: 18px;
+}
+.planner-assist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.planner-assist-chip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+.planner-assist-chip strong {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(200, 148, 46, 0.18);
+  color: var(--gold-soft);
+}
+.planner-assist-chip span {
+  color: var(--muted);
+  line-height: 1.45;
+}
+.planner-assist-chip:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 148, 46, 0.38);
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(200, 148, 46, 0.08));
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+}
+.hidden-field {
+  display: none !important;
+}
+.route-memory-card {
+  min-height: 100%;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+.restaurant-picks {
+  margin-top: 18px;
+}
+.restaurant-pick-chip {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(200, 148, 46, 0.08));
+}
+.restaurant-pick-chip strong {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(200, 148, 46, 0.16);
+  color: var(--gold-soft);
+}
+.restaurant-pick-chip span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+.planner-hero-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 24px;
+  align-items: end;
+}
+.planner-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.planner-hero-stats div {
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.045);
+}
+.planner-hero-stats strong {
+  display: block;
+  font-size: 1.55rem;
+  color: var(--gold-soft);
+}
+.planner-hero-stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+}
+.transport-card {
+  background: linear-gradient(135deg, rgba(24, 163, 159, 0.12), rgba(255, 255, 255, 0.03));
+  position: relative;
+  overflow: hidden;
+}
+.route-card-dining {
+  background: linear-gradient(135deg, rgba(200, 148, 46, 0.16), rgba(255, 255, 255, 0.04));
+}
+.transport-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.1) 52%, transparent 84%);
+  transform: translateX(-140%);
+  animation: shimmerSweep 3.2s ease-in-out infinite;
+}
+.transport-summary-card {
+  margin-top: 0;
+}
+.budget-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.budget-total-card {
+  background: linear-gradient(135deg, rgba(200, 148, 46, 0.14), rgba(255,255,255,0.03));
+}
+.dining-plan-card {
+  background: linear-gradient(135deg, rgba(200, 148, 46, 0.1), rgba(255, 255, 255, 0.035));
+}
+.dining-step-card strong {
+  color: #ffd98b;
+}
+.transport-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+.transport-step-card {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+.transport-step-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold-soft);
+}
+.transport-step-card:hover,
+.restaurant-pick-chip:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(200, 148, 46, 0.38);
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(200, 148, 46, 0.1));
+}
+.workflow-card {
+  margin-top: 22px;
+  background: rgba(255,255,255,0.04);
+}
+.planner-ai-brief p {
+  margin: 0;
+}
+.workflow-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 18px;
+}
+.workflow-item {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+}
+.workflow-item strong {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: rgba(200, 148, 46, 0.18);
+  color: var(--gold-soft);
+}
+.navigation-steps {
+  margin-top: 22px;
+}
+.step-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+.step-item {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+.step-item strong,
+.step-item small {
+  display: block;
+}
+.step-item strong {
+  margin-bottom: 10px;
+  color: var(--gold-soft);
+}
+.step-item small {
+  margin-top: 8px;
+  color: var(--soft);
+}
+.step-item:hover {
+  transform: translateX(6px);
+  border-color: rgba(24, 163, 159, 0.28);
+  background: rgba(24, 163, 159, 0.06);
+}
+
+@media (max-width: 980px) {
+  .planner-recommendation-columns,
+  .planner-selection-summary,
+  .recommendation-meta,
+  .recommendation-copy {
+    grid-template-columns: 1fr;
+  }
+}

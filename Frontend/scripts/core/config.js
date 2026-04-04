@@ -1,13 +1,20 @@
 export const page = document.body.dataset.page;
 
+const BACKEND_ORIGIN =
+  window.location.protocol === "file:" || !window.location.origin || window.location.origin === "null"
+    ? "http://localhost:8000"
+    : window.location.origin.includes(":8000")
+      ? window.location.origin
+      : "http://localhost:8000";
+
 export const API_CONFIG = {
   provider: "backend",
-  chatEndpoint: window.location.protocol === "file:"
-    ? "http://localhost:8000/api/chat"
-    : "/api/chat",
-  ollamaEndpoint: window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "http://localhost:11434/api/generate"
-    : "/api/ollama",
+  baseUrl: BACKEND_ORIGIN,
+  chatEndpoint: `${BACKEND_ORIGIN}/api/chat`,
+  bookingSummaryEndpoint: `${BACKEND_ORIGIN}/api/bookings/hotel-summary`,
+  bookingConfirmEndpoint: `${BACKEND_ORIGIN}/api/bookings/confirm`,
+  translateEndpoint: `${BACKEND_ORIGIN}/translate`,
+  apiTranslateEndpoint: `${BACKEND_ORIGIN}/api/translate`,
   model: "llama3.1:8b-instruct",
 };
 
@@ -83,7 +90,7 @@ export const REGION_SEASONS = {
 export const MAIN_NAV_ITEMS = [
   ["home", "./index.html", "Home"],
   ["destinations", "./destinations.html", "Destinations"],
-  ["explorer", "./explorer.html", "Explorer"],
+  ["translet", "./translet.html", "Translet"],
   ["chat", "./chat.html", "Chat"],
 ];
 
@@ -106,8 +113,8 @@ export const TRANSLATE_LANGUAGES = [
 ];
 
 export const MORE_NAV_ITEMS = [
-  ["translate", "./translate.html", "Translate"],
-  ["map", "./map.html", "India Map"],
+  ["bookings", "./bookings.html", "Bookings"],
+  ["explorer", "./explorer.html", "Explorer"],
   ["events", "./events.html", "Events"],
   ["history", "./history.html", "History"],
   ["wishlist", "./wishlist.html", "Wishlist"],
