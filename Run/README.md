@@ -20,8 +20,5 @@ Use these PowerShell scripts from the repo root.
 - The frontend is served through the backend, not as a separate static server.
 - The dashboard reads the India tourism datasets in `data/`.
 - The logging CSV files are stored in `data/analytics/`.
-- The translate page needs a local LibreTranslate server on port 5000.
-
-```powershell
-docker run --rm -p 5000:5000 libretranslate/libretranslate
-```
+- Copy `.env.example` to `.env`, set `GOOGLE_TRANSLATE_API_KEY`, or set it in your PowerShell session before starting the app.
+- The translate page calls Google Cloud Translation through the backend, so the key stays on the server side.

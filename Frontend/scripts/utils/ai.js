@@ -29,6 +29,32 @@ export function demoResponse(prompt, includeTripContext = true) {
     : "";
   const text = prompt.toLowerCase();
   const place = findPlaceMention(prompt);
+  const interestMap = [
+    ["beach", "Beach"],
+    ["beaches", "Beach"],
+    ["culture", "Culture"],
+    ["heritage", "Culture"],
+    ["food", "Food"],
+    ["romance", "Romance"],
+    ["romantic", "Romance"],
+    ["adventure", "Adventure"],
+    ["nature", "Nature"],
+    ["wildlife", "Wildlife"],
+    ["spiritual", "Spiritual"],
+    ["wellness", "Wellness"],
+    ["shopping", "Shopping"],
+    ["nightlife", "Nightlife"],
+    ["luxury", "Luxury"],
+    ["family", "Family"],
+    ["photography", "Photography"],
+    ["road trip", "Road Trip"],
+  ];
+  const interests = interestMap.filter(([needle]) => text.includes(needle)).map(([, label]) => label);
+
+  if (!place && /where should i go|where to go|recommend|suggest|best place|trip idea|i prefer|i want|choose a destination/.test(text)) {
+    const picks = destinationPlaces.filter((item) => !interests.length || item.tags.some((tag) => interests.includes(tag))).slice(0, 3);
+    return `**Best place picks**\n\n${picks.map((item) => `**${item.name}**\n- Why it fits: ${item.blurb}\n- Best for: ${(item.tags || []).slice(0, 3).join(", ")}\n- Highlights: ${(item.highlights || []).slice(0, 3).join(", ")}\n- Access: ${item.airport}, ${item.rail}, ${item.road}\n- Why YatraAI: it explains why the place fits and turns it into a route.`).join("\n\n")}\n\nNext step: tell me your budget, days and vibe, and I will turn one of these places into a full trip plan.${tripHint}`;
+  }
 
   if (text.includes("budget")) {
     if (place) {
@@ -135,14 +161,14 @@ export async function queryBackend(prompt, options = {}) {
   const backendPayload = {
     prompt,
     model: API_CONFIG.model,
-    maxTokens: 900,
+    maxTokens: 1600,
     context,
     responseMode,
   };
   const ollamaPayload = {
     model: API_CONFIG.model,
     stream: false,
-    prompt: `You are YatraAI, an India ${useTripContext ? "travel planning assistant" : "travel and tourism expert"}.\nUse this structured context when answering:\n${JSON.stringify(context)}\n\nUser prompt:\n${prompt}\n\nRules: be destination-specific, explain why each place matters, include nearby places, season, access and budget logic, and avoid generic travel filler. Use clear section headings and detailed bullets. If the user already knows the city, explain why YatraAI would still help by turning it into a route, not just a name.`,
+    prompt: `You are YatraAI, an India ${useTripContext ? "travel planning assistant" : "travel and tourism expert"}.\nUse this structured context when answering:\n${JSON.stringify(context)}\n\nUser prompt:\n${prompt}\n\nRules: be destination-specific, explain why each place matters, include nearby places, season, access and budget logic, and avoid generic travel filler. Use clear section headings and detailed bullets. If the user already knows the city, explain why YatraAI would still help by turning it into a route, not just a name. If the user asks where to go, recommend actual destinations first and explain why each one fits.`,
   };
   const candidates = [
     { endpoint: API_CONFIG.chatEndpoint, body: backendPayload, expect: "chat" },

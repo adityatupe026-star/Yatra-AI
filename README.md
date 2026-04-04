@@ -27,7 +27,7 @@ flowchart LR
   A[User] --> B[Frontend]
   B --> C[FastAPI Backend]
   C --> D[Travel Engine]
-  C --> E[LibreTranslate Server]
+  C --> E[Google Cloud Translation API]
   C --> F[CSV Logging]
   F --> G[Streamlit Tourism Dashboard]
   D --> H[Planner, Chat, Destinations]
@@ -144,11 +144,7 @@ Use the scripts in [Run](/D:/Yatraai/Run):
 - `run_dashboard.ps1` starts the tourism dashboard
 - `run_all.ps1` starts backend + dashboard together
 
-Start the local LibreTranslate server on port 5000 before using the translate page:
-
-```powershell
-docker run --rm -p 5000:5000 libretranslate/libretranslate
-```
+Copy `.env.example` to `.env`, set `GOOGLE_TRANSLATE_API_KEY`, then start the backend. You can also export it in PowerShell before starting the backend.
 
 ## Frontend Notes
 
@@ -185,7 +181,7 @@ It writes into `data/` and is documented in [data_collection/README.md](/D:/Yatr
 
 The translate page posts to `POST /translate`.
 
-The backend forwards requests to the local LibreTranslate server at `http://localhost:5000/translate`.
+The backend forwards requests to Google Cloud Translation API using the `GOOGLE_TRANSLATE_API_KEY` environment variable.
 
 If translation fails, the backend returns the original text.
 

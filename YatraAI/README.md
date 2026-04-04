@@ -81,7 +81,7 @@ CSV logger and table schema helpers for:
 
 ### [api/translation/](/D:/Yatraai/YatraAI/api/translation/)
 
-Local LibreTranslate-backed translation module with request models, caching, and router wiring.
+Google Cloud Translation-backed translation module with request models, caching, and router wiring.
 
 ### [dev_dashboard.py](/D:/Yatraai/YatraAI/dev_dashboard.py)
 
@@ -105,15 +105,11 @@ From the repo root:
 uvicorn YatraAI.api.app:app --reload --port 8000
 ```
 
-Start LibreTranslate locally on port 5000 before using translation:
-
-```powershell
-docker run --rm -p 5000:5000 libretranslate/libretranslate
-```
+Copy `.env.example` to `.env` and set `GOOGLE_TRANSLATE_API_KEY` before using translation.
 
 ## Notes
 
 - The backend supports India-wide tourism analysis.
 - The dashboard is separate from app telemetry.
-- The translate endpoint falls back to the original text if LibreTranslate is unavailable.
+- The translate endpoint falls back to the original text if Google Translate is unavailable or misconfigured.
 - Ollama can still be enabled through environment settings when needed.

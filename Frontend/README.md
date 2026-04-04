@@ -149,4 +149,4 @@ Use the scripts in [Run](/D:/Yatraai/Run) instead of opening HTML files directly
 ## Backend Bridge
 
 Chat first tries the backend, then the local fallback path.
-Translation goes through `POST /translate`, which forwards to the local LibreTranslate server when available.
+Translation goes through `POST /translate`, which forwards through the FastAPI backend to Google Cloud Translation when `GOOGLE_TRANSLATE_API_KEY` is set.

@@ -72,18 +72,19 @@ export function initExplorer() {
     const related = destinationPlaces.filter((item) => item.region === place.region && item.name !== place.name).slice(0, 4);
     const currentInterest = interestSelect.value;
     const detailLines = [
-      `Why go: ${place.blurb}`,
-      `Best season: ${season.bestMonths}`,
-      `Region mood: ${season.mood}`,
-      `Planning note: ${season.note}`,
-      `Ideal traveler: ${currentInterest} travelers who want a destination-led trip.`,
-      `Top highlights: ${place.highlights.join(", ")}`,
-      `Air access: ${place.airport}`,
-      `Rail access: ${place.rail}`,
-      `Road access: ${place.road}`,
-      `Nearby pairings: ${related.map((item) => item.name).join(", ") || "Other nearby regional places"}`,
-      `Why this helps: it gives you a clear anchor for planning, instead of a generic place list.`,
-      `Trip value: use Explorer when you know the city but want the reason, route logic and nearby add-ons.`,
+      { label: "Why go", value: place.blurb },
+      { label: "Best season", value: season.bestMonths },
+      { label: "Region mood", value: season.mood },
+      { label: "Planning note", value: season.note },
+      { label: "Ideal traveler", value: `${currentInterest} travelers who want a destination-led trip.` },
+      { label: "Top highlights", value: place.highlights.join(", ") },
+      { label: "Air access", value: place.airport },
+      { label: "Rail access", value: place.rail },
+      { label: "Road access", value: place.road },
+      { label: "Nearby pairings", value: related.map((item) => item.name).join(", ") || "Other nearby regional places" },
+      { label: "What Explorer adds", value: "It gives you a clear anchor for planning, instead of a generic place list." },
+      { label: "Why use YatraAI", value: "Use Explorer when you know the city but want the reason, route logic and nearby add-ons." },
+      { label: "Trip value", value: "It turns a place into a usable circuit with timing, access and neighborhood context." },
     ];
     placeInput.value = place.name;
     overview.innerHTML = `
@@ -93,7 +94,7 @@ export function initExplorer() {
         <h3>${place.name}</h3>
         <p>${place.blurb}</p>
         <div class="meta">${place.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-        <ul class="explorer-detail-list">${detailLines.map((line) => `<li>${line}</li>`).join("")}</ul>
+        <ul class="explorer-detail-list">${detailLines.map((item) => `<li><strong>${item.label}</strong><span>${item.value}</span></li>`).join("")}</ul>
         <div class="hero-actions">
           <a class="button button-secondary" href="${place.officialUrl}" target="_blank" rel="noreferrer">Official tourism page</a>
           <a class="button button-secondary" href="${buildGoogleMapsPlaceLink(place)}" target="_blank" rel="noreferrer">Open in Google Maps</a>
