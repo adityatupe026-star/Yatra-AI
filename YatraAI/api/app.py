@@ -154,7 +154,7 @@ def simulate(payload: SimulateRequest) -> Dict[str, Any]:
 
 @app.post("/api/chat")
 def chat(payload: ChatRequest) -> Dict[str, Any]:
-    result = engine.chat(payload.prompt, payload.context, payload.responseMode)
+    result = engine.chat(payload.prompt, payload.context, payload.responseMode, payload.maxTokens)
     if payload.model:
         result["model"] = payload.model
     session_id = str(payload.context.get("sessionId") or create_id("chat"))

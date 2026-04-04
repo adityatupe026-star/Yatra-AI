@@ -10,4 +10,4 @@ Start-Process powershell -ArgumentList @(
   "& `"$python`" -m uvicorn YatraAI.api.app:app --reload --port 8000"
 )
 Start-Sleep -Seconds 4
-Start-Process "http://localhost:8000/translate.html"
+Start-Process "http://localhost:8000/index.html"

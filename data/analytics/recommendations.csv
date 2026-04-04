@@ -1,2 +1,6 @@
 rec_id,query_id,session_id,recommendation_type,top_pick,all_picks,estimated_cost,estimated_days,ai_mode,created_at
 rec_621e87752e00,query_11ebeafa8998,chat-1775239181500-j18fk3,chat_answer,,,,,expert,2026-04-03T18:00:22.193226+00:00
+rec_d8f4ff4fadea,query_04cbe26d0d11,chat-1775294810809-bon09t,chat_answer,,,,,expert,2026-04-04T09:27:12.511496+00:00
+rec_38516b20bc60,query_533ecf7db1f8,chat-1775294810809-bon09t,chat_answer,,,,,expert,2026-04-04T09:28:24.124833+00:00
+rec_553a494b9b9b,query_0295cf034524,chat-1775297565201-gfbyn4,chat_answer,,,,,expert,2026-04-04T10:40:46.494639+00:00
+rec_3b2b809832b2,query_a2e43dc26014,chat-1775299287161-nb6r12,chat_answer,,,,,expert,2026-04-04T10:41:48.050748+00:00

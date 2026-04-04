@@ -8,6 +8,7 @@ from pydantic import BaseModel, Field
 class ChatRequest(BaseModel):
     prompt: str
     model: Optional[str] = None
+    maxTokens: Optional[int] = None
     context: Dict[str, Any] = Field(default_factory=dict)
     responseMode: str = "trip"
 

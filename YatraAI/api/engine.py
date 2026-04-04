@@ -44,6 +44,9 @@ def _safe_float(value: Any, default: float = 0.0) -> float:
         return default
 
 
+DEFAULT_NUM_PREDICT = _safe_int(os.getenv("OLLAMA_NUM_PREDICT", "900"), 900)
+
+
 def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     radius = 6371.0
     d_lat = math.radians(lat2 - lat1)
@@ -351,27 +354,47 @@ class TravelEngine:
             )
         return {"days": days, "season": season, "summary": "This simulation keeps the trip practical by spreading budget and energy across the route.", "timeline": timeline}
 
-    def _ollama_chat(self, prompt: str, context: Dict[str, Any], response_mode: str = "trip") -> Optional[str]:
+    def _ollama_chat(self, prompt: str, context: Dict[str, Any], response_mode: str = "trip", max_tokens: Optional[int] = None) -> Optional[str]:
         if os.getenv("YATRA_USE_OLLAMA", "").lower() not in {"1", "true", "yes"}:
             return None
         if ollama is None:
             return None
         try:
-            system_prompt = "You are YatraAI, a travel planner for India. Use the supplied data and keep answers grounded."
+            system_prompt = (
+                "You are YatraAI, a travel planner for India. Use the supplied data and keep answers grounded. "
+                "Be specific about actual destinations, why they fit, what to see, when to go, where to stay, "
+                "what food or nearby places matter, and why the user should trust this route. "
+                "Write in clear sections and aim for detailed answers with 10 or more useful lines when the user asks for guidance."
+            )
             if response_mode != "trip":
-                system_prompt = "You are YatraAI, an India travel and tourism expert. Answer broadly without using any saved trip context."
+                system_prompt = (
+                    "You are YatraAI, an India travel and tourism expert. Answer broadly without using any saved trip context. "
+                    "Give destination-specific guidance, explain why places are worth visiting, and avoid generic travel filler. "
+                    "Use clear sections and detailed bullets."
+                )
+            num_predict = max(256, _safe_int(max_tokens, DEFAULT_NUM_PREDICT))
             response = ollama.chat(
                 model=MODEL_NAME,
+                options={
+                    "num_predict": num_predict,
+                    "temperature": 0.35,
+                },
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"Context: {json.dumps(context, ensure_ascii=False)}\n\nUser prompt: {prompt}"},
+                    {"role": "user", "content": (
+                        "Context: "
+                        f"{json.dumps(context, ensure_ascii=False)}\n\n"
+                        "Respond with the actual destination names from the context when relevant. "
+                        "Start with why the place matters, then cover what to see, where to stay, food, nearby places, season, and next steps.\n\n"
+                        f"User prompt: {prompt}"
+                    )},
                 ],
             )
             return response["message"]["content"].strip()
         except Exception:
             return None
 
-    def chat(self, prompt: str, context: Optional[Dict[str, Any]] = None, response_mode: str = "trip") -> Dict[str, Any]:
+    def chat(self, prompt: str, context: Optional[Dict[str, Any]] = None, response_mode: str = "trip", max_tokens: Optional[int] = None) -> Dict[str, Any]:
         context = context or {}
         if response_mode != "trip":
             context = {key: value for key, value in context.items() if key != "trip"}
@@ -386,7 +409,7 @@ class TravelEngine:
         if not place and isinstance(trip, dict) and trip.get("destination"):
             place = self._find_destination(trip.get("destination"))
 
-        if (llm := self._ollama_chat(prompt, context, response_mode)) is not None:
+        if (llm := self._ollama_chat(prompt, context, response_mode, max_tokens=max_tokens)) is not None:
             return {"response": llm, "intent": "llm", "place": place}
 
         lowered = _normalize(prompt)
@@ -415,10 +438,21 @@ class TravelEngine:
     def _format_place_overview(self, place: Dict[str, Any], trip: Dict[str, Any]) -> str:
         nearby = self.nearby_places(place["name"])
         state_info = self.local_intelligence.get(place.get("state"), {})
+        highlights = place.get("highlights", [])[:3]
+        daily_cost = place.get("average_daily_cost")
         pieces = [
             f"**{place['name']}** is a strong fit for a {', '.join(place.get('tags', [])[:3]).lower()} trip.",
             f"It sits in **{place.get('state')}** and works best as a {place.get('type', 'travel stop')}.",
             f"Best season: {place.get('best_season', 'Year-round with seasonal planning')}.",
+            f"Why people go: {place.get('blurb', 'It gives the trip a clear visual identity and an easy route anchor.')}",
+            f"Top highlights: {', '.join(highlights) if highlights else 'Local highlights from the destination data.'}",
+            f"Best for: {', '.join(place.get('tags', [])[:3]) if place.get('tags') else 'balanced travel'} travelers.",
+            f"Stay vibe: {state_info.get('stay_tip', 'Use a central stay to cut transfer time.')}",
+            f"Food angle: {state_info.get('food_angle', 'Pair one local meal with one relaxed evening stop.')}",
+            f"Access: {place.get('airport', 'airport access not listed')}, {place.get('rail', 'rail access not listed')}, {place.get('road', 'road access not listed')}.",
+            f"Nearby route ideas: {', '.join(item.get('name', '') for item in nearby[:3]) or 'Other close places in the same region.'}",
+            f"Budget cue: {daily_cost if daily_cost else 'Use the planner budget ranges for a realistic estimate.'}",
+            f"Why YatraAI: it turns a place into a route, so users get the reason, timing and nearby logic instead of a generic list.",
         ]
         if nearby:
             pieces.append(f"Nearby places: {', '.join(item.get('name', '') for item in nearby[:3])}.")
@@ -450,6 +484,7 @@ class TravelEngine:
             f"- Food: Rs.{breakdown['food']['low']} to Rs.{breakdown['food']['high']}\n"
             f"- Activities: Rs.{breakdown['activities']['low']} to Rs.{breakdown['activities']['high']}\n"
             f"- Total band: Rs.{breakdown['total']['low']} to Rs.{breakdown['total']['high']}"
+            f"\n- Why it matters: {place.get('blurb', 'This destination gives you a clear trip anchor and a practical planning band.')}"
         )
 
     def _format_food(self, place: Optional[Dict[str, Any]], trip: Dict[str, Any]) -> str:
@@ -463,6 +498,7 @@ class TravelEngine:
             f"- Try: {food_line}\n"
             f"- Add one premium dinner stop and one relaxed local lunch.\n"
             f"- Pair meals with {first_highlight} so the day stays efficient."
+            f"\n- Why use YatraAI here: it helps turn food into route design, not just a random restaurant list."
         )
 
     def _format_packing(self, place: Optional[Dict[str, Any]], trip: Dict[str, Any]) -> str:
@@ -475,16 +511,23 @@ class TravelEngine:
         if not place:
             return "Share a destination and I'll suggest nearby spots."
         nearby = self.nearby_places(place["name"])
-        return "**Nearby picks**\n\n" + "\n".join(f"- {item.get('name')} - {item.get('highlights', [''])[0]}" for item in nearby[:5])
+        lines = [f"- {item.get('name')} - {item.get('highlights', [''])[0]}" for item in nearby[:5]]
+        lines.append("- Use these as route add-ons so the trip feels planned, not scattered.")
+        lines.append("- This is where YatraAI is useful: it clusters places that actually fit together.")
+        return "**Nearby picks**\n\n" + "\n".join(lines)
 
     def _format_why(self, place: Optional[Dict[str, Any]], trip: Dict[str, Any]) -> str:
         if not place:
             return "I need a destination or current trip to explain why it works."
         interests = trip.get("interests", [])
+        nearby = self.nearby_places(place["name"])[:3]
         lines = [
             f"{place['name']} matches your interests: {', '.join(interests[:3]) if interests else 'a balanced route'}.",
             f"Best season: {place.get('best_season', 'Year-round with seasonal planning')}.",
             f"Highlights: {', '.join(place.get('highlights', [])[:3])}.",
+            f"Nearby places: {', '.join(item.get('name', '') for item in nearby) or 'Other regional options'}.",
+            f"Use case: this works when you want a route, not just a destination name.",
+            f"Reason to trust it: the answer is based on your trip context, region, access, and budget band.",
         ]
         return "**Why this plan works**\n\n" + "\n".join(f"- {line}" for line in lines)
 
@@ -513,7 +556,10 @@ class TravelEngine:
         return (
             "**Trip sketch**\n\n"
             "- Tell me a destination, budget, or interest and I'll turn it into a grounded plan.\n"
-            "- I can also help with weather, packing, food, nearby places and optimization."
+            "- I can explain why a place fits your trip, not just name the place.\n"
+            "- I can also help with weather, packing, food, nearby places and optimization.\n"
+            "- If you already know the city, I’ll turn it into a route with nearby pairings and timing.\n"
+            "- If you do not know where to go, I can suggest places based on mood, budget and season."
             f"{current}"
         )
 

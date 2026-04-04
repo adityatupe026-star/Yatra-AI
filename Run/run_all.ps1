@@ -16,5 +16,5 @@ if (Get-Command docker -ErrorAction SilentlyContinue) {
 Start-Process powershell -ArgumentList @("-NoExit", "-ExecutionPolicy", "Bypass", "-File", $backend)
 Start-Process powershell -ArgumentList @("-NoExit", "-ExecutionPolicy", "Bypass", "-File", $dashboard)
 Start-Sleep -Seconds 4
-Start-Process "http://localhost:8000/translate.html"
+Start-Process "http://localhost:8000/index.html"
 Start-Process "http://localhost:8501/"

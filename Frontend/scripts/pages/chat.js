@@ -27,7 +27,7 @@ function createChat() {
     id: uid("chat"),
     title: "New chat",
     updatedAt: new Date().toLocaleString(),
-    messages: [{ role: "assistant", content: "Tell me where you want to go. I can use your current planned trip as context when one is available." }],
+    messages: [{ role: "assistant", content: "Tell me where you want to go. I can recommend places, explain why they fit, and turn a city into a route with nearby stops, season timing and budget logic." }],
   };
   sessions.unshift(session);
   setChats(sessions.slice(0, 40));
@@ -120,10 +120,10 @@ export function chatMarkup() {
           <p class="eyebrow">Ask better</p>
           <h3>Prompt ideas</h3>
           <div class="prompt-list" id="chatPromptList">
+            <button class="prompt-chip" type="button" data-prompt="Recommend the best destination for a cultural trip and explain why that place is worth going to.">Best destination</button>
             <button class="prompt-chip" type="button" data-prompt="Create a 3 day trip plan with food, culture and one premium dinner stop.">3 day trip idea</button>
             <button class="prompt-chip" type="button" data-prompt="Suggest transport, cost and the best stay zone for my current destination.">Transport help</button>
             <button class="prompt-chip" type="button" data-prompt="Show nearby places, restaurants and one evening route around my trip place.">Nearby picks</button>
-            <button class="prompt-chip" type="button" data-prompt="Give me a premium but practical itinerary with headings and bullet points.">Premium itinerary</button>
           </div>
         </article>
         <div class="hero-actions chat-sidebar-actions">

@@ -2,6 +2,7 @@ import { page } from "./core/config.js";
 import { footer, initFooter, initHamburger, initShellChrome, nav } from "./components/nav.js";
 import { initMotion } from "./components/motion.js";
 import { showToast } from "./components/toast.js";
+import { bootstrapGoogleTranslatePersistence } from "./utils/google-translate.js";
 import { homeMarkup, initHome } from "./pages/home.js";
 import { destinationsMarkup, initDestinations } from "./pages/destinations.js";
 import { plannerMarkup, initPlanner } from "./pages/planner.js";
@@ -121,6 +122,7 @@ try {
   renderApp();
   registerEnhancements();
   initShellChrome();
+  bootstrapGoogleTranslatePersistence();
 } catch (error) {
   document.body.innerHTML = `<main class="page-shell"><section class="section"><article class="route-card"><p class="eyebrow">Something broke</p><h2>YatraAI hit a page error</h2><p>${error?.message || "Unknown frontend error."}</p></article></section></main>`;
   showToast("A page error occurred. Refresh and try again.", "warning");

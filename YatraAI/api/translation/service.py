@@ -11,7 +11,14 @@ from .schemas import TranslateRequest
 
 
 LOGGER = logging.getLogger(__name__)
-LIBRETRANSLATE_URL = os.getenv("LIBRETRANSLATE_URL", "http://localhost:5001/translate")
+LIBRETRANSLATE_URLS = [
+    url.strip()
+    for url in os.getenv(
+        "LIBRETRANSLATE_URLS",
+        "http://127.0.0.1:5001/translate,http://localhost:5001/translate,http://127.0.0.1:5000/translate,http://localhost:5000/translate",
+    ).split(",")
+    if url.strip()
+]
 _CACHE: dict[str, str] = {}
 _CACHE_LOCK = Lock()
 
@@ -20,7 +27,7 @@ def _cache_key(text: str, target: str) -> str:
     return f"{text}|{target}"
 
 
-def _call_libretranslate(text: str, target: str) -> str:
+def _call_libretranslate(text: str, target: str, url: str) -> str:
     payload = {
         "q": text,
         "source": "auto",
@@ -28,7 +35,7 @@ def _call_libretranslate(text: str, target: str) -> str:
         "format": "text",
     }
     request = urlrequest.Request(
-        LIBRETRANSLATE_URL,
+        url,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json; charset=utf-8"},
         method="POST",
@@ -50,13 +57,14 @@ def translate_text(payload: TranslateRequest) -> str:
     if cached is not None:
         return cached
 
-    try:
-        translated = _call_libretranslate(payload.text, payload.target)
-        with _CACHE_LOCK:
-            _CACHE[cache_key] = translated
-        return translated
-    except (TimeoutError, urlerror.URLError, json.JSONDecodeError, ValueError) as exc:
-        LOGGER.warning("LibreTranslate fallback used: %s", exc)
-    except Exception as exc:  # pragma: no cover - defensive fallback
-        LOGGER.warning("Unexpected translation failure: %s", exc)
+    for url in LIBRETRANSLATE_URLS:
+        try:
+            translated = _call_libretranslate(payload.text, payload.target, url)
+            with _CACHE_LOCK:
+                _CACHE[cache_key] = translated
+            return translated
+        except (TimeoutError, urlerror.URLError, json.JSONDecodeError, ValueError) as exc:
+            LOGGER.warning("LibreTranslate fallback used for %s: %s", url, exc)
+        except Exception as exc:  # pragma: no cover - defensive fallback
+            LOGGER.warning("Unexpected translation failure for %s: %s", url, exc)
     return payload.text

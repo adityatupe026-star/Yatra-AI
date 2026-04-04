@@ -1,2 +1,6 @@
 query_id,session_id,user_id,query_type,raw_query,source,page,timestamp,language,trip_mode,destination_hint,budget_hint,days_hint
 query_11ebeafa8998,chat-1775239181500-j18fk3,,chat,Travel expert mode active.  User question: i was thinking of planning a holiday,chat_input,chat,2026-04-03T18:00:22.190445+00:00,en-IN,expert,,,
+query_04cbe26d0d11,chat-1775294810809-bon09t,,chat,Travel expert mode active.  User question: I WAS THINKING OF planning a trip to rajasthan,chat_input,chat,2026-04-04T09:27:12.499043+00:00,en-IN,expert,,,
+query_533ecf7db1f8,chat-1775294810809-bon09t,,chat,"Travel expert mode active.  User question: rajsthan, my budget is 20000 i want to have cultural and heritage",chat_input,chat,2026-04-04T09:28:24.119008+00:00,en-IN,expert,,,
+query_0295cf034524,chat-1775297565201-gfbyn4,,chat,"Travel expert mode active.  User question: Show nearby places, restaurants and one evening route around my trip place.",chat_input,chat,2026-04-04T10:40:46.483143+00:00,en-IN,expert,,,
+query_a2e43dc26014,chat-1775299287161-nb6r12,,chat,Travel expert mode active.  User question: i was thinking of going to Goa,chat_input,chat,2026-04-04T10:41:48.042136+00:00,en-IN,expert,,,

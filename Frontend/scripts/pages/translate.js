@@ -1,5 +1,6 @@
 import { showToast } from "../components/toast.js";
 import { speakText } from "../utils/speech.js";
+import { initGoogleTranslateWidget } from "../utils/google-translate.js";
 
 const LANGUAGE_OPTIONS = [
   ["en", "English"],
@@ -103,33 +104,7 @@ export function translateMarkup() {
 }
 
 export function initTranslate() {
-  if (!window.google?.translate?.TranslateElement && !window.__yatraGoogleTranslateLoading) {
-    window.__yatraGoogleTranslateLoading = true;
-    window.googleTranslateElementInit = () => {
-      if (!window.google?.translate?.TranslateElement) return;
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          includedLanguages: "en,hi,mr",
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-        },
-        "google_translate_element",
-      );
-    };
-
-    const script = document.createElement("script");
-    script.id = "google-translate-script";
-    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.async = true;
-    document.head.appendChild(script);
-
-    window.setTimeout(() => {
-      const host = document.getElementById("google_translate_element");
-      if (host && host.textContent === "Loading Google widget...") {
-        host.textContent = "Google widget could not load in this browser.";
-      }
-    }, 5000);
-  }
+  initGoogleTranslateWidget("google_translate_element");
 
   const form = document.getElementById("translateForm");
   const input = document.getElementById("translateInput");
