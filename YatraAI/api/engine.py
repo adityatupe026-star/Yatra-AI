@@ -44,7 +44,7 @@ def _safe_float(value: Any, default: float = 0.0) -> float:
         return default
 
 
-DEFAULT_NUM_PREDICT = _safe_int(os.getenv("OLLAMA_NUM_PREDICT", "1600"), 1600)
+DEFAULT_NUM_PREDICT = _safe_int(os.getenv("OLLAMA_NUM_PREDICT", "4096"), 4096)
 
 
 def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -101,6 +101,103 @@ class TravelEngine:
             "daily": daily,
             "low": int(daily * days * 0.85),
             "high": int(daily * days * 1.25),
+        }
+
+    def _is_place_only_query(self, prompt: str, place: Optional[Dict[str, Any]]) -> bool:
+        if not isinstance(place, dict) or not place:
+            return False
+        lowered = _normalize(prompt)
+        signal_terms = [
+            "budget", "cost", "days", "day", "itinerary", "plan", "trip",
+            "explore", "visit", "see", "stay", "places", "where",
+        ]
+        return bool(place.get("name")) and not any(term in lowered for term in signal_terms)
+
+    def _is_bare_place_request(self, prompt: str) -> bool:
+        lowered = _normalize(prompt)
+        if not lowered:
+            return False
+        signal_terms = [
+            "budget", "cost", "days", "day", "itinerary", "plan", "trip",
+            "explore", "visit", "see", "stay", "places", "where", "weather",
+            "season", "food", "eat", "restaurant", "cafe", "near", "nearby",
+            "transport", "route", "pack", "packing", "why", "recommend",
+            "suggest", "overview", "about", "tell me",
+        ]
+        if any(term in lowered for term in signal_terms):
+            return False
+        tokens = re.findall(r"[a-zA-Z][a-zA-Z'\-]*", prompt)
+        if not tokens or len(tokens) > 4:
+            return False
+        return True
+
+    def _is_destination_trip_request(self, prompt: str, place: Optional[Dict[str, Any]]) -> bool:
+        if not isinstance(place, dict) or not place:
+            return False
+        lowered = _normalize(prompt)
+        if not lowered:
+            return False
+        trip_terms = [
+            "trip", "plan", "planning", "visit", "go to", "travel", "itinerary",
+            "vacation", "holiday", "explore", "stay", "route", "thinking of",
+            "where should i go", "where to go", "i want to go", "help me plan",
+        ]
+        return any(term in lowered for term in trip_terms)
+
+    def _extract_prompt_destination(self, prompt: str) -> str:
+        text = re.sub(r"\s+", " ", prompt).strip(" .?,;:")
+        if not text:
+            return ""
+        patterns = [
+            r"\b(?:to|for|in|at|visit|visiting|go to|travel to|trip to)\s+([A-Za-z][A-Za-z\s\-']{1,40})",
+            r"\b(?:planning a trip to|plan a trip to|thinking of a trip to)\s+([A-Za-z][A-Za-z\s\-']{1,40})",
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                candidate = re.split(
+                    r"\b(?:with|for|budget|cost|days|day|itinerary|plan|trip|travel|weather|season|food|eat|near|nearby)\b",
+                    match.group(1),
+                    maxsplit=1,
+                    flags=re.IGNORECASE,
+                )[0].strip(" ,.-")
+                if candidate:
+                    return candidate
+        tokens = re.findall(r"[A-Za-z][A-Za-z'\-]*", text)
+        if len(tokens) <= 4:
+            return text
+        return ""
+
+    def _synthetic_place(self, prompt: str) -> Dict[str, Any]:
+        lowered = _normalize(prompt)
+        tags: List[str] = []
+        highlights: List[str] = []
+        if any(term in lowered for term in ["beach", "coast", "island"]):
+            tags = ["Beach", "Relaxed", "Scenic"]
+            highlights = ["Beach time", "Sunset spots", "Easy day trips"]
+        elif any(term in lowered for term in ["hill", "mountain", "trek"]):
+            tags = ["Hill", "Nature", "Adventure"]
+            highlights = ["Viewpoints", "Short treks", "Scenic drives"]
+        elif any(term in lowered for term in ["city", "urban", "metro"]):
+            tags = ["City", "Culture", "Food"]
+            highlights = ["Landmarks", "Local food lanes", "Museum or market stops"]
+        else:
+            tags = ["Balanced Travel", "Culture", "Food"]
+            highlights = ["Main landmarks", "Local food", "One nearby explore stop"]
+        name = re.sub(r"\s+", " ", prompt).strip(" .?") or "This place"
+        return {
+            "name": name.title(),
+            "state": "Not listed",
+            "region": "",
+            "type": "travel destination",
+            "blurb": f"A practical anchor for planning {name.title()} without needing extra context.",
+            "best_season": "Year-round with seasonal planning",
+            "tags": tags,
+            "highlights": highlights,
+            "airport": "Nearest airport varies by route",
+            "rail": "Nearest rail link varies by route",
+            "road": "Road access varies by route",
+            "average_daily_cost": 3200,
         }
 
     def _key(self, value: Any) -> str:
@@ -458,34 +555,62 @@ class TravelEngine:
             return None
         try:
             trip = context.get("trip") if self._has_trip_context(context) else {}
-            expert_mode = response_mode != "trip" or not trip
-            if expert_mode:
-                system_prompt = (
-                    "You are YatraAI, an India travel and tourism expert. Answer without relying on trip context unless the user supplied it. "
-                    "When the user names a city, district, or place, respond with the best tourist places in that location, why each place is worth visiting, "
-                    "what to see, and how long a default visit should take. If budget or trip length are not given, propose a sensible default budget plan "
-                    "and trip duration instead of asking the user to fill in the blanks. Keep the answer practical, specific, and grounded in the supplied data."
-                )
-            else:
-                system_prompt = (
-                    "You are YatraAI, a travel planner for India. Use the supplied trip context and keep answers grounded. "
-                    "Be specific about actual destinations, why they fit, what to see, when to go, where to stay, "
-                    "what food or nearby places matter, and why the user should trust this route. "
-                    "Write in clear sections and aim for detailed answers with 12 or more useful lines when the user asks for guidance. "
-                    "If the user asks where to go, name actual places first and explain why each one fits the trip."
-                )
-            num_predict = max(512, _safe_int(max_tokens, DEFAULT_NUM_PREDICT))
             place = self._find_destination(prompt)
-            trip_hint = ""
-            if isinstance(place, dict):
+            if not place and isinstance(trip, dict):
+                destination = trip.get("destination") or trip.get("place") or {}
+                if isinstance(destination, dict):
+                    place = destination
+            if self._is_bare_place_request(prompt):
+                return self._format_place_overview(place or self._synthetic_place(prompt), trip if isinstance(trip, dict) else {})
+
+            system_prompt = (
+                "You are YatraAI, an India travel and tourism expert. "
+                "Do not require trip context to answer. If the user gives only a city, place, or travel idea, respond directly with practical travel advice, "
+                "top places to visit, a sensible default stay duration, and a budget estimate. "
+                "If trip context is supplied, use it to improve the answer, but never ask the user to provide extra context before helping. "
+                "Be specific, grounded, and concise at the start, then expand with useful sections."
+            )
+            num_predict = max(1024, min(8192, _safe_int(max_tokens, DEFAULT_NUM_PREDICT)))
+            context_lines = []
+            if isinstance(trip, dict) and trip:
+                context_lines.append(
+                    "Trip context: "
+                    f"{trip.get('start', 'unknown start')} to "
+                    f"{(trip.get('destination') or trip.get('place') or {}).get('name', 'unknown destination')}"
+                )
+                context_lines.append(f"Trip mode: {trip.get('mode', 'Road')}, days: {trip.get('days', 'n/a')}, budget: Rs.{trip.get('budget', 'n/a')}")
+            if isinstance(place, dict) and place:
+                context_lines.append(
+                    "Matched place: "
+                    f"{place.get('name', '')} | {place.get('state', '')} | {place.get('region', '')} | "
+                    f"{place.get('blurb', '')}"
+                )
+                nearby_names = [item.get("name", "") for item in self.nearby_places(place["name"], limit=3)]
+                if nearby_names:
+                    context_lines.append(f"Nearby places: {', '.join(nearby_names)}")
                 days = self._estimate_trip_days(place)
                 budget = self._estimate_budget_band(place, days)
-                trip_hint = (
-                    f"\nSuggested trip defaults if the user did not provide them:\n"
-                    f"- Trip length: {days} days\n"
-                    f"- Budget range: Rs.{budget['low']} to Rs.{budget['high']}\n"
-                    f"- Reasoning cue: {place.get('blurb', 'Use the destination itself as the anchor and build around its main highlights.')}\n"
-                )
+                context_lines.append(f"Suggested default stay: {days} days")
+                context_lines.append(f"Suggested default budget: Rs.{budget['low']} to Rs.{budget['high']}")
+            context_block = f"Context:\n{chr(10).join(context_lines)}\n\n" if context_lines else ""
+            place_only = self._is_place_only_query(prompt, place)
+            requirements = [
+                "If the user only gave a place name, include these sections in your answer:",
+                "- Days required",
+                "- Budget range",
+                "- Places to explore",
+                "- Best time or season",
+                "- One practical tip",
+            ] if place_only else [
+                "If the user asks about a destination, include practical details like days required, budget, and places to explore whenever useful.",
+            ]
+            user_content = (
+                f"{context_block}"
+                f"{chr(10).join(requirements)}\n"
+                "Answer the user directly. If the question is about a destination, start with the actual destination names or places that fit best. "
+                "If budget or trip length are missing, choose sensible defaults instead of asking for more context. "
+                f"User prompt: {prompt}"
+            )
             response = ollama.chat(
                 model=MODEL_NAME,
                 options={
@@ -494,15 +619,7 @@ class TravelEngine:
                 },
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": (
-                        "Context: "
-                        f"{json.dumps(context, ensure_ascii=False)}\n\n"
-                        f"{trip_hint}"
-                        "Respond with the actual destination names from the context when relevant. "
-                        "If the user gave only a city or place, start with the best tourist places in that city/place, then explain why they matter, "
-                        "what to see, how long to stay, and what budget to expect if not already provided.\n\n"
-                        f"User prompt: {prompt}"
-                    )},
+                    {"role": "user", "content": user_content},
                 ],
             )
             return response["message"]["content"].strip()
@@ -520,9 +637,21 @@ class TravelEngine:
             destination = trip.get("destination") or trip.get("place") or {}
             if isinstance(destination, dict):
                 place_name = destination.get("name", "")
-        place = self._find_destination(place_name or prompt)
+        extracted_destination = self._extract_prompt_destination(prompt)
+        place = self._find_destination(place_name or extracted_destination or prompt)
         if not place and isinstance(trip, dict) and trip.get("destination"):
             place = self._find_destination(trip.get("destination"))
+
+        if self._is_bare_place_request(prompt):
+            synth_place = place or self._synthetic_place(extracted_destination or prompt)
+            return {"response": self._format_place_overview(synth_place, trip), "intent": "overview", "place": synth_place}
+
+        if self._is_destination_trip_request(prompt, place):
+            return {"response": self._format_place_overview(place, trip), "intent": "overview", "place": place}
+
+        if extracted_destination and any(term in _normalize(prompt) for term in ["trip", "plan", "planning", "visit", "travel", "itinerary", "vacation", "holiday", "explore", "stay", "route"]):
+            synth_place = place or self._synthetic_place(extracted_destination)
+            return {"response": self._format_place_overview(synth_place, trip), "intent": "overview", "place": synth_place}
 
         if (llm := self._ollama_chat(prompt, context, response_mode, max_tokens=max_tokens)) is not None:
             return {"response": llm, "intent": "llm", "place": place}

@@ -1,6 +1,6 @@
 import { API_CONFIG, REGION_SEASONS } from "../core/config.js";
 import { getPlan } from "../core/state.js";
-import { destinationPlaces, featuredRoutes } from "../data/site-data.js";
+import { destinationPlaces } from "../data/site-data.js";
 import { formatInline } from "./helpers.js";
 
 export function planContextText() {
@@ -28,21 +28,7 @@ export function demoResponse(prompt, includeTripContext = true) {
 export async function queryBackend(prompt, options = {}) {
   const useTripContext = options.useTripContext ?? true;
   const responseMode = useTripContext ? "trip" : "expert";
-  const context = {
-    featuredRoutes,
-    places: destinationPlaces.map((place) => ({
-      name: place.name,
-      state: place.state,
-      region: place.region,
-      tags: place.tags,
-      highlights: place.highlights,
-      airport: place.airport,
-      rail: place.rail,
-      road: place.road,
-      lat: place.lat,
-      lng: place.lng,
-    })),
-  };
+  const context = {};
   if (options.sessionId) {
     context.sessionId = options.sessionId;
   }
@@ -54,6 +40,7 @@ export async function queryBackend(prompt, options = {}) {
     model: API_CONFIG.model,
     context,
     responseMode,
+    maxTokens: options.maxTokens || 4096,
   };
   try {
     const response = await fetch(API_CONFIG.chatEndpoint, {

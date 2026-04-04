@@ -11,6 +11,25 @@ foreach ($path in @($stdoutPath, $stderrPath)) {
   }
 }
 
+function Stop-PortListener {
+  param(
+    [int[]]$Ports
+  )
+  foreach ($port in $Ports) {
+    $connections = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue
+    foreach ($connection in $connections) {
+      try {
+        Stop-Process -Id $connection.OwningProcess -Force -ErrorAction Stop
+        Write-Host "Stopped existing process on port $port (PID $($connection.OwningProcess))."
+      } catch {
+        Write-Host "Could not stop existing process on port $port (PID $($connection.OwningProcess))."
+      }
+    }
+  }
+}
+
+Stop-PortListener -Ports @(8000, 8001)
+
 $candidates = @(
   Join-Path $root ".venv\Scripts\pythonw.exe"
   Join-Path $root ".venv\Scripts\python.exe"

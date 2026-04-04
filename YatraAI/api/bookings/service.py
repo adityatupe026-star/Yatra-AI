@@ -58,7 +58,7 @@ def summarize_hotel(payload: HotelSummaryRequest) -> str:
     )
     context = {"hotel": hotel, "destination": destination}
     if os.getenv("YATRA_USE_OLLAMA", "").lower() in {"1", "true", "yes"}:
-        llm = engine._ollama_chat(prompt, context, response_mode="expert", max_tokens=320)
+        llm = engine._ollama_chat(prompt, context, response_mode="expert", max_tokens=1024)
         if llm:
             return llm
     return _fallback_hotel_summary(hotel, destination)
@@ -124,4 +124,3 @@ def confirm_booking(payload: BookingConfirmRequest) -> Dict[str, Any]:
         "created_at": created_at,
         "details": payload.details,
     }
-

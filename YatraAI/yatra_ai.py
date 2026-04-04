@@ -51,6 +51,7 @@ PRICE_ESTIMATES = {
 
 TIME_SLOTS = ["Morning", "Afternoon", "Evening"]
 DEFAULT_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+DEFAULT_NUM_PREDICT = int(os.getenv("OLLAMA_NUM_PREDICT", "4096"))
 DATASET_DEFAULT = Path(__file__).resolve().parents[1] / "data" / "places_dataset.csv"
 
 
@@ -301,15 +302,138 @@ class OllamaTravelAgent:
         self.profile = UserProfile()
         self.region = self.db.infer_supported_region()
 
-    def ask_llm(self, system_prompt: str, user_prompt: str) -> str:
+    def ask_llm(self, system_prompt: str, user_prompt: str, num_predict: int = DEFAULT_NUM_PREDICT) -> str:
         response = ollama.chat(
             model=self.model,
+            options={"num_predict": max(1024, num_predict), "temperature": 0.3},
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
         )
         return response["message"]["content"].strip()
+
+    def looks_like_place_only(self, message: str) -> bool:
+        lowered = message.lower().strip()
+        if not lowered:
+            return False
+        if self.db.search_places(message, limit=1).empty:
+            return False
+        signal_terms = [
+            "budget", "cost", "days", "day", "itinerary", "plan", "trip",
+            "explore", "visit", "see", "stay", "places", "where",
+        ]
+        return not any(term in lowered for term in signal_terms)
+
+    def looks_like_bare_place_request(self, message: str) -> bool:
+        lowered = message.lower().strip()
+        if not lowered:
+            return False
+        signal_terms = [
+            "budget", "cost", "days", "day", "itinerary", "plan", "trip",
+            "explore", "visit", "see", "stay", "places", "where", "weather",
+            "season", "food", "eat", "restaurant", "cafe", "near", "nearby",
+            "transport", "route", "pack", "packing", "why", "recommend",
+            "suggest", "overview", "about", "tell me",
+        ]
+        if any(term in lowered for term in signal_terms):
+            return False
+        tokens = re.findall(r"[a-zA-Z][a-zA-Z'\-]*", message)
+        if not tokens or len(tokens) > 4:
+            return False
+        return True
+
+    def looks_like_destination_trip_request(self, message: str) -> bool:
+        lowered = message.lower().strip()
+        if not lowered:
+            return False
+        if self.db.search_places(message, limit=1).empty:
+            return False
+        trip_terms = [
+            "trip", "plan", "planning", "visit", "go to", "travel", "itinerary",
+            "vacation", "holiday", "explore", "stay", "route", "thinking of",
+            "where should i go", "where to go", "i want to go", "help me plan",
+        ]
+        return any(term in lowered for term in trip_terms)
+
+    def extract_prompt_destination(self, message: str) -> str:
+        text = re.sub(r"\s+", " ", message).strip(" .?,;:")
+        if not text:
+            return ""
+        patterns = [
+            r"\b(?:to|for|in|at|visit|visiting|go to|travel to|trip to)\s+([A-Za-z][A-Za-z\s\-']{1,40})",
+            r"\b(?:planning a trip to|plan a trip to|thinking of a trip to)\s+([A-Za-z][A-Za-z\s\-']{1,40})",
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                candidate = re.split(
+                    r"\b(?:with|for|budget|cost|days|day|itinerary|plan|trip|travel|weather|season|food|eat|near|nearby)\b",
+                    match.group(1),
+                    maxsplit=1,
+                    flags=re.IGNORECASE,
+                )[0].strip(" ,.-")
+                if candidate:
+                    return candidate
+        tokens = re.findall(r"[a-zA-Z][a-zA-Z'\-]*", text)
+        if len(tokens) <= 4:
+            return text
+        return ""
+
+    def build_synthetic_place_context(self, place_name: str) -> Dict[str, str]:
+        lowered = place_name.lower().strip()
+        if any(term in lowered for term in ["beach", "coast", "island"]):
+            place_type = "beach destination"
+            highlights = "beaches, sunset spots, and easy day trips"
+            season = "Year-round with seasonal planning"
+            days = "3"
+            budget = "Rs.9000 to Rs.18000"
+        elif any(term in lowered for term in ["hill", "mountain", "trek"]):
+            place_type = "hill destination"
+            highlights = "viewpoints, short treks, and scenic drives"
+            season = "October to March"
+            days = "3"
+            budget = "Rs.8000 to Rs.16000"
+        elif any(term in lowered for term in ["city", "urban", "metro"]):
+            place_type = "city destination"
+            highlights = "landmarks, food lanes, and market walks"
+            season = "Year-round with seasonal planning"
+            days = "2"
+            budget = "Rs.6000 to Rs.14000"
+        else:
+            place_type = "travel destination"
+            highlights = "main landmarks, food stops, and one nearby explore stop"
+            season = "Year-round with seasonal planning"
+            days = "2 to 3"
+            budget = "Rs.7000 to Rs.15000"
+        return {
+            "place_name": place_name.strip().title() or "This Place",
+            "category": place_type,
+            "subcategory": "General travel planning",
+            "address": "Location varies by route",
+            "opening_hours": "Best explored during daylight hours",
+            "price_level": "mid-range",
+            "is_free": "No",
+            "description": f"Use {place_name.strip().title() or 'this place'} as the trip anchor and build a short, practical route around it.",
+            "tags": highlights,
+            "website": "Not available",
+            "phone": "Not available",
+            "suggested_days": days,
+            "suggested_budget": budget,
+            "best_time": season,
+            "places_to_explore": highlights,
+        }
+
+    def render_place_summary(self, context: Dict[str, str]) -> str:
+        return (
+            f"**{context['place_name']}**\n\n"
+            f"- What it is: {context['category']}\n"
+            f"- Days required: {context['suggested_days']}\n"
+            f"- Budget range: {context['suggested_budget']}\n"
+            f"- Places to explore: {context['places_to_explore']}\n"
+            f"- Best time or season: {context['best_time']}\n"
+            f"- Practical tip: keep one anchor place, one food stop and one flexible evening slot."
+        )
 
     def extract_preferences(self, message: str) -> None:
         budget = re.search(r"(?:budget|under|around)\s*[₹rs\.\s]*([0-9]{3,6})", message, re.IGNORECASE)
@@ -570,6 +694,18 @@ class OllamaTravelAgent:
         return "\n".join(lines)
 
     def handle_general(self, message: str) -> str:
+        if self.looks_like_bare_place_request(message):
+            context = self.db.place_overview_context(message) or self.build_synthetic_place_context(message)
+            return self.render_place_summary(context)
+        if self.looks_like_destination_trip_request(message):
+            context = self.db.place_overview_context(message)
+            if context:
+                return self.render_place_summary(context)
+        extracted_destination = self.extract_prompt_destination(message)
+        if extracted_destination and any(term in message.lower() for term in ["trip", "plan", "planning", "visit", "travel", "itinerary", "vacation", "holiday", "explore", "stay", "route"]):
+            context = self.db.place_overview_context(extracted_destination) or self.build_synthetic_place_context(extracted_destination)
+            return self.render_place_summary(context)
+
         search_results = self.db.search_places(message, limit=5)
         context_lines = [
             f"Supported region: {self.region}",
@@ -585,10 +721,15 @@ class OllamaTravelAgent:
 
         system_prompt = (
             "You are YatraAI, a travel assistant built on a local place dataset and Ollama. "
-            "Answer naturally, stay travel-focused, and prefer the supplied dataset context. "
-            "If the user gives only a city, suggest the best tourist places in that city, explain why they matter, "
-            "and include a default trip length and budget if the user did not provide them."
+            "Answer naturally and do not require extra context from the user before helping. "
+            "If the user gives only a city or place, suggest the best tourist places there, explain why they matter, "
+            "and include a default trip length and budget if the user did not provide them. "
+            "When the user only gives a place name, your answer must include days required, budget range, and places to explore."
         )
+        if self.looks_like_place_only(message):
+            context_lines.append(
+                "Required answer sections: days required, budget range, places to explore, best time or season, and one practical tip."
+            )
         user_prompt = "\n".join(context_lines + [f"User message: {message}"])
         return self.ask_llm(system_prompt, user_prompt)
 
