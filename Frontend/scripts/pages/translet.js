@@ -222,7 +222,6 @@ export function transletMarkup() {
           <div class="translet-language-pills" id="transletLanguagePills">
             ${TRANSLATE_LANGUAGES
               .filter(([code]) => code !== "auto")
-              .slice(0, 8)
               .map(([code, label]) => `<button class="translet-language-pill" type="button" data-target-lang="${code}">${label}</button>`)
               .join("")}
           </div>

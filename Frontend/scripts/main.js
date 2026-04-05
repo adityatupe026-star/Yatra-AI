@@ -2,11 +2,13 @@ import { page } from "./core/config.js";
 import { footer, initFooter, initHamburger, initShellChrome, nav } from "./components/nav.js";
 import { initMotion } from "./components/motion.js";
 import { showToast } from "./components/toast.js";
+import { bootstrapGoogleTranslatePersistence } from "./utils/google-translate.js";
 import { homeMarkup, initHome } from "./pages/home.js";
 import { destinationsMarkup, initDestinations } from "./pages/destinations.js";
 import { bookingsMarkup, initBookings } from "./pages/bookings.js";
 import { plannerMarkup, initPlanner } from "./pages/planner.js";
 import { transletMarkup, initTranslet } from "./pages/translet.js";
+import { partnerInboxMarkup, initPartnerInbox } from "./pages/partner-inbox.js";
 import { chatMarkup, initChat } from "./pages/chat.js";
 import { explorerMarkup, initExplorer } from "./pages/explorer.js";
 import { mapMarkup, initMap } from "./pages/map.js";
@@ -20,6 +22,7 @@ const pages = {
   destinations: { markup: destinationsMarkup, init: initDestinations },
   bookings: { markup: bookingsMarkup, init: initBookings },
   planner: { markup: plannerMarkup, init: initPlanner },
+  "partner-inbox": { markup: partnerInboxMarkup, init: initPartnerInbox, shell: "page-shell" },
   translet: { markup: transletMarkup, init: initTranslet },
   chat: { markup: chatMarkup, init: initChat, shell: "page-shell chat-shell" },
   explorer: { markup: explorerMarkup, init: initExplorer },
@@ -116,6 +119,7 @@ function renderApp() {
   initFooter();
   current.init?.();
   initMotion();
+  bootstrapGoogleTranslatePersistence();
 }
 
 const hideLoader = renderLoader();

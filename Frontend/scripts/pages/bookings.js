@@ -170,8 +170,31 @@ function renderSavedTrips() {
   const trips = loadTrips();
   bookingState.savedTrips = trips;
   holder.innerHTML = trips.length
-    ? trips.slice(0, 6).map((trip) => `<article class="saved-trip-card"><strong>${escapeHtml(trip.label)}</strong><p>${escapeHtml(trip.summary)}</p><small>${escapeHtml(trip.createdAt)}${trip.reference ? ` • ${escapeHtml(trip.reference)}` : ""}</small></article>`).join("")
-    : `<article class="saved-trip-card empty"><strong>No saved bookings yet</strong><p>Select any booking result and save it here.</p></article>`;
+    ? trips.slice(0, 6).map((trip) => {
+      const title = escapeHtml(trip.label || "Saved booking");
+      const summary = escapeHtml(trip.summary || "No extra summary stored.");
+      const reference = trip.reference ? `<span class="saved-trip-chip">Ref ${escapeHtml(trip.reference)}</span>` : "";
+      const moduleLabel = escapeHtml(String(trip.module || "booking"));
+      const createdAt = escapeHtml(trip.createdAt || "");
+      const detailLine = trip.details?.seat || trip.details?.flight?.flightNo || trip.details?.hotel?.name || trip.details?.experience?.category || trip.details?.cab?.carType || trip.details?.pkg?.name || "";
+      return `
+        <article class="saved-trip-card">
+          <div class="saved-trip-card-top">
+            <div>
+              <p class="saved-trip-eyebrow">${moduleLabel}</p>
+              <strong>${title}</strong>
+            </div>
+            ${reference}
+          </div>
+          <p>${summary}</p>
+          ${detailLine ? `<div class="saved-trip-route">${escapeHtml(String(detailLine))}</div>` : ""}
+          <div class="saved-trip-footer">
+            <span>${createdAt}</span>
+          </div>
+        </article>
+      `;
+    }).join("")
+    : `<article class="saved-trip-card empty"><strong>No saved bookings yet</strong><p>Select any booking result and save it here.</p><div class="saved-trip-footer"><span>Your saved flights, hotels and activities will show up here.</span></div></article>`;
   const count = document.getElementById("savedTripsCount");
   if (count) count.textContent = String(trips.length);
 }
@@ -228,6 +251,7 @@ async function saveCurrentSelection(module, label, summary, details = {}) {
       summary: confirmation.summary || summary,
       reference: confirmation.reference || "",
       createdAt: new Date().toLocaleString(),
+      details,
     };
     trips.unshift(entry);
     saveTrips(trips.slice(0, 18));

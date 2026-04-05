@@ -1,3 +1,5 @@
+import { GOOGLE_TRANSLATE_INDIAN_LANGUAGE_CODES } from "../core/config.js";
+
 const STORAGE_KEY = "yatraai.googleTranslate.language";
 const COOKIE_NAME = "googtrans";
 const DEFAULT_LANGUAGE = "en";
@@ -54,7 +56,7 @@ function mountWidget(hostId) {
   new window.google.translate.TranslateElement(
     {
       pageLanguage: DEFAULT_LANGUAGE,
-      includedLanguages: "en,hi,mr",
+      includedLanguages: GOOGLE_TRANSLATE_INDIAN_LANGUAGE_CODES,
       layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
     },
     hostId,

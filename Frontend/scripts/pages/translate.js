@@ -1,6 +1,6 @@
 import { showToast } from "../components/toast.js";
 import { speakText } from "../utils/speech.js";
-import { initGoogleTranslateWidget } from "../utils/google-translate.js";
+import { bootstrapGoogleTranslatePersistence, initGoogleTranslateWidget } from "../utils/google-translate.js";
 import { API_CONFIG } from "../core/config.js";
 
 const LANGUAGE_OPTIONS = [
@@ -22,7 +22,7 @@ function languageOptions(selectedCode) {
 }
 
 async function translate(text, lang) {
-  const response = await fetch(API_CONFIG.translateEndpoint, {
+  const response = await fetch(API_CONFIG.apiTranslateEndpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text, target: lang }),
@@ -39,7 +39,7 @@ export function translateMarkup() {
     <section class="page-hero">
       <p class="eyebrow">Translate text</p>
       <h1>Turn one message into another Indian language</h1>
-      <p>Use Google Translate for the page widget and LibreTranslate for the custom translation section below.</p>
+      <p>Use Google Translate for the page widget and the backend translate API for the custom translation section below.</p>
     </section>
     <section class="section">
       <div class="planner-section-block planner-section-block-soft translate-widget-shell" style="margin-bottom: 22px;">
@@ -47,7 +47,7 @@ export function translateMarkup() {
           <p class="eyebrow">Google widget</p>
           <h3>Quick page translation</h3>
         </div>
-        <p class="section-note">Translate the visible page text with Google before using the local LibreTranslate section below.</p>
+        <p class="section-note">Translate the visible page text with Google before using the backend translation section below.</p>
         <div id="google_translate_element" class="google-translate-host">Loading Google widget...</div>
       </div>
 
@@ -105,6 +105,7 @@ export function translateMarkup() {
 }
 
 export function initTranslate() {
+  bootstrapGoogleTranslatePersistence();
   initGoogleTranslateWidget("google_translate_element");
 
   const form = document.getElementById("translateForm");

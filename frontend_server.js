@@ -111,18 +111,6 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      if (pathname === "/api/translate" && req.method === "POST") {
-        let translated = "";
-        try {
-          const payload = JSON.parse(bodyText || "{}");
-          translated = typeof payload.text === "string" ? payload.text : "";
-        } catch {
-          translated = "";
-        }
-        send(res, 200, "application/json; charset=utf-8", JSON.stringify({ translated }));
-        return;
-      }
-
       send(res, 503, "application/json; charset=utf-8", JSON.stringify({ detail: "Backend unavailable." }));
       return;
     }

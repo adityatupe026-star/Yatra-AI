@@ -13,7 +13,7 @@ export const API_CONFIG = {
   chatEndpoint: `${BACKEND_ORIGIN}/api/chat`,
   bookingSummaryEndpoint: `${BACKEND_ORIGIN}/api/bookings/hotel-summary`,
   bookingConfirmEndpoint: `${BACKEND_ORIGIN}/api/bookings/confirm`,
-  translateEndpoint: `${BACKEND_ORIGIN}/translate`,
+  translateEndpoint: `${BACKEND_ORIGIN}/api/translate`,
   apiTranslateEndpoint: `${BACKEND_ORIGIN}/api/translate`,
   model: "llama3.1:8b-instruct",
 };
@@ -90,6 +90,8 @@ export const REGION_SEASONS = {
 export const MAIN_NAV_ITEMS = [
   ["home", "./index.html", "Home"],
   ["destinations", "./destinations.html", "Destinations"],
+  ["bookings", "./bookings.html", "Bookings"],
+  ["explorer", "./explorer.html", "Explorer"],
   ["translet", "./translet.html", "Translet"],
   ["chat", "./chat.html", "Chat"],
 ];
@@ -97,24 +99,34 @@ export const MAIN_NAV_ITEMS = [
 export const TRANSLATE_LANGUAGES = [
   ["auto", "Auto Detect"],
   ["en", "English"],
+  ["as", "Assamese"],
   ["hi", "Hindi"],
-  ["mr", "Marathi"],
   ["bn", "Bengali"],
+  ["gu", "Gujarati"],
+  ["kn", "Kannada"],
+  ["ks", "Kashmiri"],
+  ["gom", "Konkani"],
+  ["mai", "Maithili"],
+  ["ml", "Malayalam"],
+  ["mni-Mtei", "Meiteilon (Manipuri)"],
+  ["mr", "Marathi"],
+  ["ne", "Nepali"],
+  ["or", "Odia"],
+  ["pa", "Punjabi"],
+  ["sa", "Sanskrit"],
+  ["sd", "Sindhi"],
   ["ta", "Tamil"],
   ["te", "Telugu"],
-  ["kn", "Kannada"],
-  ["ml", "Malayalam"],
-  ["gu", "Gujarati"],
-  ["pa", "Punjabi"],
   ["ur", "Urdu"],
-  ["or", "Odia"],
-  ["as", "Assamese"],
-  ["kok", "Konkani"],
 ];
 
+export const GOOGLE_TRANSLATE_INDIAN_LANGUAGE_CODES = TRANSLATE_LANGUAGES
+  .filter(([code]) => code !== "auto")
+  .map(([code]) => code)
+  .join(",");
+
 export const MORE_NAV_ITEMS = [
-  ["bookings", "./bookings.html", "Bookings"],
-  ["explorer", "./explorer.html", "Explorer"],
+  ["partner-inbox", "./partner-inbox.html", "Travel Partner"],
   ["events", "./events.html", "Events"],
   ["history", "./history.html", "History"],
   ["wishlist", "./wishlist.html", "Wishlist"],

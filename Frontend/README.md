@@ -2,9 +2,9 @@
 
 ## What This Is
 
-This folder contains the full YatraAI website experience: a multi-page travel app for India with curated destinations, a trip planner, AI chat, an explorer, a map view, history, wishlist, events, and informational pages.
+This folder contains the full YatraAI website experience: a multi-page travel app for India with curated destinations, a trip planner, AI chat, explorer tools, a map view, history, wishlist, events, a travel partner inbox, and informational pages.
 
-The frontend is designed to feel premium and hackathon-ready, while still being practical enough to demo clearly:
+The frontend is designed to feel premium and easy to demo:
 
 - bold editorial home page
 - route planning with local memory
@@ -12,6 +12,8 @@ The frontend is designed to feel premium and hackathon-ready, while still being 
 - browser-based chat sessions
 - map and explorer utilities
 - saved trip history and wishlist
+- travel partner inbox and home-page partner teaser
+- cleaner booking cards and saved booking storage
 - polished mobile behavior and responsive layouts
 - lightweight offline-friendly shell behavior
 
@@ -22,7 +24,9 @@ The frontend is designed to feel premium and hackathon-ready, while still being 
 - [index.html](D:/Yatraai/Frontend/index.html)
 - [destinations.html](D:/Yatraai/Frontend/destinations.html)
 - [planner.html](D:/Yatraai/Frontend/planner.html)
+- [bookings.html](D:/Yatraai/Frontend/bookings.html)
 - [chat.html](D:/Yatraai/Frontend/chat.html)
+- [partner-inbox.html](D:/Yatraai/Frontend/partner-inbox.html)
 - [explorer.html](D:/Yatraai/Frontend/explorer.html)
 - [map.html](D:/Yatraai/Frontend/map.html)
 - [events.html](D:/Yatraai/Frontend/events.html)
@@ -38,6 +42,7 @@ The frontend is designed to feel premium and hackathon-ready, while still being 
 - [scripts/core/config.js](D:/Yatraai/Frontend/scripts/core/config.js) stores page constants, seasons, phrases, contacts, and nav groups.
 - [scripts/core/state.js](D:/Yatraai/Frontend/scripts/core/state.js) manages browser storage for plans, chats, and wishlist items.
 - [scripts/data/site-data.js](D:/Yatraai/Frontend/scripts/data/site-data.js) contains the destination and event dataset used throughout the UI.
+- [scripts/data/partner-inbox-data.js](D:/Yatraai/Frontend/scripts/data/partner-inbox-data.js) stores the dummy travel partner requests used on Home and the inbox page.
 - [scripts/components/nav.js](D:/Yatraai/Frontend/scripts/components/nav.js) renders the header, mobile drawer, mobile bottom nav, and offline banner.
 - [scripts/components/cards.js](D:/Yatraai/Frontend/scripts/components/cards.js) builds shared card markup.
 - [scripts/components/motion.js](D:/Yatraai/Frontend/scripts/components/motion.js) handles reveal animations and counters.
@@ -53,6 +58,9 @@ The frontend is designed to feel premium and hackathon-ready, while still being 
 - [styles/base.css](D:/Yatraai/Frontend/styles/base.css) holds global variables, shell styling, typography, buttons, forms, nav, and core UI primitives.
 - [styles/layout.css](D:/Yatraai/Frontend/styles/layout.css) handles page-level structure such as chat, planner, footer, and cards.
 - [styles/sections.css](D:/Yatraai/Frontend/styles/sections.css) handles feature sections, grids, empty states, map list, event calendar, wishlist summary, and detailed content blocks.
+- [styles/pages/bookings.css](D:/Yatraai/Frontend/styles/pages/bookings.css) styles the bookings hub cards and saved-trip panels.
+- [styles/pages/*.css](D:/Yatraai/Frontend/styles/pages) contains page-specific CSS for the other routes.
+- [styles/partner-inbox.css](D:/Yatraai/Frontend/styles/partner-inbox.css) styles the travel partner inbox and its home-page teaser cards.
 - [styles/animations.css](D:/Yatraai/Frontend/styles/animations.css) holds motion, shimmer, hover, and reveal effects.
 - [styles/responsive.css](D:/Yatraai/Frontend/styles/responsive.css) controls tablet and mobile layout changes.
 
@@ -93,16 +101,18 @@ On small screens the UI shifts to:
 
 ## Navigation
 
-The header now focuses on the main routes:
+The header focuses on the main routes:
 
 - Home
 - Destinations
-- Plan Trip
+- Bookings
+- Explorer
 - Chat
 
 Other pages live under a single `More` menu:
 
-- Explorer
+- Plan Trip
+- Travel Partner
 - India Map
 - Events
 - History
@@ -127,12 +137,35 @@ What it shows:
 - hero stats and quick jump cards
 - featured route storytelling
 - feature tiles linking to the rest of the app
+- travel partner teaser cards and the partner modal
 
 UI details:
 
 - hero slide text and image crossfade
 - pause-on-hover for auto-rotation
-- “Surprise me” action that drops into Explorer with a random destination
+- "Surprise me" action that drops into Explorer with a random destination
+- travel partner teaser cards that link into the inbox page
+- embedded partner matching modal for quick route matching
+
+### Bookings
+
+File:
+
+- [scripts/pages/bookings.js](D:/Yatraai/Frontend/scripts/pages/bookings.js)
+
+What it does:
+
+- keeps flights, hotels, buses, trains, cabs, packages, experiences and Myra in one booking hub
+- stores confirmed selections in browser storage
+- shows saved bookings as readable cards in the sidebar
+- keeps each booking grouped by module, route, summary and reference
+
+UI details:
+
+- framed booking result cards
+- compact saved-trip cards
+- route, date and status chips
+- summary cards for selected items and add-ons
 
 ### Destinations
 
@@ -147,13 +180,6 @@ What it does:
 - allows comparing up to three destinations
 - supports wishlist toggling from each card
 - opens official tourism links and Google Maps links
-
-UI details:
-
-- clear filters button
-- empty-state illustration when there are no results
-- comparison panel with side-by-side cards
-- image-heavy destination cards with hover zoom
 
 ### Planner
 
@@ -172,17 +198,6 @@ What it does:
 - supports shareable trip links
 - supports read-only restored plans from history or shared URLs
 
-UI details:
-
-- hero summary card for the trip
-- trip setup cards
-- route access card
-- budget calculator
-- carbon footprint comparison card
-- workflow and packing cards
-- right sidebar with route memory, weather, phrasebook, and emergency info
-- printable/exportable trip output
-
 ### Chat
 
 File:
@@ -198,14 +213,6 @@ What it does:
 - supports voice input when the browser allows it
 - can turn the latest assistant reply into a planner trip
 
-UI details:
-
-- large chat console
-- typing indicator with animated dots
-- chat session list in the sidebar
-- save-as-trip action in the header
-- voice input button beside the send action
-
 ### Explorer
 
 File:
@@ -219,12 +226,26 @@ What it does:
 - surfaces logistics, season fit, nearby routes, phrasebook, emergency contacts, and weather
 - can reuse the current trip destination
 
+### Travel Partner Inbox
+
+File:
+
+- [scripts/pages/partner-inbox.js](D:/Yatraai/Frontend/scripts/pages/partner-inbox.js)
+
+What it does:
+
+- shows a feed of dummy travel partner requests
+- filters by solo, group, couple, budget, best-experience and luxury
+- lets users search routes, destinations and interests
+- opens a connection-request modal
+
 UI details:
 
-- loading state on explore action
-- detailed overview card
-- supporting utility cards
-- destination-aware content blocks
+- framed hero summary
+- step-by-step helper card
+- structured route cards
+- contact line and interest tags on each card
+- featured preview cards on the home page
 
 ### Map
 
@@ -238,12 +259,6 @@ What it does:
 - lists all featured places in a sidebar
 - highlights and pans the map when a list item is hovered or clicked
 
-UI details:
-
-- sticky list sidebar on desktop
-- full-width map on mobile
-- interactive place list for faster scanning
-
 ### Events
 
 File:
@@ -254,12 +269,6 @@ What it does:
 
 - shows major travel events and festivals
 - toggles between grid view and calendar view
-
-UI details:
-
-- calendar month grid
-- event chips inside each month
-- active toggle styling for the current view
 
 ### History
 
@@ -274,11 +283,6 @@ What it does:
 - supports search
 - lets users restore a saved plan back into the planner
 
-UI details:
-
-- empty illustration when history is empty
-- restore action button on every trip card
-
 ### Wishlist
 
 File:
@@ -291,13 +295,6 @@ What it does:
 - lets users remove items
 - supports compare mode for two to three destinations
 - shows budget range and best season for each place
-
-UI details:
-
-- compare checkboxes
-- comparison panel
-- summary blocks for budget and season
-- empty-state illustration
 
 ### About
 
@@ -348,6 +345,8 @@ The app stores:
 - current chat session
 - all chat sessions
 - wishlist items
+- saved bookings
+- requested travel-partner connections
 
 All of this lives in browser `localStorage`.
 
@@ -359,15 +358,18 @@ All of this lives in browser `localStorage`.
 - view transitions for supported browsers
 - destination hover polish
 - empty-state illustrations
+- home-page partner inbox teaser and modal
+- saved booking cards with stored metadata
 
 ### Data Flow
 
 The frontend uses:
 
 1. static seed data from `scripts/data/site-data.js`
-2. browser state from `localStorage`
-3. optional live weather and map services
-4. optional AI responses from the configured Ollama endpoint
+2. partner request dummy data from `scripts/data/partner-inbox-data.js`
+3. browser state from `localStorage`
+4. optional live weather and map services
+5. optional AI responses from the configured Ollama and backend endpoints
 
 ## Accessibility Notes
 
@@ -399,20 +401,24 @@ http://localhost:8000/index.html
 ## Important Notes
 
 - do not open `index.html` directly from the filesystem if you want the backend-connected features to work reliably
-- browser storage still powers saved plans, history and wishlist
+- browser storage still powers saved plans, history, wishlist, saved bookings and partner requests
 - chat, bookings, hotel summaries and translation now depend on the Python backend
+- the travel partner inbox uses local dummy data for now and can later be swapped to backend storage
 
 ## Suggested Demo Flow
 
-1. Open Home and show the hero, swipe behavior, and “Surprise me”
+1. Open Home and show the hero, swipe behavior, and "Surprise me"
 2. Open Destinations and demonstrate filters, compare mode, and wishlist
 3. Open Planner and show route generation, budget, carbon check, and export
 4. Open Chat and show sessions, typing indicator, voice input, and save-as-trip
-5. Open Explorer and show the destination deep-dive cards
-6. Open Map and hover the destination list
-7. Open History and restore a saved plan
-8. Open Wishlist and compare two or three destinations
-9. Open About and Privacy to show product framing and polish
+5. Open Bookings and show the saved cards plus module tabs
+6. Open the Travel Partner Inbox and show the request cards and filters
+7. Open Explorer and show the destination deep-dive cards
+8. Open Map and hover the destination list
+9. Open History and restore a saved plan
+10. Open Wishlist and compare two or three destinations
+11. Open About and Privacy to show product framing and polish
+
 ## Backend Bridge
 
-The frontend chat, bookings and translation screens now call the FastAPI backend directly. If the backend is not running, those features show an error instead of a demo response.
+The frontend chat, bookings, translation and travel-partner screens now call the FastAPI backend directly where needed. If the backend is not running, those features show an error instead of a demo response.

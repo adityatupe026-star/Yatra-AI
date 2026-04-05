@@ -4,6 +4,7 @@ import html
 import json
 import logging
 import os
+from pathlib import Path
 from threading import Lock
 from urllib import error as urlerror
 from urllib import parse as urlparse
@@ -13,13 +14,38 @@ from .schemas import TranslateRequest
 
 
 LOGGER = logging.getLogger(__name__)
-GOOGLE_TRANSLATE_API_KEY = os.getenv("GOOGLE_TRANSLATE_API_KEY", "").strip()
-GOOGLE_TRANSLATE_URL = os.getenv(
-    "GOOGLE_TRANSLATE_URL",
-    "https://translation.googleapis.com/language/translate/v2",
-).strip()
 _CACHE: dict[str, str] = {}
 _CACHE_LOCK = Lock()
+
+
+def _load_env_file() -> None:
+    root = Path(__file__).resolve().parents[3]
+    env_path = root / ".env"
+    if not env_path.exists():
+        return
+
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_env_file()
+
+
+def _google_translate_config() -> tuple[str, str]:
+    return (
+        os.getenv("GOOGLE_TRANSLATE_API_KEY", "").strip(),
+        os.getenv(
+            "GOOGLE_TRANSLATE_URL",
+            "https://translation.googleapis.com/language/translate/v2",
+        ).strip(),
+    )
 
 
 def _cache_key(text: str, target: str) -> str:
@@ -27,24 +53,24 @@ def _cache_key(text: str, target: str) -> str:
 
 
 def _call_google_translate(text: str, target: str) -> str:
-    if not GOOGLE_TRANSLATE_API_KEY:
+    api_key, google_translate_url = _google_translate_config()
+    if not api_key:
         raise ValueError("GOOGLE_TRANSLATE_API_KEY is not configured")
 
-    payload = {
+    params = {
+        "key": api_key,
         "q": text,
-        "source": "auto",
         "target": target,
         "format": "text",
     }
-    url = f"{GOOGLE_TRANSLATE_URL}?{urlparse.urlencode({'key': GOOGLE_TRANSLATE_API_KEY})}"
-    request = urlrequest.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json; charset=utf-8"},
-        method="POST",
-    )
-    with urlrequest.urlopen(request, timeout=3) as response:
-        raw = response.read().decode("utf-8")
+    url = f"{google_translate_url}?{urlparse.urlencode(params)}"
+    request = urlrequest.Request(url, method="POST")
+    try:
+        with urlrequest.urlopen(request, timeout=10) as response:
+            raw = response.read().decode("utf-8")
+    except urlerror.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise ValueError(f"Google Translate HTTP {exc.code}: {body or exc.reason}") from exc
 
     data = json.loads(raw)
     translations = data.get("data", {}).get("translations", [])
@@ -69,7 +95,12 @@ def translate_text(payload: TranslateRequest) -> str:
             _CACHE[cache_key] = translated
         return translated
     except (TimeoutError, urlerror.URLError, json.JSONDecodeError, ValueError) as exc:
-        LOGGER.warning("Google Translate fallback used: %s", exc)
+        LOGGER.warning(
+            "Google Translate fallback used for target=%s (configured=%s): %s",
+            payload.target,
+            bool(os.getenv("GOOGLE_TRANSLATE_API_KEY", "").strip()),
+            exc,
+        )
     except Exception as exc:  # pragma: no cover - defensive fallback
         LOGGER.warning("Unexpected translation failure: %s", exc)
-    return payload.text
+    raise RuntimeError("Translation unavailable")

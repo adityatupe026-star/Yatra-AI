@@ -1,6 +1,7 @@
 import { HOME_SLIDES } from "../core/config.js";
 import { destinationPlaces, featuredRoutes } from "../data/site-data.js";
 import { miniPlaceCard, routeSpotlightCard, statBlock } from "../components/cards.js";
+import { PARTNER_REQUESTS, partnerInboxStats, partnerRequestCard } from "../data/partner-inbox-data.js";
 
 export function homeMarkup() {
   const spotlightPlaces = ["Jaipur", "Goa", "Leh", "Alappuzha"].map((name) => destinationPlaces.find((place) => place.name === name));
@@ -254,6 +255,24 @@ export function homeMarkup() {
         <a class="feature-card" href="./planner.html"><h3>Plan trip</h3><p>Route builder with dining-aware suggestions, map output and workflow cards.</p></a>
         <a class="feature-card" href="./explorer.html"><h3>Explorer + seasons</h3><p>Type a place and get an overview, logistics, season notes and nearby pairings.</p></a>
         <a class="feature-card" href="./wishlist.html"><h3>Wishlist mode</h3><p>Heart destinations, compare them later and turn any shortlist into a trip.</p></a>
+      </div>
+    </section>
+
+    <section class="section partner-inbox-section" id="partnerInboxSection">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Travel partner inbox</p>
+          <h2>Open requests from travelers heading your way</h2>
+        </div>
+        <a class="button button-secondary" href="./partner-inbox.html">Open inbox</a>
+      </div>
+      <div class="partner-inbox-stats">
+        <div class="partner-inbox-stat"><strong>${partnerInboxStats().total}</strong><span>Open requests</span></div>
+        <div class="partner-inbox-stat"><strong>${partnerInboxStats().newRequests}</strong><span>New today</span></div>
+        <div class="partner-inbox-stat"><strong>${partnerInboxStats().destinations}</strong><span>Destinations</span></div>
+      </div>
+      <div class="partner-preview-grid">
+        ${PARTNER_REQUESTS.slice(0, 3).map((request) => partnerRequestCard(request, { compact: true })).join("")}
       </div>
     </section>
   `;

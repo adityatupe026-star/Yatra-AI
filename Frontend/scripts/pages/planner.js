@@ -44,17 +44,29 @@ function paintInterestChips(holder, selected) {
   });
 }
 
+function paintVisitChips(holder, selected, place) {
+  const options = getVisitSuggestions(place);
+  holder.innerHTML = options.map((item) => `<button class="interest-chip ${selected.has(item) ? "active" : ""}" type="button" data-visit="${item}">${item}</button>`).join("");
+  holder.querySelectorAll(".interest-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      if (selected.has(chip.dataset.visit)) selected.delete(chip.dataset.visit);
+      else selected.add(chip.dataset.visit);
+      paintVisitChips(holder, selected, place);
+    });
+  });
+}
+
 function updateRestaurantSuggestionList(placeName) {
   const datalist = document.getElementById("restaurantSuggestions");
   if (!datalist) return;
   datalist.innerHTML = getRestaurantSuggestions(placeName).map((name) => `<option value="${name}"></option>`).join("");
 }
 
-function renderRouteMemory(place, stayPreference, restaurantName, visitFocus = "") {
+function renderRouteMemory(place, restaurantName, visitFocus = "") {
   const card = document.getElementById("routeMemoryCard");
   if (!card) return;
-  if (!isDiningIntent(stayPreference, visitFocus)) {
-    card.innerHTML = `<p class="eyebrow">YatraAI route memory</p><h3>Start fresh without losing old plans</h3><p>When you start a new trip, the current one is moved into history automatically.</p><div class="planner-memory-points"><div><strong>Current place</strong><span>${place.name}, ${place.state}</span></div><div><strong>Nearby style</strong><span>${place.highlights.slice(0, 2).join(", ")}</span></div><div><strong>Map note</strong><span>OpenStreetMap handles free routing and turn-by-turn guidance for road-led plans.</span></div></div><p class="route-note">Switch stay preference or places to visit to <strong>restro</strong> whenever you want dining-led recommendations here.</p>`;
+  if (!isDiningIntent(visitFocus)) {
+    card.innerHTML = `<p class="eyebrow">YatraAI route memory</p><h3>Start fresh without losing old plans</h3><p>When you start a new trip, the current one is moved into history automatically.</p><div class="planner-memory-points"><div><strong>Current place</strong><span>${place.name}, ${place.state}</span></div><div><strong>Nearby style</strong><span>${place.highlights.slice(0, 2).join(", ")}</span></div><div><strong>Map note</strong><span>OpenStreetMap handles free routing and turn-by-turn guidance for road-led plans.</span></div></div><p class="route-note">Use the places-to-visit choices to unlock dining-led recommendations when you want them.</p>`;
     return;
   }
   const suggestions = getRestaurantSuggestions(place.name);
@@ -115,12 +127,6 @@ function showPlannerAssist(fieldKey, place, currentValue) {
   let suggestions = [];
   let heading = "Suggestions";
   let text = "Destination-aware picks for this field.";
-  if (fieldKey === "stayPreference") {
-    const restaurantMode = isRestaurantPreference(currentValue);
-    suggestions = restaurantMode ? getRestaurantSuggestions(place.name) : [`Central ${place.name} hotel district`, `${place.name} luxury stay zone`, `${place.name} family stay area`, `${place.name} budget hotel cluster`, `${place.name} heritage stay`, `${place.name} transit-friendly stay`];
-    heading = restaurantMode ? `Top dining anchors for ${place.name}` : `Stay suggestions for ${place.name}`;
-    text = restaurantMode ? "Choose one restaurant-led area and let the evening plan orbit around it." : "Pick a stay direction that matches your pace and budget.";
-  }
   if (fieldKey === "nearbyFocus") {
     suggestions = getNearbySuggestions(place, currentValue);
     heading = `Nearby focus ideas for ${place.name}`;
@@ -131,6 +137,11 @@ function showPlannerAssist(fieldKey, place, currentValue) {
     suggestions = restaurantMode ? getRestaurantSuggestions(place.name) : getVisitSuggestions(place);
     heading = restaurantMode ? `Dining places to visit in ${place.name}` : `Places to visit in and around ${place.name}`;
     text = restaurantMode ? "Dining intent is active, so these restaurant picks will influence the actual planner cards too." : "These are the strongest destination highlights and nearby regional add-ons.";
+  }
+  if (!suggestions.length) {
+    panel.classList.add("hidden-field");
+    panel.classList.remove("planner-assist-open");
+    return;
   }
   eyebrow.textContent = "Smart suggestions";
   title.textContent = heading;
@@ -150,7 +161,7 @@ function hidePlannerAssist() {
 function renderPlan(plan) {
   updatePlannerSupportCards(plan.place);
   const transportPlan = buildTransportPlan(plan);
-  const diningEnabled = isDiningIntent(plan.stayPreference, plan.visitFocus, plan.nearbyFocus);
+  const diningEnabled = isDiningIntent(plan.visitFocus, plan.nearbyFocus);
   const diningPlan = getDiningPlan(plan);
   const startCoords = findCoords(plan.start);
   const budget = buildBudgetBreakdown(plan, startCoords);
@@ -245,8 +256,8 @@ export function plannerMarkup() {
         <form id="plannerForm" class="quick-planner">
           <div class="planner-story-strip">
             <article class="planner-story-card planner-story-card-primary"><p class="eyebrow">Trip brief</p><h3>Build the route first</h3><p>Start city, destination, travel mode, days and budget create the backbone for the whole itinerary.</p></article>
-            <article class="planner-story-card"><p class="eyebrow">Stay logic</p><h3>Unlock smart stay ideas</h3><p>Write hotel, resort, hostel, family stay or <strong>restro</strong> to trigger dining-aware suggestions.</p></article>
-            <article class="planner-story-card"><p class="eyebrow">Explore layer</p><h3>Shape what happens nearby</h3><p>Nearby focus and places to visit use one shared suggestion frame only when you focus those boxes.</p></article>
+          <article class="planner-story-card"><p class="eyebrow">Stay logic</p><h3>Use booking filters</h3><p>Set stay preference for booking filters instead of planner recommendations.</p></article>
+          <article class="planner-story-card"><p class="eyebrow">Explore layer</p><h3>Shape what happens nearby</h3><p>Nearby focus and places to visit use one shared suggestion frame only when you focus those boxes.</p></article>
           </div>
           <div class="planner-section-block">
             <div class="planner-section-head"><p class="eyebrow">Section 01</p><h3>Trip essentials</h3></div>
@@ -259,7 +270,7 @@ export function plannerMarkup() {
             <div class="quick-grid triple">
               <label>Days<input id="tripDays" type="number" min="1" max="21" value="4"></label>
               <label>Budget<input id="tripBudget" type="number" min="1000" step="500" value="12000"></label>
-              <label>Stay preference<input id="stayPreference" type="text" placeholder="budget hotel, resort, hostel, family stay or restro"><small class="field-helper">Type <strong>restro</strong> or <strong>restaurant</strong> to unlock restaurant-name planning.</small></label>
+              <label>Stay preference<input id="stayPreference" type="text" placeholder="budget hotel, resort, hostel, family stay"><small class="field-helper">Used as a booking filter for stays and hotels.</small></label>
             </div>
           </div>
           <div class="quick-grid planner-conditional-grid hidden-field planner-conditional-box" id="restaurantPreferenceWrap">
@@ -270,11 +281,12 @@ export function plannerMarkup() {
             <div class="quick-grid triple">
               <label>Travel vibe<input id="travelVibe" type="text" placeholder="relaxed, luxury, adventure"></label>
               <label>Nearby focus<input id="nearbyFocus" type="text" placeholder="cafes, forts, temples, shopping"></label>
-              <label>Places to visit<input id="visitFocus" type="text" placeholder="heritage, food streets, museums or restro"></label>
             </div>
+            <label>Places to visit<input id="visitFocus" type="hidden"><small class="field-helper">Choose one or more destinations or visit styles from the chips below.</small></label>
+            <div class="chip-row" id="visitFocusOptions"></div>
             <div class="planner-mini-grid">
               <article class="planner-mini-note"><strong>Nearby focus</strong><p>Open suggestions for cafes, forts, temples, shopping lanes, scenic pauses or destination neighborhoods.</p></article>
-              <article class="planner-mini-note"><strong>Places to visit</strong><p>Use this for landmarks, museums, food streets, heritage areas or <strong>restro</strong> when dining should shape the plan.</p></article>
+              <article class="planner-mini-note"><strong>Places to visit</strong><p>Select multiple options to shape the visit list for your route.</p></article>
             </div>
             <div class="planner-assist-frame hidden-field" id="plannerAssistPanel">
               <div class="planner-assist-head"><div><p class="eyebrow" id="plannerAssistEyebrow">Smart suggestions</p><h3 id="plannerAssistTitle">Suggestions</h3></div><button class="button button-secondary planner-assist-close" id="plannerAssistClose" type="button">Close</button></div>
@@ -312,6 +324,7 @@ export function initPlanner() {
   const form = document.getElementById("plannerForm");
   if (!form) return;
   const holder = document.getElementById("plannerInterests");
+  const visitHolder = document.getElementById("visitFocusOptions");
   const params = new URLSearchParams(window.location.search);
   const stayPreferenceInput = document.getElementById("stayPreference");
   const restaurantWrap = document.getElementById("restaurantPreferenceWrap");
@@ -321,17 +334,25 @@ export function initPlanner() {
   const visitFocusInput = document.getElementById("visitFocus");
   const assistPanel = document.getElementById("plannerAssistPanel");
   const assistClose = document.getElementById("plannerAssistClose");
+  const selectedVisits = new Set();
 
   paintInterestChips(holder, selected);
+
+  const syncVisitFocusSelection = (place) => {
+    if (!visitHolder || !visitFocusInput) return;
+    paintVisitChips(visitHolder, selectedVisits, place);
+    visitFocusInput.value = Array.from(selectedVisits).join(", ");
+  };
 
   const syncRestaurantPreference = () => {
     const activePlace = getPlace(destinationInput.value.trim() || "Pune");
     updateRestaurantSuggestionList(activePlace.name);
-    const showRestaurantField = isDiningIntent(stayPreferenceInput.value, visitFocusInput.value);
+    const showRestaurantField = isDiningIntent(visitFocusInput.value);
     restaurantWrap.classList.toggle("hidden-field", !showRestaurantField);
     if (!showRestaurantField) restaurantNameInput.value = "";
-    renderRouteMemory(activePlace, stayPreferenceInput.value, restaurantNameInput.value.trim(), visitFocusInput.value.trim());
+    renderRouteMemory(activePlace, restaurantNameInput.value.trim(), visitFocusInput.value.trim());
     updatePlannerSupportCards(activePlace);
+    syncVisitFocusSelection(activePlace);
   };
 
   const bindAssist = (field, fieldKey) => {
@@ -351,6 +372,8 @@ export function initPlanner() {
     document.getElementById("travelVibe").value = plan.vibe || "";
     nearbyFocusInput.value = plan.nearbyFocus || "";
     visitFocusInput.value = plan.visitFocus || "";
+    selectedVisits.clear();
+    (plan.visitFocus || "").split(",").map((item) => item.trim()).filter(Boolean).forEach((item) => selectedVisits.add(item));
     selected.clear();
     (plan.interests || []).forEach((interest) => selected.add(interest));
     if (!selected.size) {
@@ -402,26 +425,26 @@ export function initPlanner() {
     button.classList.remove("is-loading");
   });
 
-  bindAssist(stayPreferenceInput, "stayPreference");
   bindAssist(nearbyFocusInput, "nearbyFocus");
   bindAssist(visitFocusInput, "visitFocus");
   stayPreferenceInput.addEventListener("input", syncRestaurantPreference);
   restaurantNameInput.addEventListener("input", syncRestaurantPreference);
   destinationInput.addEventListener("input", syncRestaurantPreference);
   destinationInput.addEventListener("change", syncRestaurantPreference);
-  visitFocusInput.addEventListener("input", syncRestaurantPreference);
   assistClose.addEventListener("click", hidePlannerAssist);
   assistPanel.addEventListener("click", (event) => {
     const chip = event.target.closest(".planner-assist-chip");
     if (!chip) return;
     const value = chip.dataset.value || "";
-    if (document.activeElement === stayPreferenceInput) stayPreferenceInput.value = value;
-    else if (document.activeElement === nearbyFocusInput) nearbyFocusInput.value = value;
-    else visitFocusInput.value = value;
+    if (document.activeElement === nearbyFocusInput) nearbyFocusInput.value = value;
+    else if (document.activeElement === visitFocusInput) {
+      selectedVisits.add(value);
+      syncVisitFocusSelection(getPlace(destinationInput.value.trim() || "Pune"));
+    }
     syncRestaurantPreference();
   });
   document.addEventListener("click", (event) => {
-    const relevant = [stayPreferenceInput, nearbyFocusInput, visitFocusInput, restaurantNameInput, assistPanel];
+    const relevant = [stayPreferenceInput, nearbyFocusInput, visitFocusInput, restaurantNameInput, assistPanel, visitHolder];
     if (!relevant.some((node) => node && node.contains(event.target))) hidePlannerAssist();
   });
 
@@ -463,6 +486,7 @@ export function initPlanner() {
     });
   }
   syncRestaurantPreference();
+  syncVisitFocusSelection(getPlace(destinationInput.value.trim() || getPlan()?.place?.name || "Pune"));
   updatePlannerSupportCards(getPlace(destinationInput.value.trim() || getPlan()?.place?.name || "Pune"));
 
   // ── Booking Modals ──────────────────────────────────────────

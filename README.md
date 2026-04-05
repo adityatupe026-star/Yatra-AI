@@ -6,7 +6,8 @@ It includes:
 
 - an India-first travel planner
 - AI chat with trip-aware and expert modes
-- `Translate` for Indian language translation
+- `Translate` and `Translet` for Indian language translation
+- a travel partner inbox for matching with other travelers
 - browser speech output for chat and translation
 - terminal-only Python audio helpers in `Audio/`
 - CSV logging for product analytics
@@ -45,6 +46,7 @@ The frontend is a multi-page India travel app:
 - Bookings
 - Chat
 - Translate
+- Travel Partner Inbox
 - Explorer
 - India Map
 - Events
@@ -151,6 +153,8 @@ uvicorn YatraAI.api.app:app --reload --port 8000
 
 Copy `.env.example` to `.env`, set `GOOGLE_TRANSLATE_API_KEY`, then start the backend. You can also export it in PowerShell before starting the backend.
 
+If Google Translate returns an invalid-key error, replace the key in `.env` with a valid Google Cloud Translation API key and restart the backend.
+
 ## Frontend Notes
 
 The frontend includes:
@@ -184,11 +188,21 @@ It writes into `data/` and is documented in [data_collection/README.md](/D:/Yatr
 
 ## Translation
 
-The translate page posts to `POST /translate`.
+The translate page posts to `POST /api/translate`.
 
-The backend forwards requests to Google Cloud Translation API using the `GOOGLE_TRANSLATE_API_KEY` environment variable.
+The backend forwards requests to Google Cloud Translation API using the `GOOGLE_TRANSLATE_API_KEY` environment variable loaded from the repo-root `.env`.
 
-If translation fails, the backend returns the original text.
+If translation fails, the backend returns a 502 error so the UI can show a real failure instead of silently echoing the input.
+
+## Partner Inbox
+
+The travel partner inbox is a route-based directory for matching travelers by:
+
+- solo, group, and couple trips
+- budget, best-experience, and luxury preferences
+- destination, date, and interests
+
+The feature is wired into the home page teaser and a dedicated `partner-inbox.html` page.
 
 ## Short Demo Flow
 

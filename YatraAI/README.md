@@ -4,10 +4,10 @@ This folder contains the backend intelligence layer for YatraAI.
 
 It includes:
 
-- the local assistant engine in [yatra_ai.py](/D:/Yatraai/YatraAI/yatra_ai.py)
-- the FastAPI service in [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
-- CSV analytics helpers in [api/analytics.py](/D:/Yatraai/YatraAI/api/analytics.py)
-- the tourism dashboard in [dev_dashboard.py](/D:/Yatraai/YatraAI/dev_dashboard.py)
+- the local assistant engine in [yatra_ai.py](D:/Yatraai/YatraAI/yatra_ai.py)
+- the FastAPI service in [api/app.py](D:/Yatraai/YatraAI/api/app.py)
+- CSV analytics helpers in [api/analytics.py](D:/Yatraai/YatraAI/api/analytics.py)
+- the tourism dashboard in [dev_dashboard.py](D:/Yatraai/YatraAI/dev_dashboard.py)
 
 ## What The Backend Does
 
@@ -17,7 +17,7 @@ The backend:
 - searches destinations and places
 - builds planner responses
 - handles trip-aware and expert chat modes
-- proxies translation requests
+- proxies translation requests through Google Cloud Translation
 - powers booking confirmations and hotel summary generation
 - writes structured CSV logs
 - serves the frontend from the same origin
@@ -45,11 +45,11 @@ The dashboard also reads:
 
 ## Main Files
 
-### [yatra_ai.py](/D:/Yatraai/YatraAI/yatra_ai.py)
+### [yatra_ai.py](D:/Yatraai/YatraAI/yatra_ai.py)
 
 Local assistant script with dataset loading, recommendation logic, and offline chat flow.
 
-### [api/app.py](/D:/Yatraai/YatraAI/api/app.py)
+### [api/app.py](D:/Yatraai/YatraAI/api/app.py)
 
 FastAPI entry point that exposes:
 
@@ -65,10 +65,10 @@ FastAPI entry point that exposes:
 - `POST /api/chat`
 - `POST /api/bookings/hotel-summary`
 - `POST /api/bookings/confirm`
-- `POST /translate`
 - `POST /api/translate`
+- `POST /translate`
 
-### [api/analytics.py](/D:/Yatraai/YatraAI/api/analytics.py)
+### [api/analytics.py](D:/Yatraai/YatraAI/api/analytics.py)
 
 CSV logger and table schema helpers for:
 
@@ -82,11 +82,11 @@ CSV logger and table schema helpers for:
 - chat messages
 - events
 
-### [api/translation/](/D:/Yatraai/YatraAI/api/translation/)
+### [api/translation/](D:/Yatraai/YatraAI/api/translation/)
 
 Google Cloud Translation-backed translation module with request models, caching, and router wiring.
 
-### [dev_dashboard.py](/D:/Yatraai/YatraAI/dev_dashboard.py)
+### [dev_dashboard.py](D:/Yatraai/YatraAI/dev_dashboard.py)
 
 Streamlit dashboard for India tourism analysis.
 
@@ -114,11 +114,18 @@ Or start the API manually:
 uvicorn YatraAI.api.app:app --reload --port 8000
 ```
 
-Copy `.env.example` to `.env` and set `GOOGLE_TRANSLATE_API_KEY` before using translation.
+## Environment
+
+Copy `.env.example` to `.env` and set:
+
+- `GOOGLE_TRANSLATE_API_KEY`
+- `GOOGLE_TRANSLATE_URL` if you need a different endpoint
+
+The backend reads the repo-root `.env` file at startup.
 
 ## Notes
 
 - The backend supports India-wide tourism analysis.
 - The dashboard is separate from app telemetry.
-- The translate endpoint falls back to the original text if Google Translate is unavailable or misconfigured.
+- The translate endpoint returns a clear failure when Google Translate is unavailable or the key is invalid.
 - Ollama can still be enabled through environment settings when needed.

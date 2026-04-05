@@ -124,6 +124,8 @@ python ".\data_collection\main.py" --city Mumbai
 - this folder creates the place dataset
 - the backend consumes that dataset
 - the dashboard reads the tourism datasets from `data/`
+- the travel partner inbox uses frontend dummy data, not this pipeline
+- the bookings hub and saved booking cards are frontend storage backed
 
 ## Hotel / Stay Pipeline
 

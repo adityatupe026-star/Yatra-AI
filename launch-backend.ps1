@@ -5,11 +5,6 @@ Set-Location $root
 
 $stdoutPath = Join-Path $root "backend.out.log"
 $stderrPath = Join-Path $root "backend.err.log"
-foreach ($path in @($stdoutPath, $stderrPath)) {
-  if (Test-Path $path) {
-    Remove-Item -LiteralPath $path -Force
-  }
-}
 
 function Stop-PortListener {
   param(
@@ -29,6 +24,16 @@ function Stop-PortListener {
 }
 
 Stop-PortListener -Ports @(8000, 8001)
+
+foreach ($path in @($stdoutPath, $stderrPath)) {
+  if (Test-Path $path) {
+    try {
+      Remove-Item -LiteralPath $path -Force
+    } catch {
+      # Keep going if an old process still has the log file open.
+    }
+  }
+}
 
 $candidates = @(
   Join-Path $root ".venv\Scripts\pythonw.exe"
